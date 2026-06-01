@@ -10,7 +10,7 @@ home directory.
 
 | Client | Manifest | Status | Review |
 | --- | --- | --- | --- |
-| Suzan Galluzzo | `manifest/suzan-galluzzo.json` | pending review, not installable | https://github.com/itsAR-VR/public-skills/issues/1 |
+| Suzan Galluzzo | `manifest/suzan-galluzzo.json` | approved subset, installable | https://github.com/itsAR-VR/public-skills/issues/1 |
 
 ## Rules
 

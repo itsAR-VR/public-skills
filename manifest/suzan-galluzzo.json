@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "public-skills-manifest/v0",
+  "clientSlug": "suzan-galluzzo-nutrition",
+  "clientDisplayName": "Suzan Galluzzo",
+  "deviceId": "macbook-neo-suzan-galluzzo",
+  "status": "pending_review",
+  "installable": false,
+  "createdAt": "2026-06-01",
+  "reviewIssue": "https://github.com/itsAR-VR/public-skills/issues/1",
+  "linkedQueueIssue": "https://github.com/ZTArepo/appliance-command-queue/issues/1",
+  "sourceInputs": [
+    {
+      "type": "private_repo_snapshot",
+      "repo": "philippeh000-hue/cao-appliance",
+      "paths": [
+        "codex-home/skills",
+        "claude-home/skills"
+      ],
+      "status": "candidate_only",
+      "reason": "The Felipe appliance repo includes full home/session/env-style paths, so skills must be selected and scanned individually before approval."
+    },
+    {
+      "type": "private_repo",
+      "repo": "itsAR-VR/goatedskills",
+      "status": "candidate_only",
+      "reason": "Repo is private and may include ZTA-specific context; only explicitly reviewed public-allowed skills can be copied."
+    }
+  ],
+  "approvedSkills": [],
+  "priorityCandidates": [
+    "codex",
+    "codex-workstation-bootstrap",
+    "skill-installer",
+    "browser-harness",
+    "github",
+    "deep-sweep",
+    "goal-post",
+    "deep-build",
+    "deep-clean",
+    "code-review",
+    "agent-message-bus",
+    "1password"
+  ],
+  "blockedUntil": [
+    "Candidate skill contents are copied into review staging one skill at a time.",
+    "Secret/private-context scan passes.",
+    "Script behavior review passes.",
+    "License/redistribution notes are recorded.",
+    "Each approved skill has a source revision and content checksum.",
+    "This manifest is updated with approvedSkills and installable=true."
+  ],
+  "excludedPatterns": [
+    "session",
+    "history",
+    "memory",
+    ".env",
+    "oauth",
+    "auth",
+    "token",
+    "secret",
+    "vercel",
+    "ZTArepo/Z2A",
+    "client PII",
+    "raw transcript"
+  ]
+}

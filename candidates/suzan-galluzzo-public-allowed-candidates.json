@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "public-skills-candidates/v0",
+  "clientSlug": "suzan-galluzzo-nutrition",
+  "createdAt": "2026-06-01",
+  "intent": "Start from the public-allowed subset of Felipe's appliance skills, but approve only individually scanned client-safe skills.",
+  "candidateSources": [
+    {
+      "repo": "philippeh000-hue/cao-appliance",
+      "paths": [
+        "codex-home/skills",
+        "claude-home/skills"
+      ],
+      "visibility": "private",
+      "copyPolicy": "candidate-names-only-until-scan"
+    },
+    {
+      "repo": "itsAR-VR/goatedskills",
+      "visibility": "private",
+      "copyPolicy": "candidate-only-until-public-allowed-review"
+    }
+  ],
+  "priorityCandidates": [
+    "codex",
+    "codex-workstation-bootstrap",
+    "skill-installer",
+    "browser-harness",
+    "github",
+    "deep-sweep",
+    "goal-post",
+    "deep-build",
+    "deep-clean",
+    "code-review",
+    "agent-message-bus",
+    "1password"
+  ],
+  "explicitRejects": [
+    "full-home-snapshots",
+    "sessions",
+    "history",
+    "memories",
+    "oauth-state",
+    ".env-files",
+    "private-zta-context",
+    "client-data",
+    "unreviewed-felipe-machine-state",
+    "quarantined-skills"
+  ]
+}

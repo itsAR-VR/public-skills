@@ -1,11 +1,12 @@
 # Public Skills
 
-A public, reusable catalog exported from the private `goatedskills` source.
+A curated public catalog exported from a larger private source.
 
-The export is deliberately fail-closed. Skills containing company names, private
+The export is deliberately fail-closed and allowlisted. Skills containing company names, private
 paths, client or operator names, credentials, session state, private datasets,
-or restricted source bundles are omitted. The public development workflow is a
-generic rewrite, published as `dev-workflow`.
+or restricted source bundles are omitted. Internal orchestration, client-delivery,
+company-context, taste-layer, and machine-routing skills stay private by default.
+The public development workflow is a generic rewrite, published as `dev-workflow`.
 
 ## Use
 
@@ -22,13 +23,15 @@ The Faceplant workflow family is included:
 
 ## Audit trail
 
-`PUBLIC_EXPORT.json` records the exact private-source revision, checksums for
-kept skills, and the reason every omitted or edited skill was handled that way.
+`PUBLIC_EXPORT.json` records the source type, checksums for kept skills, and
+aggregate removal reasons. Private catalog names are not published.
+`policy/public-skill-allowlist.txt` is the only set eligible for publication;
+new private-source skills do not become public automatically.
 
-To reproduce and verify an export from a local `goatedskills` checkout:
+To reproduce and verify an export from an authorized private-source checkout:
 
 ```bash
-node scripts/export-public-skills.mjs /path/to/goatedskills
+node scripts/export-public-skills.mjs /path/to/private-skill-source
 node scripts/verify-public-skills.mjs
 ```
 

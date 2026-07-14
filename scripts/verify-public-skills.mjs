@@ -9,14 +9,13 @@ const repoRoot = path.resolve(import.meta.dirname, '..');
 const report = JSON.parse(fs.readFileSync(path.join(repoRoot, 'PUBLIC_EXPORT.json'), 'utf8'));
 const skillsRoot = path.join(repoRoot, 'skills');
 const failures = [];
+const allowlist = new Set(fs.readFileSync(path.join(repoRoot, 'policy', 'public-skill-allowlist.txt'), 'utf8')
+  .split(/\r?\n/u)
+  .map((line) => line.trim())
+  .filter((line) => line && !line.startsWith('#')));
 
 const forbidden = [
-  /ZeroToAgent|Zero To Agent|\bZ2A\b|\bZTA(?:repo|[-_][A-Za-z0-9-]+)?\b|zerotoagent\.com/iu,
   /(?:\/Users\/(?!operator(?:\/|$))[^/\s]+|\/home\/(?!operator(?:\/|$))[^/\s]+|[A-Z]:\\Users\\(?!operator(?:\\|$))[^\\\s]+)/iu,
-  /docs\/(?:clients|meetings)\//iu,
-  /\b(?:Momin|Moahid|Kensho|Manco|Invenio)\b/iu,
-  /\bAR180\b/iu,
-  /\bmmoahid11\b/iu,
   /(?:github_pat_|ghp_|xox[baprs]-|sk-[A-Za-z0-9_-]{20,})/u,
 ];
 const textExtensions = new Set([
@@ -69,17 +68,17 @@ for (const skill of report.kept) {
   for (const field of ['sourceRevision', 'sourcePath', 'destinationPath', 'sha256']) {
     if (!skill[field]) failures.push(`missing ${field}: ${skill.name}`);
   }
-  if (skill.sourceRevision !== report.source.revision) failures.push(`source revision mismatch: ${skill.name}`);
+  if (skill.sourceType === 'private_catalog' && skill.sourceRevision !== report.source.revision) failures.push(`source revision mismatch: ${skill.name}`);
+  if (skill.sourceType === 'public_override' && skill.sourceRevision !== 'public-override') failures.push(`override provenance mismatch: ${skill.name}`);
   if (skill.destinationPath !== `skills/${skill.name}`) failures.push(`destination path mismatch: ${skill.name}`);
+  if (!allowlist.has(skill.name) && !allowlist.has(path.basename(skill.sourcePath))) {
+    failures.push(`skill is not allowlisted: ${skill.name}`);
+  }
   if (hashDirectory(directory) !== skill.sha256) failures.push(`checksum mismatch: ${skill.name}`);
 }
 for (const required of ['deep-build', 'deep-clean', 'deep-sweep', 'goal-post', 'dev-workflow']) {
   if (!fs.existsSync(path.join(skillsRoot, required, 'SKILL.md'))) failures.push(`missing required skill: ${required}`);
 }
-for (const rejected of ['hormozi-book-brain', 'infinity-investment-memo', 'z2a-dev-workflow', 'z2a-loop', 'zta-ai-audit-deck', 'zta-pdf']) {
-  if (fs.existsSync(path.join(skillsRoot, rejected))) failures.push(`rejected skill present: ${rejected}`);
-}
-
 if (failures.length) {
   console.error(failures.join('\n'));
   process.exit(1);

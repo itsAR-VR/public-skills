@@ -8,11 +8,16 @@ import os from 'node:os';
 import { execFileSync } from 'node:child_process';
 
 const repoRoot = path.resolve(import.meta.dirname, '..');
-const sourceRoot = path.resolve(process.argv[2] ?? '../goatedskills');
+const sourceRoot = path.resolve(process.argv[2] ?? '../private-skill-source');
 const outputSkills = path.join(repoRoot, 'skills');
+const allowlistPath = path.join(repoRoot, 'policy', 'public-skill-allowlist.txt');
+const allowlist = new Set(fs.readFileSync(allowlistPath, 'utf8')
+  .split(/\r?\n/u)
+  .map((line) => line.trim())
+  .filter((line) => line && !line.startsWith('#')));
 
 if (!fs.existsSync(path.join(sourceRoot, '.git'))) {
-  console.error(`Usage: ${path.basename(process.argv[1])} /path/to/goatedskills`);
+  console.error(`Usage: ${path.basename(process.argv[1])} /path/to/private-skill-source`);
   process.exit(2);
 }
 
@@ -29,94 +34,28 @@ fs.writeFileSync(archivePath, execFileSync('git', ['archive', '--format=tar', 'o
 execFileSync('tar', ['-xf', archivePath, '-C', archiveRoot]);
 const sourceSkills = path.join(archiveRoot, 'skills');
 
-const explicitRemovals = new Map([
-  ['ai-audit', 'contains a company-specific client audit delivery system'],
-  ['ai-readiness-report', 'contains a company-specific client report and brand renderer'],
-  ['audit-chain-eval-harness', 'tests the private client audit delivery chain'],
-  ['business-context-intelligence', 'contains private company-context routing'],
-  ['canonical-meeting-archive', 'contains private meeting archive conventions'],
-  ['codex-rr-setup', 'contains private account-pool and workstation routing'],
-  ['codex-workstation-bootstrap', 'contains private workstation restore behavior'],
-  ['feasibility-tester', 'contains a company-specific client feasibility delivery system'],
-  ['granola-github-meetings-sync', 'contains private meeting sync conventions'],
-  ['hormozi-book-brain', 'bundles copyrighted books and a derived database'],
-  ['infinity-investment-memo', 'contains a private investor-deck source bundle'],
-  ['knowledge-base', 'contains a local derived knowledge database'],
-  ['knowledge-base.quarantine-20260225-043142', 'quarantined local database snapshot'],
-  ['memory-chain', 'contains a company-specific client research and report chain'],
-  ['kensho-eod-delivery-brief', 'person-specific internal operating workflow'],
-  ['kensho-spin', 'person-specific internal operating workflow'],
-  ['mo-book-creator', 'person-specific writing workflow'],
-  ['mo-book-crisis-scenario-stress-testing', 'person-specific writing workflow'],
-  ['mo-book-digital-acceleration-readiness', 'person-specific writing workflow'],
-  ['mo-book-ecom-lifecycle-flows', 'person-specific writing workflow'],
-  ['mo-book-email-behavioral-segmentation', 'person-specific writing workflow'],
-  ['mo-book-email-corrections-apology', 'person-specific writing workflow'],
-  ['mo-book-email-deliverability-setup', 'person-specific writing workflow'],
-  ['mo-book-email-diagnostic-audit', 'person-specific writing workflow'],
-  ['mo-book-email-frequency-strategy', 'person-specific writing workflow'],
-  ['mo-book-email-lifecycle-analytics', 'person-specific writing workflow'],
-  ['mo-book-email-preference-center', 'person-specific writing workflow'],
-  ['mo-book-email-qa-checklist', 'person-specific writing workflow'],
-  ['mo-book-email-rendering-design', 'person-specific writing workflow'],
-  ['mo-book-email-subject-line-optimizer', 'person-specific writing workflow'],
-  ['mo-book-how-to-win-friends-digital-age', 'person-specific writing workflow'],
-  ['mo-book-mckinsey-way', 'person-specific writing workflow'],
-  ['mo-book-mckinsey-way-consultant-career', 'person-specific writing workflow'],
-  ['mo-book-mckinsey-way-consulting-workflow', 'person-specific writing workflow'],
-  ['mo-book-mckinsey-way-presenting-solutions', 'person-specific writing workflow'],
-  ['mo-book-mckinsey-way-problem-solving', 'person-specific writing workflow'],
-  ['mo-book-stakeholder-decision-scorecard', 'person-specific writing workflow'],
-  ['mo-book-supply-chain-resilience-evaluator', 'person-specific writing workflow'],
-  ['mo-book-surveillance-privacy-tradeoff', 'person-specific writing workflow'],
-  ['mo-book-systemic-risk-interconnection-mapper', 'person-specific writing workflow'],
-  ['mo-infinity-investor-deck', 'person-specific private investor workflow'],
-  ['mo-nano-banana-pro', 'person-specific operating workflow'],
-  ['mo-post-call-auditor', 'person-specific internal call workflow'],
-  ['mo-pre-call-strategist', 'person-specific internal call workflow'],
-  ['mo-writing-voice-system', 'person-specific writing voice'],
-  ['mo-youtube-gemini-video-analyst', 'person-specific operating workflow'],
-  ['setup-skill-packs', 'contains private workstation and source-repository setup'],
-  ['skill-portfolio-evals', 'contains private team handoffs and quality-routing context'],
-  ['writing-voice-system', 'contains a person-specific writing voice and source materials'],
-  ['z2a-loop', 'company-specific orchestration workflow'],
-  ['zta-ai-audit-deck', 'company-specific client-delivery workflow'],
-  ['zta-pdf', 'company-specific client-delivery workflow'],
-]);
+const explicitRemovals = new Map();
 
 const editedSkills = new Map([
   ['deep-build', 'deep-build'],
+  ['deep-clean', 'deep-clean'],
   ['deep-sweep', 'deep-sweep'],
-  ['z2a-dev-workflow', 'dev-workflow'],
+  ['goal-post', 'goal-post'],
+  ['brave-search', 'brave-search'],
+  ['browser-harness', 'browser-harness'],
+  ['gitnexus', 'gitnexus'],
+  ['verify', 'verify'],
 ]);
 
 const privatePatterns = [
-  ['company name', /ZeroToAgent|Zero To Agent|\bZ2A\b|\bZTA(?:repo|[-_][A-Za-z0-9-]+)?\b|zerotoagent\.com/iu],
   ['private operator path', /(?:\/Users\/[^/\s]+|\/home\/[^/\s]+|[A-Z]:\\Users\\[^\\\s]+)/iu],
-  ['private client path', /docs\/(?:clients|meetings)\//iu],
-  ['person or client name', /\b(?:Momin|Moahid|Kensho|Manco|Invenio)\b/iu],
-  ['operator identifier', /\bAR180\b/iu],
-  ['operator identifier', /\bmmoahid11\b/iu],
   ['reusable credential', /(?:github_pat_|ghp_|xox[baprs]-|sk-[A-Za-z0-9_-]{20,})/u],
 ];
 
 const scrubReplacements = [
-  [/itsAR-VR\/goatedskills/giu, 'itsAR-VR/public-skills'],
-  [/\bgoatedskills\b/giu, 'public-skills'],
-  [/z2a-loop/giu, 'workflow-orchestrator'],
-  [/ZeroToAgent|Zero To Agent/giu, 'the organization'],
-  [/\bZ2A\b/giu, 'the project'],
-  [/\bZTA(?:repo|[-_][A-Za-z0-9-]+)?\b/giu, 'PROJECT'],
-  [/zerotoagent\.com/giu, 'example.com'],
   [/\/Users\/[^/\s]+/gu, '/Users/operator'],
   [/\/home\/[^/\s]+/gu, '/home/operator'],
   [/[A-Z]:\\Users\\[^\\\s]+/giu, 'C:\\Users\\operator'],
-  [/\bAR180\b/giu, 'contributor'],
-  [/\bmmoahid11\b/giu, 'contributor'],
-  [/docs\/clients\//giu, 'private/client-records/'],
-  [/docs\/meetings\//giu, 'private/meeting-records/'],
-  [/\b(?:Momin|Moahid|Kensho)\b/giu, 'operator'],
-  [/\b(?:Manco|Invenio)\b/giu, 'client'],
 ];
 
 const textExtensions = new Set([
@@ -201,20 +140,26 @@ for (const entry of fs.readdirSync(sourceSkills, { withFileTypes: true }).sort((
     continue;
   }
 
+  const publicName = editedSkills.get(sourceName) ?? sourceName;
+  if (!allowlist.has(sourceName) && !allowlist.has(publicName)) {
+    removed.push({ name: sourceName, reason: 'not in the curated public allowlist' });
+    continue;
+  }
+
   if (explicitRemovals.has(sourceName)) {
     removed.push({ name: sourceName, reason: explicitRemovals.get(sourceName) });
     continue;
   }
 
   if (editedSkills.has(sourceName)) {
-    const publicName = editedSkills.get(sourceName);
     const override = path.join(repoRoot, 'overrides', publicName);
     fs.cpSync(override, path.join(outputSkills, publicName), { recursive: true });
     edited.push({ source: sourceName, public: publicName, reason: 'removed company branding and repo-specific implementation details' });
     kept.push({
       name: publicName,
-      sourceRevision,
-      sourcePath: `skills/${sourceName}`,
+      sourceType: 'public_override',
+      sourceRevision: 'public-override',
+      sourcePath: `overrides/${publicName}`,
       destinationPath: `skills/${publicName}`,
       sha256: hashDirectory(path.join(outputSkills, publicName)),
     });
@@ -235,6 +180,7 @@ for (const entry of fs.readdirSync(sourceSkills, { withFileTypes: true }).sort((
     edited.push({ source: sourceName, public: sourceName, reason: 'scrubbed company, operator, client, or private-path references' });
     kept.push({
       name: sourceName,
+      sourceType: 'private_catalog',
       sourceRevision,
       sourcePath: `skills/${sourceName}`,
       destinationPath: `skills/${sourceName}`,
@@ -252,6 +198,7 @@ for (const entry of fs.readdirSync(sourceSkills, { withFileTypes: true }).sort((
   fs.cpSync(sourceDirectory, destination, { recursive: true });
   kept.push({
     name: sourceName,
+    sourceType: 'private_catalog',
     sourceRevision,
     sourcePath: `skills/${sourceName}`,
     destinationPath: `skills/${sourceName}`,
@@ -259,13 +206,34 @@ for (const entry of fs.readdirSync(sourceSkills, { withFileTypes: true }).sort((
   });
 }
 
+if (allowlist.has('dev-workflow')) {
+  const publicName = 'dev-workflow';
+  const override = path.join(repoRoot, 'overrides', publicName);
+  const destination = path.join(outputSkills, publicName);
+  fs.cpSync(override, destination, { recursive: true });
+  edited.push({ source: 'private development workflow', public: publicName, reason: 'published as a generic self-contained workflow' });
+  kept.push({
+    name: publicName,
+    sourceType: 'public_override',
+    sourceRevision: 'public-override',
+    sourcePath: `overrides/${publicName}`,
+    destinationPath: `skills/${publicName}`,
+    sha256: hashDirectory(destination),
+  });
+}
+
+const removedSummary = Object.entries(removed.reduce((summary, item) => {
+  summary[item.reason] = (summary[item.reason] ?? 0) + 1;
+  return summary;
+}, {})).map(([reason, count]) => ({ reason, count })).sort((a, b) => b.count - a.count || a.reason.localeCompare(b.reason));
+
 const report = {
   schemaVersion: 'public-skills-export/v1',
   generatedAt: new Date().toISOString(),
   source: { catalog: 'private canonical catalog', revision: sourceRevision },
   counts: { kept: kept.length, removed: removed.length, edited: edited.length },
   edited,
-  removed,
+  removedSummary,
   kept,
 };
 

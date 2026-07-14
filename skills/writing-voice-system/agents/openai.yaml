@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writing Voice System"
+  short_description: "Apply reusable writing voice profiles and anti-AI cleanup"
+  default_prompt: "Use $writing-voice-system to rewrite this in the right human voice and remove AI tells."

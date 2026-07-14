@@ -1,0 +1,4 @@
+interface:
+  display_name: "Loop Engineering"
+  short_description: "Design verified human-gated agent loops"
+  default_prompt: "Use $loop-engineering to design a human-gated multi-agent loop with clear evals, observability, and stop conditions."

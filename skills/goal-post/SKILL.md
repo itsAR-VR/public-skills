@@ -8,16 +8,16 @@ description: >
   loop using skill-oracle, phase-plan, deep-sweep, deep-build, ultra-review,
   deep-clean, browser-harness, and follow-up phase plans. Artifacts ship with
   preflight uncertainty ranking (propose-and-proceed, not open-ended
-  questions), priority-tier scope control, per-gate rollback plans, and a
-  closing strategy-confidence loop.
-related_skills: [phase-plan, skill-oracle, think, deep-sweep, deep-build, ultra-review, deep-clean, browser-harness, loophole-loop, codex, agent-message-bus, claude-heartbeat-loop, crow-nest]
+  questions), priority-tier scope control, per-gate rollback plans, a
+  fresh-context verifier gate, and a closing strategy-confidence loop.
+related_skills: [vision-lock, phase-plan, skill-oracle, think, deep-sweep, deep-build, ultra-review, deep-clean, browser-harness, loophole-loop, codex, prompt-generation, agent-message-bus, claude-heartbeat-loop, crow-nest]
 ---
 
 # Goal Post
 
-> **Naming note — Codex CLI `/goal` mode (since v0.128.0) is a separate
-> feature.** Codex's native `/goal` is the persistent Ralph Loop in the
-> `codex` skill — see `codex/SKILL.md` § "Goal Mode (`/goal`)". This
+> **Naming note - Codex native `/goal` is a separate feature.** Codex's
+> native `/goal` is the thread goal lifecycle in the `codex` skill - see
+> `codex/SKILL.md` § "Native `/goal`". This
 > skill (`goal-post`) is **independent**: it generates a goal-artifact
 > markdown file and emits a *short prompt that references that
 > artifact*. The short prompt may use Codex `/goal` syntax as one of
@@ -25,8 +25,8 @@ related_skills: [phase-plan, skill-oracle, think, deep-sweep, deep-build, ultra-
 > goal-post's own. If you want long-horizon Codex autonomy with a
 > peer-coordination heartbeat, see `codex`, `agent-message-bus`,
 > `claude-heartbeat-loop`, and `crow-nest`. When the launch surface is
-> Codex native `/goal`, start with `/goal budget 1000000` before the short
-> artifact prompt until openai/codex#19910 is resolved.
+> Codex native `/goal`, follow the current official slash-command and Goals
+> cookbook guidance rather than hardcoded issue workarounds.
 
 Turn an existing `/phase-plan` or long delivery prompt into a durable Markdown
 goal artifact, then output a tiny `/goal` prompt that references that artifact.
@@ -60,6 +60,8 @@ detail. The `/goal` prompt stays short enough for goal-command limits.
 - Name files as `<phase-name-or-number>__<goal-slug>.md`.
 - Mention the phase name in the artifact title and metadata.
 - Keep the final `/goal` prompt under 300 characters.
+- Official Codex `/goal` can carry a longer objective, but `goal-post` house
+  style keeps the launch prompt short and stores detail in the artifact.
 - The `/goal` prompt must reference the artifact path; do not paste the full
   plan into `/goal`.
 - Artifacts always use `references/goal-artifact-template.md`; include every
@@ -71,12 +73,19 @@ detail. The `/goal` prompt stays short enough for goal-command limits.
   details. Refer to existing secret stores or the user's already logged-in
   browser session.
 - Do not execute the goal loop unless the user separately asks to run it.
+- Every artifact must include a `## Verifier Gate`: before the run ledger is
+  marked done, dispatch a fresh-context verifier subagent that checks the
+  Definition Of Done and every Verification Gate row against on-disk evidence
+  only — never the actor's transcript or reasoning. The agent that produced
+  the work must not grade it. The verdict uses the strict schema in the
+  template.
 - Every generated artifact must end with a `## Strategy Confidence Loop`
-  section that asks the executing agent whether it is 100% confident in the
-  current strategy. If not, the agent lists every loophole, proposes fixes,
-  and reruns the loop until factually 100% confident before declaring done.
-- The short `/goal` prompt must reference the strategy-confidence loop so the
-  instruction survives even if the agent never opens the artifact.
+  section. It runs after the Verifier Gate, may not override a verifier
+  failure, and exits on an evidence-backed confidence statement citing gates,
+  capped at 3 iterations.
+- The short `/goal` prompt must reference the verifier gate and
+  strategy-confidence loop so the instructions survive even if the agent
+  never opens the artifact.
 - Every artifact must include `## Preflight Uncertainty Ranking` populated
   before the Autonomous Loop begins. The agent proposes the highest-confidence
   resolution for each uncertainty and proceeds; open-ended clarification
@@ -92,8 +101,35 @@ detail. The `/goal` prompt stays short enough for goal-command limits.
 - Before any non-trivial change, the executing agent restates the goal,
   constraints, and § Priority Order in one paragraph; that restatement is the
   contract for the run.
+- Every artifact must include the official native-goal contract: Outcome,
+  Verification surface, Constraints, Boundaries, Iteration policy, and Blocked
+  stop condition.
+- Every artifact must pin a `## Frozen Original Intent` block copied from
+  `docs/references/vision-lock.md` at creation. It is immutable for the run, and
+  the Verifier Gate grades the finished build against it (the Matt-test) — not
+  only the Definition Of Done. If no `vision-lock.md` exists, stop and run
+  `vision-lock` first; never infer intent from the phase plan alone.
+- Every artifact must include a `## Product-Truth Launch Gate`: before the
+  Verifier Gate, one real Matt-test outcome is proven against data the build did
+  not author — for a product/UI goal, in the freshly launched real app (desktop +
+  mobile); for a non-UI goal (backend, data, infra, docs, process), against the
+  goal's real verification surface (a live endpoint, a real query result, a
+  deployed job), with the launch/mobile fields marked `N/A` + a one-line reason.
+  A real surface is mandatory either way — `N/A` never means skip the proof.
+  Self-validating scripts, source string-checks, and "it compiles" are
+  inadmissible as acceptance evidence regardless of goal type.
+- Every artifact must include a `## Drift Gate`, run before each successor phase
+  and the done-gate. A tripped drift signal halts successor creation and triggers
+  a scoped `deep-sweep` or escalation; a green per-phase DoD does not authorize
+  continuing through drift.
 
 ## Workflow
+
+0. **Confirm the frozen intent exists.** Check for
+   `docs/references/vision-lock.md`. If it is missing, stop and run `vision-lock`
+   first — the artifact's `## Frozen Original Intent` block and the Verifier
+   Gate's Matt-test both depend on it. Never infer intent from the phase plan
+   alone.
 
 1. **Find the source phase.**
    - If the user provides a phase path, use it.
@@ -115,27 +151,30 @@ detail. The `/goal` prompt stays short enough for goal-command limits.
    - Preserve any source-of-truth folders, PR links, branch names, dates,
      workbook/transcript references, provider docs, and live verification
      requirements from the user's prompt.
+   - Populate the native-goal contract fields before writing the autonomous
+     loop.
 
 4. **Generate the short prompt.**
    - Use this default shape:
 
 ```text
-/goal Execute @docs/planning/goals/<file>.md autonomously. Read it, follow the run ledger, create successor phases as needed, run the strategy-confidence loop until 100% certain, and stop only at done or a stop condition.
+/goal Execute @docs/planning/goals/<file>.md. Done only when every gate passes — Frozen Intent (Matt-test), DoD, Verification, Product-Truth Launch, Verifier — and Strategy Confidence Loop closes; else stop with blocker evidence.
 ```
 
 5. **Check the prompt.**
    - If it exceeds 300 characters, shorten it.
    - If it omits the artifact path, fix it.
-   - If it omits the strategy-confidence loop reference, add it back.
+   - If it omits the verifier-gate or strategy-confidence loop reference, add
+     it back.
    - If it includes secrets or large pasted context, remove them.
 
 ## Artifact Contract
 
 Use `references/goal-artifact-template.md` as the schema. Do not omit sections:
 the evidence pack, source mapping table, autonomous loop, successor policy, run
-ledger, model routing, verification gates, stop conditions, final report
-requirements, and closing `## Strategy Confidence Loop` all stay in the
-artifact. If a section does not apply, mark it `N/A` and say why.
+ledger, model routing, verification gates, verifier gate, stop conditions,
+final report requirements, and closing `## Strategy Confidence Loop` all stay
+in the artifact. If a section does not apply, mark it `N/A` and say why.
 
 ## Guarded Autonomous Authority
 
@@ -154,9 +193,16 @@ normal project workflow. It must still stop for:
 
 ## Model And Agent Defaults
 
-- Use GPT-5.5 for main planning, synthesis, and final judgment.
-- Use GPT-5.4 subagents for token-efficient research, exploration, and bounded
-  review lanes when the harness supports them.
+- Use the current highest-reasoning configured model — OpenAI/Codex or
+  Anthropic Claude — verified at execution time, or the active config default,
+  for main planning, synthesis, and final judgment.
+- Use current configured smaller or cheaper models for bounded research,
+  exploration, and review lanes when the harness supports them.
+- Record concrete model IDs only after current docs or local config prove them.
+- When the executor is Claude (Fable 5), load `prompt-generation`
+  `references/claude-fable-5.md`: effort high by default, audit each progress
+  claim against a tool result from this session, and propose-and-proceed on
+  reversible actions instead of pausing.
 - Use the existing agent roles/model routing from the active `config.toml`.
   Goal Post should record expected routing, not edit configuration.
 - Use browser-harness for live logged-in UI verification; use Browser Harness only
@@ -187,3 +233,10 @@ normal project workflow. It must still stop for:
 - Do not invent a Rollback Plan mid-run. If a gate fails irreversibly and the
   documented rollback is missing or wrong, halt and escalate per § Stop
   Conditions.
+- Do not infer intent from the phase plan alone; pin it from the frozen
+  `vision-lock.md` as `## Frozen Original Intent`.
+- Do not accept self-validating scripts, source string-checks, or "tests pass"
+  as product-truth proof. Acceptance evidence comes from a fresh real-app launch
+  against data the build did not author.
+- Do not keep spawning successor phases through drift just because each phase's
+  Definition Of Done is green. A tripped § Drift Gate signal halts and escalates.

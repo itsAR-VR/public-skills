@@ -1,0 +1,4 @@
+# Requires Python 3.11+ (temporalio >=1.17 wheels and the workflow-sandbox
+# passthrough of cryptography extension modules are not supported below 3.11).
+cryptography>=46,<47
+temporalio>=1.17,<2

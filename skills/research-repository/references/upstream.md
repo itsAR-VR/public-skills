@@ -1,0 +1,7 @@
+# Upstream Provenance
+
+- Source repo: https://github.com/Owl-Listener/designer-skills
+- Source commit: `152fc2a19985b061971c61efbf45e675517005c8`
+- Source plugin: `design-research`
+- Source path: `design-research/skills/research-repository/`
+- License: MIT, see `/LICENSE` in the upstream repo.

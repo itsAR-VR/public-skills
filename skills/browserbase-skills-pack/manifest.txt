@@ -1,0 +1,18 @@
+# browserbase-skills-pack manifest — github.com/browserbase/skills (cherry-picked)
+# Skill names this pack installs (prefixed with `browserbase-` to avoid
+# collisions with browser-harness and existing browser skills). Used by
+# sync-skills Step 1.6 to scope the managed-upstream replacement pass —
+# upstream wins ONLY for these names, preserving user edits to any other skill.
+#
+# Selection rationale (see browserbase-skills-pack/SKILL.md for full table):
+#   - Only the FREE-with-no-BROWSERBASE_API_KEY skills are installed.
+#   - Paid skills (fetch, search, cookie-sync) and platform tools (functions,
+#     browserbase-cli) are intentionally excluded.
+#   - autobrowse is excluded — its iteration pattern is ported in-house as
+#     `harness-autobrowse` driving browser-harness instead of the browse CLI.
+#
+# Update this list when upstream adds another skill we want to vendor.
+browserbase-browser
+browserbase-safe-browser
+browserbase-what-antibot
+browserbase-browser-trace

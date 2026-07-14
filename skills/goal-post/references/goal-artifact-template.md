@@ -14,21 +14,52 @@ source_phase: "docs/planning/phase-<N>/plan.md"
 source_phase_name: "<Phase Name>"
 created_at: "<YYYY-MM-DD>"
 short_goal_prompt_max_chars: 300
+native_goal_objective_max_chars: 4000
+goal_post_prompt_style: "artifact-pointer"
 authority: "guarded-autonomous"
 status: "not-started"
 ---
 
 # <Phase Name> Goal: <Goal Title>
 
+## Frozen Original Intent (immutable)
+
+Pinned from `docs/references/vision-lock.md` at creation — do NOT edit during the
+run. The Definition Of Done below is the mutable, plan-level done-list; THIS is
+the day-one truth the finished build is judged against. If no `vision-lock.md`
+exists, STOP and run `vision-lock` first — never infer intent from the phase
+plan alone.
+
+- Building (Matt's words): `<one real end-to-end outcome>`
+- Matt-test (binding): `<3-5 product-truth checks from vision-lock>`
+- Design target: `<frozen packet path or N/A>`
+- Out of scope / anti-goals: `<items>`
+- Canonical repo + branch: `<repo @ branch>`
+
 ## Short /goal Prompt
 
 ```text
-/goal Execute @docs/planning/goals/<file>.md autonomously. Read it, follow the run ledger, create successor phases as needed, run the strategy-confidence loop until 100% certain, and stop only at done or a stop condition.
+/goal Execute @docs/planning/goals/<file>.md. Done only when every gate passes — Frozen Intent (Matt-test), DoD, Verification, Product-Truth Launch, Verifier — and Strategy Confidence Loop closes; else stop with blocker evidence.
 ```
 
 ## Objective
 
 Deliver <specific outcome> from <source phase> end to end.
+
+## Codex Native Goal Contract
+
+Use this table when the launch surface is Codex native `/goal`. The short goal
+prompt can point at this artifact, but the artifact must still make completion
+auditable.
+
+| Field | Value |
+|-------|-------|
+| Outcome | `<specific deliverable or state>` |
+| Verification surface | `<tests, screenshots, benchmarks, source citations, file readbacks, PR/check state, or other proof>` |
+| Constraints | `<repo, safety, approval, tool, privacy, and style limits>` |
+| Boundaries | `<in scope, out of scope, and external-action limits>` |
+| Iteration policy | `<how to plan, act, test, review, fix, and continue>` |
+| Blocked stop condition | `<when to stop and what evidence/next input to report>` |
 
 ## Definition Of Done
 
@@ -151,8 +182,9 @@ Rules for this section:
    change the plan, propose a highest-confidence resolution. Do not ask
    open-ended clarification questions; propose and proceed. Log each
    resolution in the run ledger.
-6. Restate the goal, constraints, and § Priority Order in one paragraph before
-   any non-trivial change. This restatement is the contract for the run.
+6. Restate § Frozen Original Intent (Building + Matt-test), the constraints, and
+   § Priority Order in one paragraph before any non-trivial change. This
+   restatement is the contract for the run.
 7. Run `$deep-sweep` to find plan gaps, risks, stale assumptions, evidence
    gaps, and verification gaps.
 8. Update this artifact or the phase plan only if the sweep reveals material
@@ -167,14 +199,20 @@ Rules for this section:
     Do not invent rollback paths.
 13. Use `$browser-harness` in the user's real logged-in browser for live
     platform verification when the feature touches UI or platform workflows.
-14. If the definition of done is not satisfied, create the next numbered
-    `docs/planning/phase-N/` plan around discovered facts, update this ledger,
-    and continue. If time, tokens, or live access force a scope cut, drop
-    work from lowest § Priority Order tier up; do not silently re-rank.
+14. Run § Drift Gate against § Frozen Original Intent. If a drift signal trips,
+    halt successor creation and re-run `$deep-sweep` scoped to the approach, or
+    escalate. Otherwise, if the definition of done is not satisfied, create the
+    next numbered `docs/planning/phase-N/` plan around discovered facts, update
+    this ledger, and continue. If time, tokens, or live access force a scope
+    cut, drop work from lowest § Priority Order tier up; do not silently re-rank.
 15. Stop when the definition of done and verification gates pass, or when a
     stop condition below is hit. Do not expand scope after the definition of
     done is satisfied; declare done and emit the Final Report.
-16. Run § Strategy Confidence Loop before declaring done.
+16. Run § Verifier Gate before marking the run ledger done. A verifier
+    failure returns the run to step 9 and consumes one fix pass
+    (see § Stop Conditions).
+17. Run § Strategy Confidence Loop after the Verifier Gate passes. It may not
+    override a verifier failure.
 
 ## Successor Phase Policy
 
@@ -185,6 +223,27 @@ Rules for this section:
 - Record each successor in the run ledger.
 - Continue creating successors until done or a stop condition is hit.
 
+## Drift Gate
+
+Run before creating each successor phase and before the final done-gate. Compare
+current work against § Frozen Original Intent (not just the per-phase Definition
+Of Done) on four signals:
+
+1. Product-truth regression — an earlier-working real outcome stopped working,
+   or a fixture replaced real data.
+2. Intent divergence — current work no longer serves the frozen "Building"
+   outcome / Matt-test.
+3. Scope expansion — new surface area not in § Scope Boundaries (route stray
+   ideas to `docs/PARKED.md`; never absorb them).
+4. Design-direction flip — the look drifted from the frozen design target.
+
+If any signal trips, do NOT auto-create a successor feature phase. Branch:
+
+- DoD genuinely unmet, approach still sound → create a successor phase.
+- Drift signal tripped → HALT and re-run `$deep-sweep` scoped to "is this
+  approach still right given the live build and the frozen intent," or escalate
+  to Matt. A green per-phase DoD does not authorize continuing through drift.
+
 ## Required Skills
 
 - `phase-plan` for source-plan structure and successor plans.
@@ -194,21 +253,43 @@ Rules for this section:
 - `ultra-review` for broad review.
 - `deep-clean` for review-driven cleanup only.
 - `browser-harness` for logged-in browser verification.
-- `prompt-optimizer` for tightening any generated short prompt.
+- `prompt-generation` for tightening any generated prompt package or model
+  routing guidance.
 - `ecc-autonomous-agent-harness` for long-running loop discipline.
 - `ecc-agentic-engineering` for eval-first decomposition and model routing.
 
 ## Agent And Model Routing
 
-- Main planner/synthesizer/final judgment: GPT-5.5 or active highest-reasoning
-  main model.
-- Research/exploration subagents: GPT-5.4 where available for token efficiency.
+- Main planner/synthesizer/final judgment: current highest-reasoning
+  configured model (OpenAI/Codex or Anthropic Claude) verified at execution
+  time, or the active config default. Record concrete model IDs only after
+  current docs or local config prove them.
+- Executor note — Claude (Fable 5): load `prompt-generation`
+  `references/claude-fable-5.md`. Effort high by default; audit each progress
+  claim against a tool result from this session; propose-and-proceed on
+  reversible actions.
+- Research/exploration subagents: current configured smaller or cheaper
+  models where available for token efficiency.
 - Specialist review lanes: use relevant ECC reviewer agents based on changed
   files and risk area.
 - Browser verification: use `browser-harness`; do not require passwords in the
   artifact.
 - Configuration: use existing `config.toml` agent roles; do not edit config
   unless the user explicitly asks for configuration changes.
+
+## Prompt Or Model Eval Gate
+
+Use this gate whenever the goal changes prompts, model choice, tool routing, or
+agent behavior.
+
+| Item | Value |
+|------|-------|
+| Prompt/model change | `<description or N/A>` |
+| Baseline fixture or score | `<fixture, score, or N/A>` |
+| Changed fixture or score | `<fixture, score, or N/A>` |
+| Regression failures | `<list or none>` |
+| Cost/latency note | `<delta or N/A>` |
+| Promotion/rollback decision | `<decision plus evidence>` |
 
 ## Priority Order
 
@@ -247,7 +328,91 @@ fails irreversibly.
 | Provider / API docs check | `<docs>` | `<criteria>` | `N/A (read-only)` |
 | Browser-harness verification | `<live route / workflow>` | `<criteria>` | `<session rollback or N/A>` |
 | PR / CI / deploy checks | `<command or service>` | `<criteria>` | `<deploy revert command + owner>` |
+| Product-truth launch | UI goal: `$run`, then `$browser-harness` for logged-in UI. Non-UI goal: the goal's real surface — live endpoint / query / deployed job | one real Matt-test outcome completes against data the build did not author — UI goal in a freshly launched real app with desktop + mobile screenshots; non-UI goal on the real verification surface (launch/mobile `N/A` + reason) | `<session / deploy rollback or N/A>` |
 | Final review | `$ultra-review` | no critical / high blockers | `<reverse merge or revert PR + owner>` |
+
+## Product-Truth Launch Gate
+
+"Done" is never tests / typecheck / self-written scripts passing. Before the
+Verifier Gate, prove ONE real Matt-test outcome (from § Frozen Original Intent)
+against data the build did NOT author — a real account, a human-seeded row, or a
+live provider, never a build-written fixture or proof harness:
+
+- Product / UI goal: LAUNCH the real app the way Matt runs it (`$run`;
+  `$browser-harness` for logged-in UI); capture desktop + mobile screenshots and
+  a click-through of the Matt-test. Do not read compiled exhibits or
+  self-validating phase scripts.
+- Non-UI goal (backend, data, infra, docs, process — no launched app or mobile
+  surface): exercise the goal's real verification surface instead — a live
+  endpoint hit, a real query result, a deployed job run, a rendered artifact —
+  against non-build-authored data, and mark the launch/mobile fields `N/A` with a
+  one-line reason. A real surface is still mandatory; `N/A` never means "skip the
+  product-truth proof".
+
+Evidence admissibility: a proof is INADMISSIBLE if its pass-condition can be
+true while the product is broken. Inadmissible — string-checks/greps on source
+files, doc/fixture internal-consistency checks, screenshots reusable from a
+prior run, "it compiles". Admissible — a fresh real-app launch (or, for non-UI
+goals, a live exercise of the real surface) producing the real outcome against
+non-build-authored data.
+
+## Verifier Gate
+
+Before the run ledger is marked `done`, dispatch a fresh-context verifier
+subagent. The verifier sees only this artifact and on-disk evidence — never
+the actor's transcript or reasoning — and checks § Frozen Original Intent (the
+Matt-test) AND § Definition Of Done AND every § Verification Gates row. The
+agent that produced the work must not grade it.
+
+For best independence, the verifier should run on a different configured model
+family than the actor (e.g. the harness-routed OpenAI-family verifier that
+`deep-sweep` uses) when one is available; if only one family is configured, log
+that the cross-model check was degraded.
+
+The verifier returns exactly this verdict shape:
+
+```json
+{
+  "verdict": "pass | fail | stuck",
+  "criteria": [
+    {"id": "<DoD item, Matt-test item, or gate row>", "pass": true, "evidence": "<file:line, command output, or URL>", "severity": "blocker | major | minor"}
+  ],
+  "live_launch_evidence": {
+    "launched": true,
+    "entrypoint": "<Electron app | dev server URL | deployed URL | 'N/A — non-UI goal: <reason>'>",
+    "real_user_action": "<the Matt-test outcome completed in the running app OR on the real verification surface>",
+    "non_authored_data": "<real account / human-seeded row / live provider>",
+    "screenshots": ["<desktop path>", "<mobile path>"]
+  },
+  "summary": "<one-line scoreboard>",
+  "next_action": "<what the actor does next>"
+}
+```
+
+Field types are fixed: `launched` is always a boolean and `screenshots` always an
+array — never put `N/A` text into them. For a non-UI goal, set `launched: false`
+and `screenshots: []`, put the no-app reason in `entrypoint`, and carry the actual
+proof in `real_user_action` + `non_authored_data` (which apply to any goal type).
+
+- Every criterion needs named evidence before `pass`; missing evidence is a
+  `fail`, not a pass.
+- If the build passes § Definition Of Done but fails any § Frozen Original
+  Intent Matt-test item, that is a `fail` — building the wrong thing correctly
+  is not done.
+- Require § Product-Truth Launch Gate evidence (`live_launch_evidence`). For a
+  product/UI goal, a verdict without a real-app launch against non-build-authored
+  data is a `fail`. For a non-UI goal, keep the shape valid — `launched: false`,
+  `screenshots: []`, the no-app reason in `entrypoint` — and require instead a
+  `real_user_action` proven on the goal's live verification surface against
+  non-build-authored data; a verdict with no real surface exercised is still a
+  `fail`. Self-validating scripts and source
+  string-checks are inadmissible for either goal type.
+- `fail` on any blocker or major criterion returns the run to the fix loop.
+- `stuck` maps to the blocked-stop report in § Stop Conditions.
+- Treat a malformed or missing verdict as a loud `fail`; never retry silently
+  or count it as a pass.
+- The Strategy Confidence Loop runs after this gate and may not override a
+  verifier failure.
 
 ## Lightweight Run Ledger
 
@@ -260,16 +425,29 @@ fails irreversibly.
 | Last verified gate | `none` |
 | Successor phases created | `none` |
 | Evidence links | `none` |
+| Lessons distilled | `none` |
 | Last updated | `<YYYY-MM-DD>` |
+
+Lessons distilled: one lesson per entry, recorded only after the fix was
+confirmed; update the existing note rather than duplicating it.
 
 ## Stop Conditions
 
+- Max fix passes: `3` (default). Each Verifier Gate failure consumes one pass;
+  exhausting them is a stop.
+- Non-convergence: the same blocker or major finding three times → STUCK.
+- STUCK exit: stop and report `{attempted_paths, evidence_gathered, blocker,
+  next_input_needed}` instead of looping further.
 - Required credentials, live access, provider access, or approved deploy target
   are unavailable.
 - A destructive data operation, migration, production change, or policy bypass
   is required but not explicitly approved.
 - Provider docs or rate limits prove the plan is not viable.
 - Source phase conflicts with newer merged work and cannot be reconciled safely.
+- A § Drift Gate signal trips and is not resolvable inside the current approach
+  → STUCK / escalate; do not keep spawning successors through drift.
+- The § Product-Truth Launch Gate cannot prove one real Matt-test outcome in the
+  launched app against non-build-authored data.
 - Browser-harness verification cannot prove the user-facing outcome.
 - CI, mergeability, or branch protection failures cannot be resolved safely.
 - Any critical/high review finding remains unresolved.
@@ -287,36 +465,33 @@ Report:
 - What could not be verified and why (cite the gate that would have run).
 - Preflight uncertainty resolutions actually applied versus user amendments.
 - Scope cuts taken under § Priority Order, with the priority tier dropped.
+- Lessons distilled during the run — one lesson per entry, only after the fix
+  was confirmed; update existing notes rather than duplicating.
 - The final short `/goal` prompt path.
 
 ## Strategy Confidence Loop
 
-This section is the closing instruction. Run it before declaring done and run
-it again whenever the strategy changes.
+This section is the closing instruction. It runs after § Verifier Gate passes
+and may not override a verifier failure. Run it again whenever the strategy
+changes.
 
-> Are you 100% confident in this strategy? If not, find all possible loopholes,
-> suggest proper fixes, and run this loop until you are factually 100%
-> confident in the new strategy.
-
-How to run the loop:
+How to run the loop (max 3 iterations):
 
 1. State the current strategy in one paragraph.
-2. List every loophole, gap, hidden assumption, missing evidence, race
-   condition, stop-condition trigger, unapplied preflight resolution, silent
-   priority re-rank, missing rollback path, or contradiction with the source
-   phase, evidence pack, run ledger, or verification gates. If you cannot
-   find any, keep looking — silent confidence is not the same as verified
-   confidence.
-3. For each loophole, propose a concrete fix and update the artifact, the
+2. List loopholes, hidden assumptions, missing evidence, stop-condition
+   triggers, unapplied preflight resolutions, silent priority re-ranks,
+   missing rollback paths, or contradictions with the source phase, evidence
+   pack, run ledger, or verification gates.
+3. For each finding, propose a concrete fix and update the artifact, the
    source phase, the run ledger, or the verification gates so the fix lives
    on disk and survives the next agent.
-4. Re-state the strategy with the fixes applied.
-5. Repeat from step 2 until you can write a one-line confidence statement that
-   is factually true: "I am 100% confident because: <evidence-backed reasons,
-   not vibes>." Cite the gate, evidence row, or successor phase that proves
-   each reason.
-6. Only then mark the run ledger `done` and emit the Final Report.
+4. Exit on an evidence-backed confidence statement that cites the gate,
+   evidence row, or successor phase proving each reason — or at the iteration
+   cap, whichever comes first. Log unresolved findings in the run ledger as
+   open risks; blocker or major findings route back through § Verifier Gate,
+   not this loop.
+5. Only then mark the run ledger `done` and emit the Final Report.
 
 If the loop ever requires bypassing a stop condition, escalate instead of
-looping. 100% confidence does not authorize policy bypass.
+looping. Confidence does not authorize policy bypass.
 ````

@@ -11,9 +11,9 @@ description: >
   circular deps", "run madge", "strengthen typing", "remove any usage",
   "remove legacy paths", "remove AI stubs", "low-risk refactor", or
   "careful refactor". Not for new features (see code-refactoring) or
-  single PR reviews (see simplify).
+  single PR reviews (see code-review).
 metadata:
-  author: mmoahid11
+  author: contributor
   version: 1.0.0
 related_skills:
   - phase-plan
@@ -93,7 +93,7 @@ specific.
 
 ### Source of truth (avoid rot)
 
-- ECC catalog: `skills/everything-claude-code/agents/` and `commands/`
+- ECC agent catalog: `~/.claude/agents/{refactor-cleaner,*-reviewer}.md`
 - GSD catalog: `~/.claude/agents/gsd-*`
 - Superpowers catalog: `skills/superpowers-*/` (vendored from `anthropics/claude-plugins-official`; no plugin dependency)
 
@@ -120,8 +120,8 @@ Do NOT activate for:
   to the feature's footprint and is safe to run on in-progress features.
   For greenfield refactors unrelated to a feature slice, use
   code-refactoring's "make the change easy" instead.
-- Fixing a specific bug — use systematic-debugging.
-- Reviewing a PR or recent diff — use simplify or code-review.
+- Fixing a specific bug — use superpowers-systematic-debugging.
+- Reviewing a PR or recent diff — use code-review.
 - Sweeping architectural change — requires a plan skill, not cleanup.
 
 ## Non-Negotiable Rules
@@ -585,12 +585,11 @@ graph-aware rename (not find-and-replace) in a dedicated commit.
 
 ## Related Skills
 
-- **simplify** — for reviewing recently-changed code only (not a full
-  repo sweep).
 - **code-refactoring** — refactoring techniques (extract method, early
   return, parameter object) to apply once a cleanup target is chosen.
-- **code-review** — for reviewing a specific PR or diff.
-- **security-review** — run when cleanup touches auth, input handling,
+- **code-review** — for reviewing recently changed code, a specific PR,
+  or a diff.
+- **ecc-security-review** — run when cleanup touches auth, input handling,
   crypto, or any security-sensitive code.
 - **gitnexus-impact-analysis**, **gitnexus-refactoring** — if the
   codebase is GitNexus-indexed, use these for impact analysis and

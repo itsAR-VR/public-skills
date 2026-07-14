@@ -1,24 +1,37 @@
 # Public Skills
 
-Private-first reviewed skill manifests for client-device installs.
+A public, reusable catalog exported from the private `goatedskills` source.
 
-This repo exists so a client MacBook can sync only skills that have passed
-public-allowed review. It is intentionally not a dump of a developer or client
-home directory.
+The export is deliberately fail-closed. Skills containing company names, private
+paths, client or operator names, credentials, session state, private datasets,
+or restricted source bundles are omitted. The public development workflow is a
+generic rewrite, published as `dev-workflow`.
 
-## Current Clients
+## Use
 
-| Client | Manifest | Status | Review |
-| --- | --- | --- | --- |
-| Suzan Galluzzo | `manifest/suzan-galluzzo.json` | approved subset, installable | https://github.com/itsAR-VR/public-skills/issues/1 |
+Copy any directory under `skills/` into the skill directory used by your agent.
+Each package is self-contained unless its `SKILL.md` names related skills.
 
-## Rules
+The Faceplant workflow family is included:
 
-- Keep this repo private until every included skill is approved for
-  public/client distribution.
-- Do not copy full home snapshots, sessions, memories, history, OAuth state,
-  `.env` files, private ZTA paths, or client data into this repo.
-- Each approved skill must have a source revision, content checksum, script
-  behavior review, and license/redistribution note.
-- Client installers must fail closed when a manifest is missing, not installable,
-  or has a checksum mismatch.
+- `deep-sweep`
+- `deep-build`
+- `deep-clean`
+- `goal-post`
+- `dev-workflow`
+
+## Audit trail
+
+`PUBLIC_EXPORT.json` records the exact private-source revision, checksums for
+kept skills, and the reason every omitted or edited skill was handled that way.
+
+To reproduce and verify an export from a local `goatedskills` checkout:
+
+```bash
+node scripts/export-public-skills.mjs /path/to/goatedskills
+node scripts/verify-public-skills.mjs
+```
+
+The source catalog and this export are MIT licensed. Individual bundled skills
+may carry additional license or attribution files, which remain in their skill
+directories.

@@ -1,0 +1,35 @@
+# matt-pocock-skills-pack manifest — mattpocock/skills
+# Skill names this marketplace pack installs. Used by sync-skills Step 1.6
+# to scope the managed-upstream replacement pass — upstream wins ONLY for
+# these names, preserving user edits to any other skill.
+#
+# 2026-05-01: upstream now organizes skills into engineering / misc /
+# personal / productivity buckets, with deprecated/ for retired skills.
+# We retain deprecated names in this manifest so their last known good
+# copy continues to ship from the public-skills source-of-truth, even
+# though `npx skills add` no longer installs them.
+caveman
+design-an-interface
+diagnose
+domain-model
+edit-article
+git-guardrails-claude-code
+github-triage
+grill-me
+grill-with-docs
+improve-codebase-architecture
+migrate-to-shoehorn
+obsidian-vault
+qa
+request-refactor-plan
+scaffold-exercises
+setup-matt-pocock-skills
+setup-pre-commit
+tdd
+to-issues
+to-prd
+triage
+triage-issue
+ubiquitous-language
+write-a-skill
+zoom-out

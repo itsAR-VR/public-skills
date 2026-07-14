@@ -1,0 +1,26 @@
+{
+  "outcome_class": "investor_research_to_linear",
+  "charter_version": "1.0",
+  "auth_context": [
+    {"provider": "google_drive", "principal_id": "user:mo@example.com", "tenant_id": "workspace:example", "scopes": ["files.read"]},
+    {"provider": "hubspot", "principal_id": "user:example", "tenant_id": "portal:example", "scopes": ["companies.read"]},
+    {"provider": "linear", "principal_id": "user:example", "tenant_id": "workspace:example", "scopes": ["issues.write", "teams.read"]}
+  ],
+  "auth_validated_at": "2099-01-01T00:00:00+00:00",
+  "auth_max_age_seconds": 900,
+  "tool_schemas": {
+    "googledrive.download_file": {"schema_digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111", "provider": "google_drive", "required_scopes": ["files.read"], "side_effect": "read"},
+    "googledrive.find_file": {"schema_digest": "sha256:2222222222222222222222222222222222222222222222222222222222222222", "provider": "google_drive", "required_scopes": ["files.read"], "side_effect": "read"},
+    "hubspot.search_companies": {"schema_digest": "sha256:3333333333333333333333333333333333333333333333333333333333333333", "provider": "hubspot", "required_scopes": ["companies.read"], "side_effect": "read"},
+    "linear.create_issue": {"schema_digest": "sha256:4444444444444444444444444444444444444444444444444444444444444444", "provider": "linear", "required_scopes": ["issues.write"], "side_effect": "write"}
+  },
+  "approval_policy_version": "2026-07",
+  "requires_current_approval": true,
+  "approval_scope_digest": "sha256:5555555555555555555555555555555555555555555555555555555555555555",
+  "operator_id": "user:example",
+  "preview_digest": "sha256:6666666666666666666666666666666666666666666666666666666666666666",
+  "action_count": 5,
+  "required_inputs": ["brief_name", "count", "tier"],
+  "required_outputs": ["linear_task_link", "name"],
+  "runner_contract_version": "1.0"
+}

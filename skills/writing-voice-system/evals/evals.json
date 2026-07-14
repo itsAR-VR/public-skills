@@ -1,0 +1,38 @@
+{
+  "skill_name": "writing-voice-system",
+  "evals": [
+    {
+      "id": "structural-banned-pattern-sweep",
+      "validation_type": "structural",
+      "prompt": "Use $writing-voice-system with the mo profile on this before draft: 'In today's ever-evolving landscape, we leverage a robust, holistic approach to streamline growth. This game-changer lets founders delve into best practices -- and here\u2019s the kicker: it is scalable.'",
+      "before": "In today's ever-evolving landscape, we leverage a robust, holistic approach to streamline growth. This game-changer lets founders delve into best practices -- and here\u2019s the kicker: it is scalable.",
+      "expected_output": "After rewrite removes unquoted banned patterns from references/banned-patterns.md while preserving the business point.",
+      "checks": [
+        "structural: output excludes unquoted banned terms including ever-evolving, leverage, robust, holistic, streamline, game-changer, delve, best practices, and here\u2019s the kicker",
+        "structural: output reports that the profile banned-pattern sweep and stop-slop structural sweep ran"
+      ]
+    },
+    {
+      "id": "behavioral-missing-profile-fallback",
+      "validation_type": "behavioral",
+      "prompt": "Use $writing-voice-system to rewrite this in Dana's voice, but no Dana profile or corpus is available: 'We shipped the beta last week and need a concise customer note.'",
+      "before": "We shipped the beta last week and need a concise customer note.",
+      "expected_output": "Agent does not invent Dana's voice. It asks for or builds from an explicit corpus if provided; without corpus, it declines the voice match and offers neutral cleanup.",
+      "checks": [
+        "behavioral: output names that the requested voice has no existing profile",
+        "behavioral: output does not claim the draft is in Dana's voice without corpus"
+      ]
+    },
+    {
+      "id": "behavioral-failed-gate-fallback",
+      "validation_type": "behavioral",
+      "prompt": "Use $writing-voice-system on a draft that still scores 32/50 or voice confidence 3/5 after the single allowed revision.",
+      "before": "A draft remains below the rubric or voice-confidence gate after one revision.",
+      "expected_output": "Agent does not keep revising indefinitely or present the result as passed. It names the failed gate, asks for more corpus when voice confidence failed, or returns neutral cleanup.",
+      "checks": [
+        "behavioral: output names the failed 35/50 rubric or 4/5 voice-confidence gate",
+        "behavioral: output stops after the single allowed revision and chooses corpus request or neutral cleanup"
+      ]
+    }
+  ]
+}

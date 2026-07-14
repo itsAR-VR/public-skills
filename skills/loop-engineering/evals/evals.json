@@ -1,0 +1,106 @@
+{
+  "skill_name": "loop-engineering",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a loop that keeps fixing our repo until CI is green on the open PR.",
+      "expected_output": "Should design a minimal closed loop and route execution to loop-on-ci as the leaf implementation. Should name the verification surface explicitly (gh pr checks / the CI status command) rather than prose intent. Should wire all four stop conditions: success on green checks, a hard iteration or budget cap, a STUCK blocked-stop report with attempted_paths/evidence_gathered/blocker/next_input_needed, and same-major-finding-3x non-convergence. Should keep one fix cause per iteration with fresh context and commit per iteration.",
+      "assertions": [
+        "Names a concrete verification command or surface for CI status",
+        "Wires a success exit, an iteration or budget cap, a STUCK report, and a non-convergence stop",
+        "Routes the CI-green execution pattern to loop-on-ci instead of re-specifying it",
+        "Keeps one unit of work per iteration with fresh context",
+        "Does not propose an unbounded while-true loop"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Review this /goal prompt before I launch it: 'Goal: make the dashboard better and keep iterating until it is high quality.'",
+      "expected_output": "Should reject the goal as a weak one-sentence outcome with a vague finish line. Should rewrite it toward the six-field contract: outcome, named verification surface, constraints, boundaries, iteration policy, and blocked stop condition. Should note that a Claude /goal evaluator only reads the transcript, so the condition must be transcript-demonstrable with the actor surfacing evidence each turn, and should add a turn or time bound inside the condition.",
+      "assertions": [
+        "Rejects the vague finish line instead of polishing its wording",
+        "Requires a named verification command or measurable end state",
+        "Applies the six-field goal contract",
+        "Adds an explicit stop rule including a turn, time, or budget bound",
+        "Notes the transcript-only limitation of the /goal evaluator where relevant"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "What evaluator should gate a loop whose goal is 'the marketing page looks polished and on-brand'? A script can't check that.",
+      "expected_output": "Should select a T2 fresh-context tool-using verifier subagent because the gate is subjective quality that requires inspecting the running artifact. Should require a per-criterion, binary-checkable rubric negotiated before work starts, with named evidence per criterion, hard thresholds, a no-fire list, and bounded iterations. Should enforce the strict verdict schema (verdict pass/fail/stuck, criteria with id/pass/evidence/severity, summary, next_action) and severity-gated continuation on blocker/major findings only. Should state that the maker must not grade its own work and the verifier sees only rubric plus artifact.",
+      "assertions": [
+        "Selects a T2 fresh-context verifier rather than a script or self-critique",
+        "Requires a per-criterion binary-checkable rubric with evidence and hard thresholds",
+        "Uses the strict verdict schema with pass/fail/stuck and severities",
+        "Gates continuation on blocker or major findings only",
+        "Keeps the verifier blind to the actor's reasoning"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Walk me through using the OODA loop to decide whether we should enter the mid-market segment this quarter.",
+      "expected_output": "Should recognize this as a decision-tempo question, not an agent loop design task, and route to the ooda-loop skill (or related decision frameworks) instead of applying loop-engineering. Should not produce a goal contract, verifier design, or launch-surface mapping for this request.",
+      "assertions": [
+        "Does not apply loop-engineering to the request",
+        "Routes to ooda-loop or an equivalent decision framework",
+        "Produces no agent-loop goal contract or verifier design"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Here is my Ralph-style runner: 'while true; do cat PROMPT.md | claude -p --dangerously-skip-permissions; done'. Make it production-ready.",
+      "expected_output": "Should convert the unbounded while-true into a bounded closed loop: machine-checkable goal with a named verification command, an independent fresh-context verifier gating each pass, and all four exits (success, hard iteration/budget cap, STUCK blocked-stop report, 3x non-convergence). Should load the production-hardening reference and flag that permission-skipping requires an OS-enforced sandbox or non-root container with credential paths denied, no secrets in PROMPT.md or any loop-read file, per-tick cost caps with fresh sessions, and a human gate before anything production-touching merges.",
+      "assertions": [
+        "Replaces the unbounded while-true with explicit success and cap exits",
+        "Adds an independent verifier instead of trusting the actor's own completion claim",
+        "Adds a STUCK blocked-stop report and non-convergence detection",
+        "Requires sandboxing before permission-skipping and bans secrets in loop-read files",
+        "Adds cost governance (fresh session per tick, budget caps) and keeps the human gate"
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Should I run three reviewer agents in parallel each pass so the review loop converges faster?",
+      "expected_output": "Should reject parallel validators because multiple verdicts un-close the loop — no single gate decides continuation. Should recommend parallelizing reads or research while serializing validation to one lane, and should describe the review-loop pass contract: fresh reviewer subagent, scoped fixer subagent receiving only blocker/major findings, and the parent as severity judge tracking finding fingerprints with a 3-strikes stop.",
+      "assertions": [
+        "Rejects parallel validators with the un-closing rationale",
+        "Serializes validation to a single lane",
+        "Describes the reviewer/fixer/parent severity-judge pass contract",
+        "Keeps severity-gated continuation and the 3-strikes non-convergence stop"
+      ],
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "I want to launch 15 parallel agents to research, build, and publish a client-facing report. How should the loop work?",
+      "expected_output": "Should treat this as a supervisor/control-plane problem, not just 15 prompts. Should require a phase plan with scout, plan, build, verify, approve, publish, and learn states. Should split workers into isolated lanes with lane_id, scoped_goal, allowed paths/sources, forbidden actions, handoff_path, acceptance criteria, and budget. Should require a scoreboard, structured handoffs, a serialized verifier lane, and explicit human approval before publishing or any external action.",
+      "assertions": [
+        "Defines a multi-step phase loop instead of a single prompt swarm",
+        "Requires isolated worker lanes with structured handoffs",
+        "Includes a scoreboard or observable state ledger",
+        "Serializes final verification through one verifier gate",
+        "Requires explicit human approval before publishing or external action"
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Design observability and evals for an agent loop that runs every morning and creates drafts for me to approve.",
+      "expected_output": "Should separate evaluations from observability. Should include deterministic checks, rubric checks, and human approval checks. Should require state.json or a ledger, run IDs, per-lane handoffs, verifier verdicts, failure fingerprints, cost/turn counters, heartbeat status, and plain human-facing states like running, needs_human, blocked, verified, and published. Should say drafts are not sent unless an approval record names the exact action and scope.",
+      "assertions": [
+        "Separates evals from observability",
+        "Includes deterministic, rubric, and human-value approval checks",
+        "Requires run IDs, handoffs, verdicts, failure fingerprints, and heartbeat/status tracking",
+        "Uses plain human-facing statuses including needs_human",
+        "Blocks sending or publishing until exact approval is recorded"
+      ],
+      "files": []
+    }
+  ]
+}

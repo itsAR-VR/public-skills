@@ -1,0 +1,5 @@
+{"task":"Use Editframe to build a data-driven product update video","expected":["editframe-video"]}
+{"task":"Create an HTML/CSS video composition with editframe.com and render it to MP4","expected":["editframe-video"]}
+{"task":"Scaffold an @editframe/react project for a reusable video template","expected":["editframe-video"]}
+{"task":"Use @editframe/api to cloud render videos from HTML compositions","expected":["editframe-video"]}
+{"task":"Preview this Editframe timeline locally and export output.mp4","expected":["editframe-video"]}

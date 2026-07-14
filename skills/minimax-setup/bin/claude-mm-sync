@@ -1,0 +1,128 @@
+#!/usr/bin/env bash
+# claude-mm-sync — sync the claude-mm / ct-mm profiles with your main ~/.claude
+# config. Shares skills, agents, commands, rules, contexts, hooks, plugins,
+# CLAUDE.md, .claude.json, and per-project memory. Sessions stay separate
+# (each profile has its own projects/<workspace>/sessions/).
+#
+# Idempotent. Safe to re-run — recreates missing symlinks, refreshes pointers
+# to new projects, leaves existing session data alone.
+#
+# Usage: claude-mm-sync            # sync both profiles
+#        claude-mm-sync --dry-run  # show what would change
+#        claude-mm-sync --force    # back up conflicting real files to
+#                                  # *.pre-sync-<timestamp> before symlinking
+#        claude-mm-sync solo       # only sync ~/.claude-minimax
+#        claude-mm-sync teams      # only sync ~/.claude-minimax-teams
+
+set -euo pipefail
+
+SOURCE="$HOME/.claude"
+PROFILES=("$HOME/.claude-minimax" "$HOME/.claude-minimax-teams")
+DRY_RUN=0
+FORCE=0
+BACKUP_STAMP="$(date +%Y%m%d-%H%M%S)"
+
+# Parse args
+for arg in "$@"; do
+  case "$arg" in
+    --dry-run|-n) DRY_RUN=1 ;;
+    --force|-f)   FORCE=1 ;;
+    solo)  PROFILES=("$HOME/.claude-minimax") ;;
+    teams) PROFILES=("$HOME/.claude-minimax-teams") ;;
+    -h|--help)
+      sed -n '2,16p' "$0"
+      exit 0 ;;
+  esac
+done
+
+if [[ ! -d "$SOURCE" ]]; then
+  echo "claude-mm-sync: $SOURCE not found. Install/use Claude Code first." >&2
+  exit 1
+fi
+
+# Symlink entries from $SOURCE to $TARGET — skip if already correctly linked,
+# replace if pointing elsewhere, skip (don't clobber) if a real file exists.
+link_shared() {
+  local name="$1" target="$2"
+  local src="$SOURCE/$name"
+  local dst="$target/$name"
+  [[ -e "$src" || -L "$src" ]] || return 0
+  if [[ -L "$dst" ]]; then
+    local current
+    current="$(readlink "$dst")"
+    [[ "$current" == "$src" ]] && return 0
+    ((DRY_RUN)) && { echo "  [update] $dst -> $src (was $current)"; return 0; }
+    ln -sfn "$src" "$dst"
+    echo "  [update] $dst -> $src"
+  elif [[ -e "$dst" ]]; then
+    if ((FORCE)); then
+      local backup="$dst.pre-sync-$BACKUP_STAMP"
+      ((DRY_RUN)) && { echo "  [backup] $dst -> $backup; then -> $src"; return 0; }
+      mv "$dst" "$backup"
+      ln -sfn "$src" "$dst"
+      echo "  [backup] $dst -> $backup; linked -> $src"
+    else
+      echo "  [skip]   $dst exists as a real file (use --force to back up and replace)" >&2
+    fi
+  else
+    ((DRY_RUN)) && { echo "  [new]    $dst -> $src"; return 0; }
+    ln -sfn "$src" "$dst"
+    echo "  [new]    $dst -> $src"
+  fi
+}
+
+# Top-level shared resources. Anything listed here is a pure symlink so the
+# profile stays in lock-step with your main ~/.claude. Things NOT in this
+# list (sessions, session-data, session-env, metrics, paste-cache, history,
+# cache, backups) are per-profile and not touched.
+SHARED_DIRS=(skills agents commands rules contexts hooks plugins plans chrome ide statusline output-styles)
+SHARED_FILES=(CLAUDE.md .claude.json settings.json settings.local.json keybindings.json)
+
+for profile in "${PROFILES[@]}"; do
+  echo "=== $profile ==="
+  ((DRY_RUN)) || mkdir -p "$profile"
+
+  for d in "${SHARED_DIRS[@]}"; do link_shared "$d" "$profile"; done
+  for f in "${SHARED_FILES[@]}"; do link_shared "$f" "$profile"; done
+
+  # Per-project memory: sessions stay separate, memory folders share with
+  # ~/.claude so recording a memory in either profile surfaces in the other.
+  if [[ -d "$SOURCE/projects" ]]; then
+    ((DRY_RUN)) || mkdir -p "$profile/projects"
+    for proj in "$SOURCE/projects"/*/; do
+      [[ -d "$proj" ]] || continue
+      name="$(basename "$proj")"
+      ((DRY_RUN)) || mkdir -p "$profile/projects/$name"
+      if [[ -d "$proj/memory" ]]; then
+        dst="$profile/projects/$name/memory"
+        if [[ -L "$dst" ]]; then
+          [[ "$(readlink "$dst")" == "$proj/memory" ]] && continue
+          ((DRY_RUN)) && { echo "  [memory update] $dst"; continue; }
+          ln -sfn "$proj/memory" "$dst"
+          echo "  [memory update] $dst"
+        elif [[ -e "$dst" ]]; then
+          echo "  [memory skip]   $dst is a real dir, not clobbering" >&2
+        else
+          ((DRY_RUN)) && { echo "  [memory new]    $dst -> $proj/memory"; continue; }
+          ln -sfn "$proj/memory" "$dst"
+          echo "  [memory new]    $dst -> $proj/memory"
+        fi
+      fi
+    done
+  fi
+done
+
+# Audit agents for hardcoded Claude model IDs that would bypass the
+# ANTHROPIC_DEFAULT_*_MODEL env overrides and leak requests to Anthropic
+# when running under claude-mm / ct-mm. Alias forms (model: opus/sonnet/haiku)
+# are fine — they respect env. Literal forms (model: claude-sonnet-4-6) don't.
+LEAKS=$(grep -rnE '^model:\s*claude-(sonnet|opus|haiku)-[0-9]' "$SOURCE/agents/" 2>/dev/null || true)
+if [[ -n "$LEAKS" ]]; then
+  echo ""
+  echo "WARNING: agent files with hardcoded Claude model IDs (these will hit"
+  echo "Anthropic even under claude-mm/ct-mm — rewrite to opus/sonnet/haiku):"
+  echo "$LEAKS" | sed 's/^/  /'
+fi
+
+((DRY_RUN)) && echo "(dry run — no changes written)"
+echo "Done. Launch claude-mm or ct-mm to use the synced profile."

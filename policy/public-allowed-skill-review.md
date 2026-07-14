@@ -2,48 +2,42 @@
 
 ## Purpose
 
-This policy keeps client-device skill installs useful without copying private
-operator state, client data, secrets, or repo-specific implementation context
-onto a client's laptop.
+This policy keeps public skill installs useful without publishing private
+operator state, client data, secrets, copyrighted source bundles, or
+repo-specific implementation context.
 
 ## Review Steps
 
-1. Select one candidate skill from an approved source.
-2. Copy only the skill directory needed for review into a staging branch.
+1. Export from the committed source revision, never from an operator's working tree.
+2. Copy only skill directories that pass the fail-closed export policy.
 3. Inspect `SKILL.md`, referenced files, assets, scripts, agents, and templates.
 4. Reject the skill if it contains private paths, secrets, sessions, memories,
-   OAuth state, client data, raw transcripts, or ZTA-only implementation context.
+   OAuth state, client data, raw transcripts, or company-only implementation context.
 5. Reject scripts that can mutate GitHub, Vercel, billing, messaging, payments,
    production data, or local filesystem state without a clear approval gate.
-6. Record source repo, source revision, destination path, checksum, script review,
-   license/redistribution note, and reviewer in the client manifest.
-7. Keep `installable` false until every listed skill has passed review.
+6. Record source revision, destination path, checksum, and the reason for every
+   removal or edit in `PUBLIC_EXPORT.json`.
+7. Keep the repository private until export verification and independent review pass.
 
-## Required Manifest Fields For Approved Skills
+## Required Export Fields For Kept Skills
 
 Each approved skill entry must include:
 
 ```json
 {
   "name": "skill-name",
-  "sourceRepo": "owner/repo",
   "sourceRevision": "commit-sha-or-tag",
   "sourcePath": "skills/skill-name",
   "destinationPath": "skills/skill-name",
-  "sha256": "content-tree-or-archive-sha256",
-  "license": "license-name-or-review-note",
-  "scriptReview": "passed|not-applicable",
-  "approvedBy": "github-handle",
-  "approvedAt": "YYYY-MM-DD"
+  "sha256": "content-tree-sha256"
 }
 ```
 
-## Fail-Closed Install Rule
+## Fail-Closed Publish Rule
 
-Client installers must refuse to sync this repo when:
+Publication must stop when:
 
-- `installable` is false.
-- Manifest checksum differs from the queue job.
-- Any approved skill is missing a checksum, source revision, or review note.
+- The export or verification script exits nonzero.
+- Any kept skill is missing a checksum or source revision.
 - Any rejected pattern appears in the install payload.
-- The repo/ref differs from the queue-approved manifest.
+- A private dataset, source bundle, credential, local session, or client path is present.

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Opaque Outcome Charter Temporal Submission",
+  "type": "object",
+  "required": ["workflow_id", "charter_id", "workflow_type", "task_queue", "overall_timeout_seconds", "plan_ref", "inputs_ref", "capability_ref", "approval_ref", "definition_digest", "execution_scope_digest", "preview_digest"],
+  "properties": {
+    "workflow_id": { "type": "string", "pattern": "^charter:[0-9a-f]{64}$" },
+    "charter_id": { "type": "string", "minLength": 1 },
+    "workflow_type": { "const": "OutcomeCharterWorkflow" },
+    "task_queue": { "type": "string", "minLength": 1 },
+    "overall_timeout_seconds": { "type": "integer", "minimum": 1, "maximum": 31536000 },
+    "plan_ref": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "inputs_ref": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "capability_ref": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "approval_ref": { "anyOf": [{ "type": "null" }, { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }] },
+    "definition_digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "execution_scope_digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "preview_digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  },
+  "additionalProperties": false
+}

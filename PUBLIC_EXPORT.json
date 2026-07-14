@@ -1,13 +1,13 @@
 {
   "schemaVersion": "public-skills-export/v1",
-  "generatedAt": "2026-07-14T14:15:28.847Z",
+  "generatedAt": "2026-07-14T15:47:19.278Z",
   "source": {
     "catalog": "private canonical catalog",
     "revision": "d883e249352e2d3c53df6689bd0b9a358433e052"
   },
   "counts": {
-    "kept": 201,
-    "removed": 724,
+    "kept": 537,
+    "removed": 388,
     "edited": 9
   },
   "edited": [
@@ -60,7 +60,7 @@
   "removedSummary": [
     {
       "reason": "not in the curated public allowlist",
-      "count": 716
+      "count": 380
     },
     {
       "reason": "not a loader-facing skill package",
@@ -109,6 +109,46 @@
       "sha256": "f4f4a264f56d6eac5ca88e094ea2c614440c097aff5f5b6bc77352fe88245cd4"
     },
     {
+      "name": "ad-creative",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ad-creative",
+      "destinationPath": "skills/ad-creative",
+      "sha256": "45ea6d8b57d1eb12ffadf072a067426658c53bb34b51af0673918883bd51db88"
+    },
+    {
+      "name": "adapt",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/adapt",
+      "destinationPath": "skills/adapt",
+      "sha256": "c458df866e738b1e34f7139824ecc6b80e6404ace7f817f718a57412599cd2fb"
+    },
+    {
+      "name": "adcrate-cold-audience",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/adcrate-cold-audience",
+      "destinationPath": "skills/adcrate-cold-audience",
+      "sha256": "1d6a112e2d886827ed365a1136d98404fdd1921de0cd216b64cb273e935ea8a8"
+    },
+    {
+      "name": "advanced-evaluation",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/advanced-evaluation",
+      "destinationPath": "skills/advanced-evaluation",
+      "sha256": "80ad453b1885be9226bb5a82788487b9adf1da01badd72636e199ea49f2d1aaf"
+    },
+    {
+      "name": "aesthetic-usability",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/aesthetic-usability",
+      "destinationPath": "skills/aesthetic-usability",
+      "sha256": "73959474836cf24941bb43b2b265a45979c990e2af325403e2ac2524aa840684"
+    },
+    {
       "name": "affinity-diagram",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
@@ -141,12 +181,60 @@
       "sha256": "a614cd350e152d66cd54780a2e011f8a6940cbb273b4f40070e87c324f40f894"
     },
     {
+      "name": "ai-seo",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ai-seo",
+      "destinationPath": "skills/ai-seo",
+      "sha256": "29fe796372664514d1c50b5f71d1b9c462b52ecb59ee6e9c3c2fa0dc67b48f2f"
+    },
+    {
+      "name": "airtable-kanban-work-tracker",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/airtable-kanban-work-tracker",
+      "destinationPath": "skills/airtable-kanban-work-tracker",
+      "sha256": "74354fa02a5e9275d96fddfca125653c91909f53def747c3b214856c33ac81e8"
+    },
+    {
+      "name": "algorithmic-art",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/algorithmic-art",
+      "destinationPath": "skills/algorithmic-art",
+      "sha256": "08218caf1e53f401e6b7d02747b0201eb3bc85a6c159b70c905c63e57e09a2cc"
+    },
+    {
+      "name": "analytics-tracking",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/analytics-tracking",
+      "destinationPath": "skills/analytics-tracking",
+      "sha256": "c888ec22540bf61f911d0f219736b4958db24b11bd18a34f9017ea9513fd2a25"
+    },
+    {
+      "name": "animate",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/animate",
+      "destinationPath": "skills/animate",
+      "sha256": "e001786cb2675ee7d1accef512b9dc777f5b20c164757ac8b162a5b71618d46a"
+    },
+    {
       "name": "animation-principles",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/animation-principles",
       "destinationPath": "skills/animation-principles",
       "sha256": "07d888da5fab587435043e4579569cbf489d9f23b36ba1f956768f54915fb5f8"
+    },
+    {
+      "name": "anthropic-academy-course-completion",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/anthropic-academy-course-completion",
+      "destinationPath": "skills/anthropic-academy-course-completion",
+      "sha256": "bc9e26719fc83888c279ae2bae8c12ec624e090a9ab0eae3c44cf18e0cc5bc05"
     },
     {
       "name": "apple-notes",
@@ -165,12 +253,124 @@
       "sha256": "92c5e3849b61159e23fc1122e29e0ef85ed1ee53cf77a2860677cca4f5e569f1"
     },
     {
+      "name": "aso-audit",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/aso-audit",
+      "destinationPath": "skills/aso-audit",
+      "sha256": "b9db2d44dab35ca7a23f2d99aef82de12647dcc1109d60af9442add24ccf4e57"
+    },
+    {
+      "name": "autoresearch",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/autoresearch",
+      "destinationPath": "skills/autoresearch",
+      "sha256": "4cb49b7531a6d42b88d49425dd452d9bfd9975fe57885706b2e8208f54d772d6"
+    },
+    {
+      "name": "backend-agent",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/backend-agent",
+      "destinationPath": "skills/backend-agent",
+      "sha256": "e7936a170008b0a3cddd599969d5e2be6466f5224b4bae77eb1f80ede9cbed0d"
+    },
+    {
+      "name": "banner-design",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/banner-design",
+      "destinationPath": "skills/banner-design",
+      "sha256": "8a67f99d9fdc994f434f028f1158e55c9f24b519c59d29ac812adab99991f041"
+    },
+    {
       "name": "bear-notes",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/bear-notes",
       "destinationPath": "skills/bear-notes",
       "sha256": "55e276402aa256452a61acffa19dba09358f777ec8c397a1927d48d0dfc8b35c"
+    },
+    {
+      "name": "blog-cover-generator",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/blog-cover-generator",
+      "destinationPath": "skills/blog-cover-generator",
+      "sha256": "c1f2d39926d41835316d8d40bf0d23d9368473bb1cbc8fb56118bed3e65d52cc"
+    },
+    {
+      "name": "blogwatcher",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/blogwatcher",
+      "destinationPath": "skills/blogwatcher",
+      "sha256": "33dd1b9baa61a11655c5050b3f6844efcdf39cd43fd3cfb47b2bfa9052bd628b"
+    },
+    {
+      "name": "blucli",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/blucli",
+      "destinationPath": "skills/blucli",
+      "sha256": "c98e0f3c0567c6c5d6cbfb3cb41629750680312028d33ffdb29c2c99b04d1e51"
+    },
+    {
+      "name": "bluebubbles",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/bluebubbles",
+      "destinationPath": "skills/bluebubbles",
+      "sha256": "cac9fa4438233961bb266c38b11b1f75a2914dfab2f79cc42c56cf47cefdbd8f"
+    },
+    {
+      "name": "bolder",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/bolder",
+      "destinationPath": "skills/bolder",
+      "sha256": "9bd1f63dc9a3433ac50d825861940de50118f0b543c6c7400bbdede4bf4c8bcc"
+    },
+    {
+      "name": "brand",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/brand",
+      "destinationPath": "skills/brand",
+      "sha256": "4f2d43b163d4c097cd4ed03527bc6049ea7ac3128f8eff29995f37bfa881c9ad"
+    },
+    {
+      "name": "brand-alchemy",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/brand-alchemy",
+      "destinationPath": "skills/brand-alchemy",
+      "sha256": "f8c293c699b66f4b7c2b29a68a15992ba8703e3bfa48e91203a6bdc8b02ed7f1"
+    },
+    {
+      "name": "brand-book-generator",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/brand-book-generator",
+      "destinationPath": "skills/brand-book-generator",
+      "sha256": "7f9259edfdd24f93dcc978d797c6a73d2e9ccf270cf89bfe3636a71ca31bd0b7"
+    },
+    {
+      "name": "brand-guidelines",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/brand-guidelines",
+      "destinationPath": "skills/brand-guidelines",
+      "sha256": "3de6b4243660edbc3bad2b96e2acc9ba585d69e2e153305bd432121fbdde8acc"
+    },
+    {
+      "name": "brandkit",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/brandkit",
+      "destinationPath": "skills/brandkit",
+      "sha256": "05b712353833de1ad0f00cd22fcb51a15bda7d9c0e885c841bd5135e374b6cb4"
     },
     {
       "name": "brave-search",
@@ -181,6 +381,22 @@
       "sha256": "0bbb633934b9664294f3c8921e46e326ca7db76e3b02fa95c228fbe57e8b1260"
     },
     {
+      "name": "briefing-trailer",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/briefing-trailer",
+      "destinationPath": "skills/briefing-trailer",
+      "sha256": "b91ecf395ed1a8c132f60ead7f40bcaaed907027a5eae02e3f3f5b1e1409155a"
+    },
+    {
+      "name": "browse-qa",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/browse-qa",
+      "destinationPath": "skills/browse-qa",
+      "sha256": "979152698dc598fd4c9214d8f123e0287dcf953885e50b44bc714235e1af1a5e"
+    },
+    {
       "name": "browser-harness",
       "sourceType": "public_override",
       "sourceRevision": "public-override",
@@ -189,12 +405,68 @@
       "sha256": "294f0a782ce600da32350911c0c73a6f085cb8a46ad4aa4b36b773df3a4cf8f8"
     },
     {
+      "name": "browserbase-browser",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/browserbase-browser",
+      "destinationPath": "skills/browserbase-browser",
+      "sha256": "4cbedf13e65b64585c158ae89f2ff2b1d550c684075defe8d32f727b8e8625f8"
+    },
+    {
+      "name": "browserbase-browser-trace",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/browserbase-browser-trace",
+      "destinationPath": "skills/browserbase-browser-trace",
+      "sha256": "7583f11a1aa00e0838aabe5239d12426864bacd68f31a7fb236190d1cf3a87dc"
+    },
+    {
+      "name": "browserbase-safe-browser",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/browserbase-safe-browser",
+      "destinationPath": "skills/browserbase-safe-browser",
+      "sha256": "7e6c81f89aaabf23b7adb15a2409dc776ba2d44941222c8e70a23da7a63a05d6"
+    },
+    {
+      "name": "brutalist-skill",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/brutalist-skill",
+      "destinationPath": "skills/brutalist-skill",
+      "sha256": "d915c228e1fd8ff18f9f417ddfff605f045a15acb85e15906dcb347ba6e2c941"
+    },
+    {
+      "name": "camsnap",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/camsnap",
+      "destinationPath": "skills/camsnap",
+      "sha256": "f7fae939c41797537a5bf74c936636c6657d06dbe13bdad8ddb06cdf8708f103"
+    },
+    {
       "name": "canvas",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/canvas",
       "destinationPath": "skills/canvas",
       "sha256": "d5b7144baf444e25eec39576827eaec06c806fa41cadbd0c44a530f5b3ed115f"
+    },
+    {
+      "name": "canvas-design",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/canvas-design",
+      "destinationPath": "skills/canvas-design",
+      "sha256": "79a6db6ee3a5a23fd888e8c66f442117a38c8cbb8cfaad812473e1adba7cb25d"
+    },
+    {
+      "name": "card-sort-analysis",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/card-sort-analysis",
+      "destinationPath": "skills/card-sort-analysis",
+      "sha256": "e70d9742aae23b9d383a417cd0b2ddfc713074c3aec76bb01e584ef14a305e21"
     },
     {
       "name": "case-study",
@@ -221,12 +493,28 @@
       "sha256": "c2ad326682a319ac227e30fc5b5f2116d598921ede3e5d5d90019575288739b7"
     },
     {
+      "name": "churn-prevention",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/churn-prevention",
+      "destinationPath": "skills/churn-prevention",
+      "sha256": "f6dd86ed39517b418b560f5e6c1c56923f6ee3f4bcf730187df8c778e6cf7968"
+    },
+    {
       "name": "clarify",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/clarify",
       "destinationPath": "skills/clarify",
       "sha256": "22734f666628ff6b2a253554bed064e1831252a096303aaeb99d9227a10d0f2e"
+    },
+    {
+      "name": "claymation-explainer",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/claymation-explainer",
+      "destinationPath": "skills/claymation-explainer",
+      "sha256": "04f0d205b272787373a6106700086b2dc755fa23b234af44338865c7bb2ebb9f"
     },
     {
       "name": "click-test-plan",
@@ -293,6 +581,14 @@
       "sha256": "41ad6799359428c44f6808e69b98e652ecfe4af0d0312f868bcbb24a93c9ab32"
     },
     {
+      "name": "colorize",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/colorize",
+      "destinationPath": "skills/colorize",
+      "sha256": "c9e49097bba63aab736ba94628c97034f34f13718cb3ef8e1df2283afa3f3f93"
+    },
+    {
       "name": "command-creator",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
@@ -317,6 +613,14 @@
       "sha256": "e584e52ba2973608a38c27902a531c4a7a11cf34f21804b1bf3d8c4ac70a6d09"
     },
     {
+      "name": "competitive-ads-extractor",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/competitive-ads-extractor",
+      "destinationPath": "skills/competitive-ads-extractor",
+      "sha256": "158841ef03b8bbeaff3b402d58e317d214d03291735c3c176f4a8002439a7de2"
+    },
+    {
       "name": "competitive-analysis",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
@@ -333,6 +637,14 @@
       "sha256": "2e7204e10195af5f5502cb3c9dc0e3ca7bc295e6f4dc65e3cd196dfc88d43c19"
     },
     {
+      "name": "competitor-profiling",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/competitor-profiling",
+      "destinationPath": "skills/competitor-profiling",
+      "sha256": "13a7cfdfeaefff4d0aa85b44c78e1cec88ac5565f6cd9112a70e16c6b2e91e8f"
+    },
+    {
       "name": "complexity-optimizer",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
@@ -347,6 +659,14 @@
       "sourcePath": "skills/component-spec",
       "destinationPath": "skills/component-spec",
       "sha256": "bbeab65f4f2638fc5d7d908ad800ff961b8b23446f1a87544989d216b4097bef"
+    },
+    {
+      "name": "conditional-activation",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/conditional-activation",
+      "destinationPath": "skills/conditional-activation",
+      "sha256": "9c319208f4a44b42c872693d72416f5491280e332cdd6e504751d3b18258cf37"
     },
     {
       "name": "content-research-writer",
@@ -413,6 +733,22 @@
       "sha256": "9a7b1cb91a6b1dad589c3a5826b5bf2311188f85ae2b379d8b43885ead45fa21"
     },
     {
+      "name": "cook-the-blog",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/cook-the-blog",
+      "destinationPath": "skills/cook-the-blog",
+      "sha256": "cb80dc696ce1dc2457e79eaa971e275407a94f47dc1d6536bb8fe67063e085ee"
+    },
+    {
+      "name": "coppa-compliance",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/coppa-compliance",
+      "destinationPath": "skills/coppa-compliance",
+      "sha256": "9fe6a59d9218c5a091404e0c9a2aac9a43d4df14f4af5db38cc7ba9a71547356"
+    },
+    {
       "name": "copy-editing",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
@@ -427,6 +763,70 @@
       "sourcePath": "skills/copywriting",
       "destinationPath": "skills/copywriting",
       "sha256": "9428aa8fe1e7b4e0ad82146eadeb8a13ddd7422a8f2f003e754f8e0f93e78a97"
+    },
+    {
+      "name": "course-certification-pipeline",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/course-certification-pipeline",
+      "destinationPath": "skills/course-certification-pipeline",
+      "sha256": "eaa06ee210ba950e87dace83a352166ab03a5a238e33b91b42b7e7f8aea2a405"
+    },
+    {
+      "name": "crafting-effective-readmes",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/crafting-effective-readmes",
+      "destinationPath": "skills/crafting-effective-readmes",
+      "sha256": "34dba58ff4e08e94f47e79c8ef276efcc071b257238cc2abf6a6e6d5ba681f59"
+    },
+    {
+      "name": "create-cli",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/create-cli",
+      "destinationPath": "skills/create-cli",
+      "sha256": "c32d83ff8d28035d54d9db6a897b3cdf96472a8cede20e0c22a020514741332f"
+    },
+    {
+      "name": "critique",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/critique",
+      "destinationPath": "skills/critique",
+      "sha256": "c63e521bd7da5f9be12abb1bbeccbd27ef72626915fbd00e3dac63722aaae914"
+    },
+    {
+      "name": "critique-brand-consistency",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/critique-brand-consistency",
+      "destinationPath": "skills/critique-brand-consistency",
+      "sha256": "82ce592ef9ca217f6ee48384a7abbdef3edae7e106df7f33ae1763e7ed05d95a"
+    },
+    {
+      "name": "critique-composition",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/critique-composition",
+      "destinationPath": "skills/critique-composition",
+      "sha256": "01579b298cd8304f21341ceded07ad04371a95c47e8e49a27c25798d95c510cc"
+    },
+    {
+      "name": "critique-typography",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/critique-typography",
+      "destinationPath": "skills/critique-typography",
+      "sha256": "2724599a2e0ba7f210fcbafa72478e467ce73ff469a514a698422e3ff8bae49e"
+    },
+    {
+      "name": "critique-visual-hierarchy",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/critique-visual-hierarchy",
+      "destinationPath": "skills/critique-visual-hierarchy",
+      "sha256": "6350a915cf7c2ee06e0e716a56489833f417db7e957a190ee4da7bfbcc97d111"
     },
     {
       "name": "customer-research",
@@ -469,6 +869,14 @@
       "sha256": "1e21918b8f2d53af8ea4f32abe67f0ece409502b04e23dacec093e78819f9221"
     },
     {
+      "name": "datadog-cli",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/datadog-cli",
+      "destinationPath": "skills/datadog-cli",
+      "sha256": "34918b81747b773f9b6369e3ad0c8c469947072940c0e6f633977f10298f9caa"
+    },
+    {
       "name": "deep-build",
       "sourceType": "public_override",
       "sourceRevision": "public-override",
@@ -501,12 +909,28 @@
       "sha256": "31af6bc4990a6a78dc1422c7ecb8022ecc89feed3b8804d1b764512c68c94b10"
     },
     {
+      "name": "delight",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/delight",
+      "destinationPath": "skills/delight",
+      "sha256": "5aba9075284126f8d0ee90788ce60d1a1d17b7356f75251cca8a68f02a7fecd5"
+    },
+    {
       "name": "dependency-updater",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/dependency-updater",
       "destinationPath": "skills/dependency-updater",
       "sha256": "c2a717fd442a7ed4c4d4cb2886692fc8a9f2c295c5dcddb494b3beb30d2ca087"
+    },
+    {
+      "name": "design",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/design",
+      "destinationPath": "skills/design",
+      "sha256": "77a4237598d5a23f6a714c7e3603ce7148764fee0a0ba87e40efaeadc7114169"
     },
     {
       "name": "design-an-interface",
@@ -533,6 +957,30 @@
       "sha256": "5c9a85d27b10dbb24899108c83309d6794f5a154182bfa1a58a4faf654bb6ba6"
     },
     {
+      "name": "design-debt-audit",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/design-debt-audit",
+      "destinationPath": "skills/design-debt-audit",
+      "sha256": "044014380c1e02e84bea45eadf90d3e1d1fff44feeeda5b2e0b6af590bbd1b78"
+    },
+    {
+      "name": "design-impact-reporting",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/design-impact-reporting",
+      "destinationPath": "skills/design-impact-reporting",
+      "sha256": "176e18ddbac3a49af1a9908a559159fc824b0f08043e417f789c124a1ff13e36"
+    },
+    {
+      "name": "design-negotiation",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/design-negotiation",
+      "destinationPath": "skills/design-negotiation",
+      "sha256": "f6229ae92c7f77adc66e91d270536d4d9f8e072ca9e6a480503cdbdfef0beac7"
+    },
+    {
       "name": "design-principles",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
@@ -555,6 +1003,22 @@
       "sourcePath": "skills/design-rationale",
       "destinationPath": "skills/design-rationale",
       "sha256": "6bdc7c925a953474d0342b7615f5963634de05802ada1bf6007bfe2b565aefdf"
+    },
+    {
+      "name": "design-review-process",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/design-review-process",
+      "destinationPath": "skills/design-review-process",
+      "sha256": "601b342ab22513774f3295668346aded283f998b050d3c01fa6b3fb63fbbcd22"
+    },
+    {
+      "name": "design-sprint-plan",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/design-sprint-plan",
+      "destinationPath": "skills/design-sprint-plan",
+      "sha256": "c15f24ffd2812bf56f3bcf80ddeb4fe1248bf096f5b436679814a09ae674a127"
     },
     {
       "name": "design-system-adoption",
@@ -597,12 +1061,164 @@
       "sha256": "264c26241cf7256a8c256abdbfc7165226b7cf464550579e7f7bc3c0560139c6"
     },
     {
+      "name": "designer-design-ops",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/designer-design-ops",
+      "destinationPath": "skills/designer-design-ops",
+      "sha256": "e85a106c0f7a9fbdd0d7e7f5156e530f6a7f6bf8c6cd3a16d31f61450470334f"
+    },
+    {
+      "name": "designer-design-research",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/designer-design-research",
+      "destinationPath": "skills/designer-design-research",
+      "sha256": "bebeed5ea3cae8f261be3e55cd8730fa23d28128f22fd1b4610a5e21b9550aa8"
+    },
+    {
+      "name": "designer-design-systems",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/designer-design-systems",
+      "destinationPath": "skills/designer-design-systems",
+      "sha256": "ffee14365ae32ed50285c4d17f7fcccbccb07abe149303550583e86a221a4f7a"
+    },
+    {
+      "name": "designer-designer-toolkit",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/designer-designer-toolkit",
+      "destinationPath": "skills/designer-designer-toolkit",
+      "sha256": "0fddc97c535116c41f63c35054343595c72670af5433e3323f5bf3f2437aa3be"
+    },
+    {
+      "name": "designer-interaction-design",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/designer-interaction-design",
+      "destinationPath": "skills/designer-interaction-design",
+      "sha256": "dc5f1526938deb663f4d88a56e7f989d68ce662b8d2ce85a982a47cbc4011a16"
+    },
+    {
+      "name": "designer-prototyping-testing",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/designer-prototyping-testing",
+      "destinationPath": "skills/designer-prototyping-testing",
+      "sha256": "ce000210687bc0684da88f7ad2429594dfcdf29bd0d3051d2e169320494a8ce6"
+    },
+    {
+      "name": "designer-skills-pack",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/designer-skills-pack",
+      "destinationPath": "skills/designer-skills-pack",
+      "sha256": "3de195ae11ccb0fe8935e367061dcd9ce70bebefc8576314f3534fc12e9dc885"
+    },
+    {
+      "name": "designer-ui-design",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/designer-ui-design",
+      "destinationPath": "skills/designer-ui-design",
+      "sha256": "af85bf20d2e57840bcea9fddb62a67003dd273b4dec66d4ecfb48e43e246da29"
+    },
+    {
+      "name": "designer-ux-strategy",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/designer-ux-strategy",
+      "destinationPath": "skills/designer-ux-strategy",
+      "sha256": "90c3c78428251f198f6813b6791e9a7ff27df15a3cddd4297c194074a6d561a3"
+    },
+    {
+      "name": "designer-visual-critique",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/designer-visual-critique",
+      "destinationPath": "skills/designer-visual-critique",
+      "sha256": "3ec184201c9f53f16246b58d4b2214972d7fce13407b82247ea7433d0e2be187"
+    },
+    {
+      "name": "deslop",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/deslop",
+      "destinationPath": "skills/deslop",
+      "sha256": "60c5412837fb5aa0af192215c706768a8e62d9350d1672a9d023fe32990c2bba"
+    },
+    {
+      "name": "developer-growth-analysis",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/developer-growth-analysis",
+      "destinationPath": "skills/developer-growth-analysis",
+      "sha256": "18d3c4f7d7657fbc1169aa15fce2a4be7204bf43ddec4b5b355145c8807400b8"
+    },
+    {
+      "name": "diagnose",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/diagnose",
+      "destinationPath": "skills/diagnose",
+      "sha256": "6b0d86fe514a8e13f67c846a8848b2f04a9d49b3ba53ef7cf745780480a98f1b"
+    },
+    {
       "name": "diagram-maker",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/diagram-maker",
       "destinationPath": "skills/diagram-maker",
       "sha256": "11b258be2d2ccbebb5155a0d1f999fb8992c537b4df270184811dd4272594b4d"
+    },
+    {
+      "name": "diary-study-plan",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/diary-study-plan",
+      "destinationPath": "skills/diary-study-plan",
+      "sha256": "c95690f7e4d8ae3360ea26436287a4a278e1a498720039c16cb6a092520a9f14"
+    },
+    {
+      "name": "difficult-workplace-conversations",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/difficult-workplace-conversations",
+      "destinationPath": "skills/difficult-workplace-conversations",
+      "sha256": "16eb88e8bba7dc3dd3ca635f5453ed2054c3859b605ef3248cbdfd6efe95fdcd"
+    },
+    {
+      "name": "directory-submissions",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/directory-submissions",
+      "destinationPath": "skills/directory-submissions",
+      "sha256": "7668dd64fde787781e6bbc94eac8985ac85d9bbd712008d6d38309d86a10d9f5"
+    },
+    {
+      "name": "discord",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/discord",
+      "destinationPath": "skills/discord",
+      "sha256": "214239c49cba000f907bb3649414693e2d164f6e6f03332048ffd6d127993349"
+    },
+    {
+      "name": "distill",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/distill",
+      "destinationPath": "skills/distill",
+      "sha256": "df9f310895dea85a60fe45ec0c811896c538288ff1437239560aba767cd23651"
+    },
+    {
+      "name": "dlna",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/dlna",
+      "destinationPath": "skills/dlna",
+      "sha256": "f02599ea5169893156f91f1e23a6ed9cd1dd2a613eb81328acb9fda20b0a05bd"
     },
     {
       "name": "doc-coauthoring",
@@ -613,12 +1229,52 @@
       "sha256": "9a34742e6bf6b88b7868c5419269dc6c3ff3cdcbddf846d9f4a507ac00f5781e"
     },
     {
+      "name": "documentation-template",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/documentation-template",
+      "destinationPath": "skills/documentation-template",
+      "sha256": "810b1a9f843e61a5f3bd4b1384752c02a6eac4704a3cb9cf835bf88af77f7d41"
+    },
+    {
       "name": "docx",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/docx",
       "destinationPath": "skills/docx",
       "sha256": "e0ff1a1290291d156d82f5e88011732d067cfbb5aa20854529229325f74c9fa3"
+    },
+    {
+      "name": "doherty-threshold",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/doherty-threshold",
+      "destinationPath": "skills/doherty-threshold",
+      "sha256": "0516cca4220459747248f618af990ef8f51cddc12d67ebc283cf73f2568ec0e3"
+    },
+    {
+      "name": "domain-dns-ops",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/domain-dns-ops",
+      "destinationPath": "skills/domain-dns-ops",
+      "sha256": "d8ffecdbf6db36679dddc3ecc18a823363b954f03a9639e98b682e39c4b4d299"
+    },
+    {
+      "name": "domain-model",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/domain-model",
+      "destinationPath": "skills/domain-model",
+      "sha256": "660c97d4f4eb5fe0c6ff1e11630218c492b551afa94b0ce9e7a2fa1ab4dca180"
+    },
+    {
+      "name": "domain-name-brainstormer",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/domain-name-brainstormer",
+      "destinationPath": "skills/domain-name-brainstormer",
+      "sha256": "1dabd6b9ec43c4fd6878f0af3d033735e90a5121a5b6285bf8edca12a2281897"
     },
     {
       "name": "draw-io",
@@ -629,12 +1285,1340 @@
       "sha256": "6ec15efc3bd9b944a0340c5e3e8e02663d7aa4377045e170b172f552b1d89355"
     },
     {
+      "name": "ecc-accessibility",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-accessibility",
+      "destinationPath": "skills/ecc-accessibility",
+      "sha256": "1cae064a42ffcac8266c15098acee13c1906a03906b5137792dff1224f7c3880"
+    },
+    {
+      "name": "ecc-agent-eval",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-agent-eval",
+      "destinationPath": "skills/ecc-agent-eval",
+      "sha256": "b809b33372462a99e0c06f7ba9b3e5a87f499a10fd9e4c31d02f1cf77ed4110b"
+    },
+    {
+      "name": "ecc-agent-harness-construction",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-agent-harness-construction",
+      "destinationPath": "skills/ecc-agent-harness-construction",
+      "sha256": "939daa32db989c1731c8ee9d37a475c7d0bf5519d3b1737020be2032d8ec0514"
+    },
+    {
+      "name": "ecc-agent-introspection-debugging",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-agent-introspection-debugging",
+      "destinationPath": "skills/ecc-agent-introspection-debugging",
+      "sha256": "5b55460bf7ae0413851e725332eee1e350f5a7e9243a23ae36cefe86a300a28f"
+    },
+    {
+      "name": "ecc-agent-payment-x402",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-agent-payment-x402",
+      "destinationPath": "skills/ecc-agent-payment-x402",
+      "sha256": "ad748e36db569474314bc4d0a5371c50766419a8db5651f4dec63d1bb01175ab"
+    },
+    {
+      "name": "ecc-agent-sort",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-agent-sort",
+      "destinationPath": "skills/ecc-agent-sort",
+      "sha256": "0f10be3172887e6d49c9f3d2ddc4be9ab2876098551fc54df85bb269f257dc5e"
+    },
+    {
+      "name": "ecc-agentic-engineering",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-agentic-engineering",
+      "destinationPath": "skills/ecc-agentic-engineering",
+      "sha256": "54f2e27d1b3c6e4064db58d0cb5851a002b2674f9093c8084de2e8fee79d16dd"
+    },
+    {
+      "name": "ecc-ai-first-engineering",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-ai-first-engineering",
+      "destinationPath": "skills/ecc-ai-first-engineering",
+      "sha256": "7b8b6484069c090207f0201c36781204f6882fb97fab5706c5003c55e298bcd1"
+    },
+    {
+      "name": "ecc-ai-regression-testing",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-ai-regression-testing",
+      "destinationPath": "skills/ecc-ai-regression-testing",
+      "sha256": "0659417a1169a184e15a9d00c2c10d7cb93064c4194936043269f3e613abfe43"
+    },
+    {
+      "name": "ecc-android-clean-architecture",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-android-clean-architecture",
+      "destinationPath": "skills/ecc-android-clean-architecture",
+      "sha256": "c1c786c35805f92270d48782a7d89d9fc75150e1f0c570b237a80bc778a0b7b1"
+    },
+    {
+      "name": "ecc-api-connector-builder",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-api-connector-builder",
+      "destinationPath": "skills/ecc-api-connector-builder",
+      "sha256": "a92de14184c6086a129928b97e5efad9c17da0dff9e3e4dc332e17771f5dee96"
+    },
+    {
+      "name": "ecc-architecture-decision-records",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-architecture-decision-records",
+      "destinationPath": "skills/ecc-architecture-decision-records",
+      "sha256": "02d079bb8ca1253a9717ce6a4e59d3dabd471041dcd025f0d820939cc9aaa76a"
+    },
+    {
+      "name": "ecc-article-writing",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-article-writing",
+      "destinationPath": "skills/ecc-article-writing",
+      "sha256": "27d7afe3476725e65c53513a62392689a1fa4a8e39c9244f6d10d5726ce706a6"
+    },
+    {
+      "name": "ecc-automation-audit-ops",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-automation-audit-ops",
+      "destinationPath": "skills/ecc-automation-audit-ops",
+      "sha256": "42b2f19f2e7b9caa6ca9c2059f014e323afbd6e492d80e46c7a6a1d495c55c8e"
+    },
+    {
+      "name": "ecc-autonomous-agent-harness",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-autonomous-agent-harness",
+      "destinationPath": "skills/ecc-autonomous-agent-harness",
+      "sha256": "75b38d53d3100f7a5d03deabecea18b49cd16040296db0ffe2123c398b7b94b0"
+    },
+    {
+      "name": "ecc-autonomous-loops",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-autonomous-loops",
+      "destinationPath": "skills/ecc-autonomous-loops",
+      "sha256": "b5ff092a5e3af433ed1f80313c1918248070db7aa7fd677531145df788677f47"
+    },
+    {
+      "name": "ecc-backend-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-backend-patterns",
+      "destinationPath": "skills/ecc-backend-patterns",
+      "sha256": "41daa403e19eb90e204314e6a91816552378ac10b253149cf9f16639a43974e6"
+    },
+    {
+      "name": "ecc-benchmark",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-benchmark",
+      "destinationPath": "skills/ecc-benchmark",
+      "sha256": "87afe3485c030f747e0c19569b804e262b18bbfa52bec74e5eb6878b5c608280"
+    },
+    {
+      "name": "ecc-blueprint",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-blueprint",
+      "destinationPath": "skills/ecc-blueprint",
+      "sha256": "8c23b0e663d2fcb63c26abfb37113e737f1a226ec41fa86d8dcb44f886400f2b"
+    },
+    {
+      "name": "ecc-brand-voice",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-brand-voice",
+      "destinationPath": "skills/ecc-brand-voice",
+      "sha256": "5219f815413b9e2a16b3825376fd388d4f892a59fd425151b34baa092c56d657"
+    },
+    {
+      "name": "ecc-browser-qa",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-browser-qa",
+      "destinationPath": "skills/ecc-browser-qa",
+      "sha256": "2933c3ee0e53b8d5e1e502617f24a297450a5c23940dd3511598d6e95bc5cb55"
+    },
+    {
+      "name": "ecc-bun-runtime",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-bun-runtime",
+      "destinationPath": "skills/ecc-bun-runtime",
+      "sha256": "c9a4b2a779e1221826162c1ce94344406eb1108ee7bd2a9a6d09cf3b28c11684"
+    },
+    {
+      "name": "ecc-canary-watch",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-canary-watch",
+      "destinationPath": "skills/ecc-canary-watch",
+      "sha256": "8ce90644e7650a3456ed9b9950f9a2b445fa1f24c5c8e756d02639a92d46d0b2"
+    },
+    {
+      "name": "ecc-carrier-relationship-management",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-carrier-relationship-management",
+      "destinationPath": "skills/ecc-carrier-relationship-management",
+      "sha256": "0ba3f734c6e7aefae44548659e2aa0d4c854612f32faca11aa90ebf70b87a1a3"
+    },
+    {
+      "name": "ecc-claude-api",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-claude-api",
+      "destinationPath": "skills/ecc-claude-api",
+      "sha256": "ab045019ae27cfc77630e195738b98c08cd4290dc974408a8b1b2bb4a3b8c993"
+    },
+    {
+      "name": "ecc-claude-devfleet",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-claude-devfleet",
+      "destinationPath": "skills/ecc-claude-devfleet",
+      "sha256": "694c08c239263f88d3096f58c071d7b362c0a6797ec09149a3b7fb891f41e933"
+    },
+    {
+      "name": "ecc-click-path-audit",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-click-path-audit",
+      "destinationPath": "skills/ecc-click-path-audit",
+      "sha256": "018f8a739a94e5402492e88878cbb7c21b054a62f1aafc48a525f42afe89688d"
+    },
+    {
+      "name": "ecc-clickhouse-io",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-clickhouse-io",
+      "destinationPath": "skills/ecc-clickhouse-io",
+      "sha256": "8c89635fe74cbbe6776625dc258e3b83180169f62a5accb6f8ef49718a289224"
+    },
+    {
+      "name": "ecc-code-tour",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-code-tour",
+      "destinationPath": "skills/ecc-code-tour",
+      "sha256": "b734a291ae1ecc92fc129561bba634c80ebd7d72a57aedd7a339af5037b60f73"
+    },
+    {
+      "name": "ecc-codebase-onboarding",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-codebase-onboarding",
+      "destinationPath": "skills/ecc-codebase-onboarding",
+      "sha256": "f38c30292d225af7cd699823b22fe6d8b94ba2b0e348f96c5efa8c39b9bed2f4"
+    },
+    {
+      "name": "ecc-coding-standards",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-coding-standards",
+      "destinationPath": "skills/ecc-coding-standards",
+      "sha256": "c6a151fa609257291b51a9c9b60f3270710942ee8eb1fea1d5e3497b38b8f5b1"
+    },
+    {
+      "name": "ecc-compose-multiplatform-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-compose-multiplatform-patterns",
+      "destinationPath": "skills/ecc-compose-multiplatform-patterns",
+      "sha256": "79aa37d8bc8f3d2f94fbdf5c1b4b4702d11cffe7bd0833ebd47508c0bee57ccd"
+    },
+    {
+      "name": "ecc-configure-ecc",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-configure-ecc",
+      "destinationPath": "skills/ecc-configure-ecc",
+      "sha256": "839b02091b9ff4c93285c4a6ea17b8c7eced598de352edbe070c0b5f469453ff"
+    },
+    {
+      "name": "ecc-connections-optimizer",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-connections-optimizer",
+      "destinationPath": "skills/ecc-connections-optimizer",
+      "sha256": "c2d6fa927ded6250b60afec017f5e7a5fe6458ac53c599fb84d7f36b3258eb71"
+    },
+    {
+      "name": "ecc-content-engine",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-content-engine",
+      "destinationPath": "skills/ecc-content-engine",
+      "sha256": "74f80c196a404d43842ef54fc27561d696d06fc74643a072c4a4621651bfbe00"
+    },
+    {
+      "name": "ecc-content-hash-cache-pattern",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-content-hash-cache-pattern",
+      "destinationPath": "skills/ecc-content-hash-cache-pattern",
+      "sha256": "eab5409be4215f9d9e2b478e78e199d4dc1aaa7e6b55c420b3a5532248cb0a5c"
+    },
+    {
+      "name": "ecc-context-budget",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-context-budget",
+      "destinationPath": "skills/ecc-context-budget",
+      "sha256": "e9913f6125cf26076ccf77e34d2b44bf4c2798f9d73645732403e1dbf7f48c27"
+    },
+    {
+      "name": "ecc-continuous-agent-loop",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-continuous-agent-loop",
+      "destinationPath": "skills/ecc-continuous-agent-loop",
+      "sha256": "6172a6d6cf08ad4baf9d4888981aa9cab589f3e85da05f3de88d79b63087fa07"
+    },
+    {
+      "name": "ecc-cost-aware-llm-pipeline",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-cost-aware-llm-pipeline",
+      "destinationPath": "skills/ecc-cost-aware-llm-pipeline",
+      "sha256": "4c3e5fc28667b298b6c2ac206178afea218590293aab3236af45ce5df4306d20"
+    },
+    {
+      "name": "ecc-council",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-council",
+      "destinationPath": "skills/ecc-council",
+      "sha256": "5babfa6bff4e9148b7d6655264e62c3560637053d6fe3aced60c46aae9bac0a3"
+    },
+    {
+      "name": "ecc-cpp-coding-standards",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-cpp-coding-standards",
+      "destinationPath": "skills/ecc-cpp-coding-standards",
+      "sha256": "0b3e8ae0c79d3159215ace3b587075260136fa76309ced88cff8a62932d5cc5b"
+    },
+    {
+      "name": "ecc-cpp-testing",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-cpp-testing",
+      "destinationPath": "skills/ecc-cpp-testing",
+      "sha256": "1b6231228daed19f6fe03fdef26494ac21a8b5e859f83165f4fb667099b09dbb"
+    },
+    {
+      "name": "ecc-crosspost",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-crosspost",
+      "destinationPath": "skills/ecc-crosspost",
+      "sha256": "625b8ff77f0c995630de8bdfd3a16493133b70f555c0b042c3582fa985ea8a24"
+    },
+    {
+      "name": "ecc-csharp-testing",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-csharp-testing",
+      "destinationPath": "skills/ecc-csharp-testing",
+      "sha256": "c86d7523bc77a24d7a2745c9a9725b5998556963da45e39aff981336a0489952"
+    },
+    {
+      "name": "ecc-customer-billing-ops",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-customer-billing-ops",
+      "destinationPath": "skills/ecc-customer-billing-ops",
+      "sha256": "83df4898e20f5a19a71ed45bdd1956df2c0fe9266b076eeda9ef085db013ed03"
+    },
+    {
+      "name": "ecc-customs-trade-compliance",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-customs-trade-compliance",
+      "destinationPath": "skills/ecc-customs-trade-compliance",
+      "sha256": "6678cf54a0161df26db89bc4a1573fab465a2274fd9e13655f403271919c5ef7"
+    },
+    {
+      "name": "ecc-dashboard-builder",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-dashboard-builder",
+      "destinationPath": "skills/ecc-dashboard-builder",
+      "sha256": "28c5f34f8bd7911b4e093e1630035c760b118a85fe9e7c02d60261e8d3025db9"
+    },
+    {
+      "name": "ecc-data-scraper-agent",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-data-scraper-agent",
+      "destinationPath": "skills/ecc-data-scraper-agent",
+      "sha256": "3df151a3222de4aaca80caa2042d959a758b42f2b653db2c64f3e5e6defa71f2"
+    },
+    {
+      "name": "ecc-database-migrations",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-database-migrations",
+      "destinationPath": "skills/ecc-database-migrations",
+      "sha256": "4454b18163e9008a0d1f53d3147927ea6cccef20ebaa4a68f67bcb8c906d7c8d"
+    },
+    {
+      "name": "ecc-deep-research",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-deep-research",
+      "destinationPath": "skills/ecc-deep-research",
+      "sha256": "17f8fe2bb4b53faff17c5655763e410e89c6d4e3f4412480b864464be6751d6f"
+    },
+    {
+      "name": "ecc-defi-amm-security",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-defi-amm-security",
+      "destinationPath": "skills/ecc-defi-amm-security",
+      "sha256": "26a4af99ec6cb3829f7131e88310fbf8f35f80abe4bde5435e15efc27322e86b"
+    },
+    {
+      "name": "ecc-deployment-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-deployment-patterns",
+      "destinationPath": "skills/ecc-deployment-patterns",
+      "sha256": "7f7abb9b65d6995b2a3a2c6f15653e2d64c8e5267e976a1eeb8e0696b294d5a1"
+    },
+    {
+      "name": "ecc-design-system",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-design-system",
+      "destinationPath": "skills/ecc-design-system",
+      "sha256": "7de39d1e9720b9486b40092381a37b97e19e566385129c3d5d1bc55618165ab9"
+    },
+    {
+      "name": "ecc-django-tdd",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-django-tdd",
+      "destinationPath": "skills/ecc-django-tdd",
+      "sha256": "49ad82346169a51876e7017199d76401869e860a78d0384ecdf895aad42d8b2d"
+    },
+    {
+      "name": "ecc-dmux-workflows",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-dmux-workflows",
+      "destinationPath": "skills/ecc-dmux-workflows",
+      "sha256": "af2c7b4c568264896dec3ea5a783bb47265c9b27af2d4c18fb8d1394e8c7c8e7"
+    },
+    {
+      "name": "ecc-docker-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-docker-patterns",
+      "destinationPath": "skills/ecc-docker-patterns",
+      "sha256": "bbb073c61763522e4b9610fbf62d29b9f66ec52f6f2f00b201d54c1a865e5711"
+    },
+    {
+      "name": "ecc-documentation-lookup",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-documentation-lookup",
+      "destinationPath": "skills/ecc-documentation-lookup",
+      "sha256": "c1cb2887d43dfd07da16096f084f076d0b7cc5ea088fbe190632f566546e1d85"
+    },
+    {
+      "name": "ecc-dotnet-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-dotnet-patterns",
+      "destinationPath": "skills/ecc-dotnet-patterns",
+      "sha256": "bde9485190254ae8ed83cf2bce83f1c1073c1bb3105c96dd3de8afb5c73ad987"
+    },
+    {
+      "name": "ecc-e2e-testing",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-e2e-testing",
+      "destinationPath": "skills/ecc-e2e-testing",
+      "sha256": "0f841392acc1b2668662b71ce53b833d81fd16a145da72160b5da396a7d3906c"
+    },
+    {
+      "name": "ecc-ecc-tools-cost-audit",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-ecc-tools-cost-audit",
+      "destinationPath": "skills/ecc-ecc-tools-cost-audit",
+      "sha256": "0559942862e8d4a945ad55fd86da64518bc0c2a7b3d8390ee222a31c7c9908a9"
+    },
+    {
+      "name": "ecc-email-ops",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-email-ops",
+      "destinationPath": "skills/ecc-email-ops",
+      "sha256": "b072876011d8f7ebc189cd000e8a5413216c45e9c9f298ea73d6670a023db4e7"
+    },
+    {
+      "name": "ecc-energy-procurement",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-energy-procurement",
+      "destinationPath": "skills/ecc-energy-procurement",
+      "sha256": "ed50a3f44da4770f40b139c2f8e4a7a60837a4e54857b4e1b71b60ec3119066a"
+    },
+    {
+      "name": "ecc-enterprise-agent-ops",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-enterprise-agent-ops",
+      "destinationPath": "skills/ecc-enterprise-agent-ops",
+      "sha256": "adaafecbfda1969ff78ddc1a9543bd796e20c84cc0e0a265d7c3e72e20465baa"
+    },
+    {
+      "name": "ecc-eval-harness",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-eval-harness",
+      "destinationPath": "skills/ecc-eval-harness",
+      "sha256": "b15bcb4b9bf8713a8dc4e53d9f4a8109e08b97e71b1d31baeaf474cb10ffa187"
+    },
+    {
+      "name": "ecc-evm-token-decimals",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-evm-token-decimals",
+      "destinationPath": "skills/ecc-evm-token-decimals",
+      "sha256": "8941f7f5650361c0c9e8636b7511515c21de5a4099f3c6e44778be0dd993f1a7"
+    },
+    {
+      "name": "ecc-exa-search",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-exa-search",
+      "destinationPath": "skills/ecc-exa-search",
+      "sha256": "022b3691f0251bb6deeefb5304dbf07ddfc46ef5234eac7b24520ff5af0b9958"
+    },
+    {
+      "name": "ecc-fal-ai-media",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-fal-ai-media",
+      "destinationPath": "skills/ecc-fal-ai-media",
+      "sha256": "749ce65ea79b481759f830fae148768790f26200b5cb841a2570c48ebfc133bf"
+    },
+    {
+      "name": "ecc-finance-billing-ops",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-finance-billing-ops",
+      "destinationPath": "skills/ecc-finance-billing-ops",
+      "sha256": "14bd674bec9dcbdde489d4c546a10ff056ebd36978257bf1a08033b47b1caf74"
+    },
+    {
+      "name": "ecc-flutter-dart-code-review",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-flutter-dart-code-review",
+      "destinationPath": "skills/ecc-flutter-dart-code-review",
+      "sha256": "a20571804729830ed3375dbe4334940b1d0dd24287538bb354670ad227aacffc"
+    },
+    {
+      "name": "ecc-foundation-models-on-device",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-foundation-models-on-device",
+      "destinationPath": "skills/ecc-foundation-models-on-device",
+      "sha256": "a4a69cc1f84cd6f50cf6dc3bd11bc603eaa65ef26882acbfff1144347f449568"
+    },
+    {
+      "name": "ecc-frontend-design",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-frontend-design",
+      "destinationPath": "skills/ecc-frontend-design",
+      "sha256": "9446e8a2c61a88f8ff07f6a18ef02f23bdd7a4145e3bf2816a16c08076597e41"
+    },
+    {
+      "name": "ecc-frontend-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-frontend-patterns",
+      "destinationPath": "skills/ecc-frontend-patterns",
+      "sha256": "779e8f47253e9f5b70f76b74d2fda779bbda049f690bfe415a4bb011e7bde653"
+    },
+    {
+      "name": "ecc-frontend-slides",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-frontend-slides",
+      "destinationPath": "skills/ecc-frontend-slides",
+      "sha256": "0581689e04a5cd02f0de750cd490080f5dde87eec23b89b52a499297cad50057"
+    },
+    {
+      "name": "ecc-gan-style-harness",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-gan-style-harness",
+      "destinationPath": "skills/ecc-gan-style-harness",
+      "sha256": "ce894a221fdfa44a3c1c8c5ec589aa949921d166581498869bedf3be9c70de30"
+    },
+    {
+      "name": "ecc-gateguard",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-gateguard",
+      "destinationPath": "skills/ecc-gateguard",
+      "sha256": "167eda003e7339709260fb645671a5cacdfe101419f7727697d87ed345027111"
+    },
+    {
+      "name": "ecc-git-workflow",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-git-workflow",
+      "destinationPath": "skills/ecc-git-workflow",
+      "sha256": "d1bc779a40c2dcf28d12c639fccde7f40569c8d6c8c070b866ee2a0d3f1742ca"
+    },
+    {
+      "name": "ecc-github-ops",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-github-ops",
+      "destinationPath": "skills/ecc-github-ops",
+      "sha256": "c7a497cd6f81f70bd6b4669a8a0d8a7dc77f932fa499552a8b45cf00ca03c809"
+    },
+    {
+      "name": "ecc-golang-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-golang-patterns",
+      "destinationPath": "skills/ecc-golang-patterns",
+      "sha256": "388c718f81f25ee7a23ba03756e20458ada0ad13fb53c43344c0dbbe28c97ecf"
+    },
+    {
+      "name": "ecc-google-workspace-ops",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-google-workspace-ops",
+      "destinationPath": "skills/ecc-google-workspace-ops",
+      "sha256": "a1049e24daa41462613bc0ba8f252e8c57566f9fc168b86e87c32284cdcc34a9"
+    },
+    {
+      "name": "ecc-healthcare-cdss-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-healthcare-cdss-patterns",
+      "destinationPath": "skills/ecc-healthcare-cdss-patterns",
+      "sha256": "17a2b7b155583ce5d445b8c7f284afefbd9201b18491acf2491f392ee28acf79"
+    },
+    {
+      "name": "ecc-healthcare-emr-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-healthcare-emr-patterns",
+      "destinationPath": "skills/ecc-healthcare-emr-patterns",
+      "sha256": "c28d36edbdbda9765a93c7027ed0659827a634eb755589c02276977c03d5df12"
+    },
+    {
+      "name": "ecc-healthcare-eval-harness",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-healthcare-eval-harness",
+      "destinationPath": "skills/ecc-healthcare-eval-harness",
+      "sha256": "b9d0d5f2603f17068ba75a2135072bb49a79b87846038d3cde8aa16012daf0ae"
+    },
+    {
+      "name": "ecc-healthcare-phi-compliance",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-healthcare-phi-compliance",
+      "destinationPath": "skills/ecc-healthcare-phi-compliance",
+      "sha256": "57154a2119652f636be002eb1b9abcdfd6ab61e089e55c2049140905ceffbe0f"
+    },
+    {
+      "name": "ecc-hexagonal-architecture",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-hexagonal-architecture",
+      "destinationPath": "skills/ecc-hexagonal-architecture",
+      "sha256": "225c99c1cba05525ef5d503a6e530485a698da0a322906a822dc8c962dad7ebe"
+    },
+    {
+      "name": "ecc-hipaa-compliance",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-hipaa-compliance",
+      "destinationPath": "skills/ecc-hipaa-compliance",
+      "sha256": "367d8b9f3e401c4b049867bc17173844262076e762b4c99554feeba0eb2797fa"
+    },
+    {
+      "name": "ecc-hookify-rules",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-hookify-rules",
+      "destinationPath": "skills/ecc-hookify-rules",
+      "sha256": "3f0eca803906d16fecd65336ad86658eef555723a79097fb7251e96aca17ed1d"
+    },
+    {
+      "name": "ecc-inventory-demand-planning",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-inventory-demand-planning",
+      "destinationPath": "skills/ecc-inventory-demand-planning",
+      "sha256": "00ff2e901b15ba9e3f54492610cae52941bb5da1caf227487131fa7980dcd4d5"
+    },
+    {
+      "name": "ecc-iterative-retrieval",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-iterative-retrieval",
+      "destinationPath": "skills/ecc-iterative-retrieval",
+      "sha256": "a74ad7738286fd52287944e2c46ea86e388af5cfd6c276e173554989d2b0c4c3"
+    },
+    {
+      "name": "ecc-java-coding-standards",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-java-coding-standards",
+      "destinationPath": "skills/ecc-java-coding-standards",
+      "sha256": "04e51859666d6fb0ea062a555e061819ec6401f5a0e44ef8962001a39050324f"
+    },
+    {
+      "name": "ecc-jira-integration",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-jira-integration",
+      "destinationPath": "skills/ecc-jira-integration",
+      "sha256": "aa63ba5b212384d0ab428e0bbbb7ddbba1e8bb53e6448ce7b47d5344487f62f0"
+    },
+    {
+      "name": "ecc-jpa-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-jpa-patterns",
+      "destinationPath": "skills/ecc-jpa-patterns",
+      "sha256": "5adb3b7403e7030f9a7d08867106ceca0bdfbe3b62babc46074135ce46d58092"
+    },
+    {
+      "name": "ecc-knowledge-ops",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-knowledge-ops",
+      "destinationPath": "skills/ecc-knowledge-ops",
+      "sha256": "f32a7899626733b48bc5b305d9113ab107013e007bfdbf2d6bda858ee35f2d33"
+    },
+    {
+      "name": "ecc-kotlin-coroutines-flows",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-kotlin-coroutines-flows",
+      "destinationPath": "skills/ecc-kotlin-coroutines-flows",
+      "sha256": "4878bbd118971ffffc9172468370bf3fc37b212c60dbcd2699d9458da5fe13c3"
+    },
+    {
+      "name": "ecc-kotlin-exposed-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-kotlin-exposed-patterns",
+      "destinationPath": "skills/ecc-kotlin-exposed-patterns",
+      "sha256": "71e23c783b5fb2edb1dbcb644577c1172220a8cf0cb252f273e02a0022515e09"
+    },
+    {
+      "name": "ecc-kotlin-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-kotlin-patterns",
+      "destinationPath": "skills/ecc-kotlin-patterns",
+      "sha256": "4a2eebc02f996da4ffdb656efe5f0ec8ca1256e1a1bc32ba38dae4005474157d"
+    },
+    {
+      "name": "ecc-kotlin-testing",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-kotlin-testing",
+      "destinationPath": "skills/ecc-kotlin-testing",
+      "sha256": "833f41b8c60668a7435027fe4827879610bc88befd59207911645b80c54f7dcd"
+    },
+    {
+      "name": "ecc-laravel-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-laravel-patterns",
+      "destinationPath": "skills/ecc-laravel-patterns",
+      "sha256": "b005bbcab16d8e097bd6114d2c8140baff3dec7067e3f99c0db52b491a5eec76"
+    },
+    {
+      "name": "ecc-laravel-plugin-discovery",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-laravel-plugin-discovery",
+      "destinationPath": "skills/ecc-laravel-plugin-discovery",
+      "sha256": "c4dada59b4319e377c2e8f494b4748b6a34ed099811c35d4d55e925b42edcad3"
+    },
+    {
+      "name": "ecc-laravel-security",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-laravel-security",
+      "destinationPath": "skills/ecc-laravel-security",
+      "sha256": "4c3a94127abbd6acbb58cc534228165fe1edc66c195ccd02f422162b9abdf0d8"
+    },
+    {
+      "name": "ecc-laravel-tdd",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-laravel-tdd",
+      "destinationPath": "skills/ecc-laravel-tdd",
+      "sha256": "9ed7f438006ae112a7fba5ed415f183acea32d55a2be7de44cfbcb463c6384b5"
+    },
+    {
+      "name": "ecc-laravel-verification",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-laravel-verification",
+      "destinationPath": "skills/ecc-laravel-verification",
+      "sha256": "4259e36e1cb3bf42c947404fdd6f4cda7ddcef665c8c0843c75e61aa6f4a9dd6"
+    },
+    {
+      "name": "ecc-liquid-glass-design",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-liquid-glass-design",
+      "destinationPath": "skills/ecc-liquid-glass-design",
+      "sha256": "4f720d7cca827a5851141100ac680b2213d8009aa911aa097ffc951ac0c48643"
+    },
+    {
+      "name": "ecc-llm-trading-agent-security",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-llm-trading-agent-security",
+      "destinationPath": "skills/ecc-llm-trading-agent-security",
+      "sha256": "1a9b6778602d087962b0cd228362099c6b376e549afd197a7f0defb17c578cd4"
+    },
+    {
+      "name": "ecc-logistics-exception-management",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-logistics-exception-management",
+      "destinationPath": "skills/ecc-logistics-exception-management",
+      "sha256": "83e6beaa2cc3282a618c3f2ee123a9e849af74508efde7c7dd31e13aa933996c"
+    },
+    {
+      "name": "ecc-manim-video",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-manim-video",
+      "destinationPath": "skills/ecc-manim-video",
+      "sha256": "9ee16e033540fb9395613f6b7cae16c5b1c3d8407802325cdc0fcc621894da2c"
+    },
+    {
+      "name": "ecc-market-research",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-market-research",
+      "destinationPath": "skills/ecc-market-research",
+      "sha256": "8e43970095ef29c23fdd53670a54545166c623aa2046ca091f316edeef5fc843"
+    },
+    {
+      "name": "ecc-mcp-server-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-mcp-server-patterns",
+      "destinationPath": "skills/ecc-mcp-server-patterns",
+      "sha256": "6a76acc21962ceae5238d273ff4e254941544b0061ffdc72f492581baf280086"
+    },
+    {
+      "name": "ecc-messages-ops",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-messages-ops",
+      "destinationPath": "skills/ecc-messages-ops",
+      "sha256": "58d876ad6fa6d939ea1ee963861afd202f0ad9db0f51203b769af3209bc0b105"
+    },
+    {
+      "name": "ecc-nanoclaw-repl",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-nanoclaw-repl",
+      "destinationPath": "skills/ecc-nanoclaw-repl",
+      "sha256": "8ea7dd5f93cedb0b978b8a417e69a66dea2e2b14ea95b84537981a40218b8093"
+    },
+    {
+      "name": "ecc-nestjs-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-nestjs-patterns",
+      "destinationPath": "skills/ecc-nestjs-patterns",
+      "sha256": "92ad75d26f9745fa40961970c4a5c988a2b4eee01615e0ebf39e0a17f1dbf566"
+    },
+    {
+      "name": "ecc-nextjs-turbopack",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-nextjs-turbopack",
+      "destinationPath": "skills/ecc-nextjs-turbopack",
+      "sha256": "5ce8447590611cee06c55dd3d8b33ea7c57573d369cdb5dc7a4e764786452bde"
+    },
+    {
+      "name": "ecc-nodejs-keccak256",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-nodejs-keccak256",
+      "destinationPath": "skills/ecc-nodejs-keccak256",
+      "sha256": "d0df29f4ae616c8472662378970df6c93734650d489b03134d873bf5b8277610"
+    },
+    {
+      "name": "ecc-nutrient-document-processing",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-nutrient-document-processing",
+      "destinationPath": "skills/ecc-nutrient-document-processing",
+      "sha256": "65687cfa8c17156e9ca1274e0ca028830d4dd13bb9cb0c2555956f5e9e0f937b"
+    },
+    {
+      "name": "ecc-nuxt4-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-nuxt4-patterns",
+      "destinationPath": "skills/ecc-nuxt4-patterns",
+      "sha256": "b7a59b7b6300156118a6a610377dba9474ab5aef5b23970e740fb39a57cbb382"
+    },
+    {
+      "name": "ecc-openclaw-persona-forge",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-openclaw-persona-forge",
+      "destinationPath": "skills/ecc-openclaw-persona-forge",
+      "sha256": "d2fd7b32f4d4590c5ab75b5657dfcd251cdd0aa45b4e30640d9463263fe4c8ba"
+    },
+    {
+      "name": "ecc-opensource-pipeline",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-opensource-pipeline",
+      "destinationPath": "skills/ecc-opensource-pipeline",
+      "sha256": "42ef7e7f3f9d9591b512ea36ca8772287d7416a46dfb92074f0dc10584cd903d"
+    },
+    {
+      "name": "ecc-perl-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-perl-patterns",
+      "destinationPath": "skills/ecc-perl-patterns",
+      "sha256": "a9e1968886415489dcf8604a3fc78b65e801b86190700b436670782eb77dc128"
+    },
+    {
+      "name": "ecc-perl-security",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-perl-security",
+      "destinationPath": "skills/ecc-perl-security",
+      "sha256": "cf2222bccb44ac2921ed117ec68d33f11450216ef2f1fe71713f07ac6933408a"
+    },
+    {
+      "name": "ecc-perl-testing",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-perl-testing",
+      "destinationPath": "skills/ecc-perl-testing",
+      "sha256": "5eafc811d0c33601c1f86f1f3a5e40fd9e0954d4a8e720089f288344498e0694"
+    },
+    {
+      "name": "ecc-plankton-code-quality",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-plankton-code-quality",
+      "destinationPath": "skills/ecc-plankton-code-quality",
+      "sha256": "c544be458345a1a2e5e5f2377b8d2d05d18cb0ee73de5e21f47d0623279ab93e"
+    },
+    {
+      "name": "ecc-product-capability",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-product-capability",
+      "destinationPath": "skills/ecc-product-capability",
+      "sha256": "1e412385ac3ce0ee413bf739db495450aef3c6db1c0415f063818f07a74bef9b"
+    },
+    {
+      "name": "ecc-product-lens",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-product-lens",
+      "destinationPath": "skills/ecc-product-lens",
+      "sha256": "29372f22d3e44a1818ab6e6e940bfd0d9914d7fcc7e07d6c8c122dbbb6a4f31a"
+    },
+    {
+      "name": "ecc-production-scheduling",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-production-scheduling",
+      "destinationPath": "skills/ecc-production-scheduling",
+      "sha256": "d68d00ae260468f5493ba2ba9db5e815702a14402715825433139c2a2272365d"
+    },
+    {
+      "name": "ecc-project-flow-ops",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-project-flow-ops",
+      "destinationPath": "skills/ecc-project-flow-ops",
+      "sha256": "a3fbaf70dc6d6e4cd795492b6582a9ac25a09a25909818e2315d0adc2f3edc60"
+    },
+    {
+      "name": "ecc-python-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-python-patterns",
+      "destinationPath": "skills/ecc-python-patterns",
+      "sha256": "abc44a93fa7b8dae49f051bf2c995ceae8e772b9ac1b868c6f3c857234f40730"
+    },
+    {
+      "name": "ecc-pytorch-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-pytorch-patterns",
+      "destinationPath": "skills/ecc-pytorch-patterns",
+      "sha256": "1700cf8c8c707514d541786bc2b86c2ec8d2cd862dc9bba4cf45a3b9718665cc"
+    },
+    {
+      "name": "ecc-quality-nonconformance",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-quality-nonconformance",
+      "destinationPath": "skills/ecc-quality-nonconformance",
+      "sha256": "88aa02f90d082c6e73f4caf3863b3fa5f70c3c726d1f6e7220d5ce5413f37a85"
+    },
+    {
+      "name": "ecc-ralphinho-rfc-pipeline",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-ralphinho-rfc-pipeline",
+      "destinationPath": "skills/ecc-ralphinho-rfc-pipeline",
+      "sha256": "e7ca1cacda92ed452cf8070c1e4351ef8033e38b544d53e7f6f174f2522c83d8"
+    },
+    {
+      "name": "ecc-regex-vs-llm-structured-text",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-regex-vs-llm-structured-text",
+      "destinationPath": "skills/ecc-regex-vs-llm-structured-text",
+      "sha256": "9687de98cc644e508619e373dd46c8d6da99b75e1fa058ab9f892f2a3c283cca"
+    },
+    {
+      "name": "ecc-remotion-video-creation",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-remotion-video-creation",
+      "destinationPath": "skills/ecc-remotion-video-creation",
+      "sha256": "1ebf76220ab0d34920d843466c509d8f0e3896213f6c470bb4199dce7786bee4"
+    },
+    {
+      "name": "ecc-repo-scan",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-repo-scan",
+      "destinationPath": "skills/ecc-repo-scan",
+      "sha256": "739ee441fbfc81e66d65da1685b33227307a9cc0c51d28dc20ded74680a5c807"
+    },
+    {
+      "name": "ecc-research-ops",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-research-ops",
+      "destinationPath": "skills/ecc-research-ops",
+      "sha256": "b643ae28f391fd15e3e2999fc47473ec465eb223b14c94ed33dddc994b6677de"
+    },
+    {
+      "name": "ecc-returns-reverse-logistics",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-returns-reverse-logistics",
+      "destinationPath": "skills/ecc-returns-reverse-logistics",
+      "sha256": "5e3c502396984b873f29f70fe230b51a8504ae6b2f4e5b10529628d94abb863c"
+    },
+    {
+      "name": "ecc-rules-distill",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-rules-distill",
+      "destinationPath": "skills/ecc-rules-distill",
+      "sha256": "290ed3214fa8d99e1b31b167d2a5b3673e426dc6434588fcb26a28f8bc9b0f2c"
+    },
+    {
+      "name": "ecc-rust-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-rust-patterns",
+      "destinationPath": "skills/ecc-rust-patterns",
+      "sha256": "c6f6ac35a717df64770779f0c7ffd204edac76c93001b811f4c36d7567fa705b"
+    },
+    {
+      "name": "ecc-rust-testing",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-rust-testing",
+      "destinationPath": "skills/ecc-rust-testing",
+      "sha256": "db1e82780e70f6754e5f0b413d73d77fad81492fe6700fc032d26b9ea6d2c906"
+    },
+    {
+      "name": "ecc-safety-guard",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-safety-guard",
+      "destinationPath": "skills/ecc-safety-guard",
+      "sha256": "524d9fd8a1600e285520428705ac7d6920589ed8d6dfeddbd98627596f7152c7"
+    },
+    {
+      "name": "ecc-santa-method",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-santa-method",
+      "destinationPath": "skills/ecc-santa-method",
+      "sha256": "f6563bd8872ddede91c46c629e741e6901250f2c7edf278e1c7be6122b09f383"
+    },
+    {
+      "name": "ecc-search-first",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-search-first",
+      "destinationPath": "skills/ecc-search-first",
+      "sha256": "f51f1878e6c555d14b661767550c3f475e8e8bedca1fabd46e069fb188d10565"
+    },
+    {
+      "name": "ecc-security-bounty-hunter",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-security-bounty-hunter",
+      "destinationPath": "skills/ecc-security-bounty-hunter",
+      "sha256": "c3c64aefd1986aad2e15192d450d045780e86dc4efd9e6cb3bdeb28e29b019c0"
+    },
+    {
+      "name": "ecc-security-review",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-security-review",
+      "destinationPath": "skills/ecc-security-review",
+      "sha256": "72c49f64f7247ce1e97520db0d785adb691fc466479f686b704f521cc283ddec"
+    },
+    {
+      "name": "ecc-security-scan",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-security-scan",
+      "destinationPath": "skills/ecc-security-scan",
+      "sha256": "5cbb8aa0da5b157cedb6d3aa3a7af590ddde7e1bc6919774485476bff35eeef4"
+    },
+    {
+      "name": "ecc-seo",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-seo",
+      "destinationPath": "skills/ecc-seo",
+      "sha256": "2773d09edb49279b9f788b48737d96dcb644ce38d8fe3b24595cddd65c081f55"
+    },
+    {
+      "name": "ecc-skill-comply",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-skill-comply",
+      "destinationPath": "skills/ecc-skill-comply",
+      "sha256": "39318a150e110506959195126275da4ffb79fb206a5bc1f0a9d6739840fff801"
+    },
+    {
+      "name": "ecc-skill-stocktake",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-skill-stocktake",
+      "destinationPath": "skills/ecc-skill-stocktake",
+      "sha256": "56866d999f948e2e8652a8430f50ad29d53f8a9ce21f984b56eee65051f321d0"
+    },
+    {
+      "name": "ecc-social-graph-ranker",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-social-graph-ranker",
+      "destinationPath": "skills/ecc-social-graph-ranker",
+      "sha256": "7c44f5b4b0378677603adc0bffc4a583c31d6d29a022728c361f7a7cdfadb643"
+    },
+    {
+      "name": "ecc-springboot-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-springboot-patterns",
+      "destinationPath": "skills/ecc-springboot-patterns",
+      "sha256": "ccb98c0b48989420f359e3d8ed7ea808993b6792f95d53ebb0ea7f0b6c27ca19"
+    },
+    {
+      "name": "ecc-springboot-tdd",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-springboot-tdd",
+      "destinationPath": "skills/ecc-springboot-tdd",
+      "sha256": "7aa7b6bda4c5309d3ac293df9b24aa09445b7cee841da367f5e330db95c00cfe"
+    },
+    {
+      "name": "ecc-springboot-verification",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-springboot-verification",
+      "destinationPath": "skills/ecc-springboot-verification",
+      "sha256": "26505959c94dddc8171cedfd6070733cc213c7e439a8d0645efacb3a2c3d0f1d"
+    },
+    {
+      "name": "ecc-strategic-compact",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-strategic-compact",
+      "destinationPath": "skills/ecc-strategic-compact",
+      "sha256": "93ed6b665935611a44bbd081a3d2c8dfd74e008bda765cc47348b177b06d428d"
+    },
+    {
+      "name": "ecc-swift-actor-persistence",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-swift-actor-persistence",
+      "destinationPath": "skills/ecc-swift-actor-persistence",
+      "sha256": "bac0823031d1e4e88574fd840b41a5e45fe9c34c77b4db76b4166e17fc774129"
+    },
+    {
+      "name": "ecc-swift-concurrency-6-2",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-swift-concurrency-6-2",
+      "destinationPath": "skills/ecc-swift-concurrency-6-2",
+      "sha256": "783d45d231910747c21307fe763b29e8b49271fef951a88e75dc4412880f053a"
+    },
+    {
+      "name": "ecc-swift-protocol-di-testing",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-swift-protocol-di-testing",
+      "destinationPath": "skills/ecc-swift-protocol-di-testing",
+      "sha256": "664ba0ef8ac94ba728135090f1fcfe2911af28a63110af8b76bbf2ed72f72860"
+    },
+    {
+      "name": "ecc-swiftui-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-swiftui-patterns",
+      "destinationPath": "skills/ecc-swiftui-patterns",
+      "sha256": "46c830cfa80633e306b7838f80c6cb41d4b16b06c891209688284f03f0dc6dd3"
+    },
+    {
+      "name": "ecc-team-builder",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-team-builder",
+      "destinationPath": "skills/ecc-team-builder",
+      "sha256": "51b849fedac242a33d93382b96ecfa7ad7f41b933ec44980d39c9f14e979fc14"
+    },
+    {
+      "name": "ecc-terminal-ops",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-terminal-ops",
+      "destinationPath": "skills/ecc-terminal-ops",
+      "sha256": "c9cad5cfbcd2ce2c83351a684d466494b5c7957974fabd6840e50b3ab12de3a6"
+    },
+    {
+      "name": "ecc-token-budget-advisor",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-token-budget-advisor",
+      "destinationPath": "skills/ecc-token-budget-advisor",
+      "sha256": "debc2233f178cf69fabbb3020513be9687999fc08f08520a87a80a91259fc815"
+    },
+    {
+      "name": "ecc-ui-demo",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-ui-demo",
+      "destinationPath": "skills/ecc-ui-demo",
+      "sha256": "bf750a16aa495fab115dc11fe145d0024f0d34e70fdc491edad17e0b3d7a3c46"
+    },
+    {
+      "name": "ecc-unified-notifications-ops",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-unified-notifications-ops",
+      "destinationPath": "skills/ecc-unified-notifications-ops",
+      "sha256": "fb5223a61973aa6fac5e7793b293a83c7b21d85534f145a55a211c89f305327e"
+    },
+    {
+      "name": "ecc-verification-loop",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-verification-loop",
+      "destinationPath": "skills/ecc-verification-loop",
+      "sha256": "cc684d555c736710678aa95f11eea9cb038bd33eee046e771637066f86978481"
+    },
+    {
+      "name": "ecc-video-editing",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-video-editing",
+      "destinationPath": "skills/ecc-video-editing",
+      "sha256": "51b1607399b28fa604c356d82ebde5c0630741cb052337cc442fe3fd9c6caf48"
+    },
+    {
+      "name": "ecc-videodb",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-videodb",
+      "destinationPath": "skills/ecc-videodb",
+      "sha256": "fa4f5e20596f848cac5f1d7ad5c31d1eb92d0abe2c982d55803459260a4783e3"
+    },
+    {
+      "name": "ecc-visa-doc-translate",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-visa-doc-translate",
+      "destinationPath": "skills/ecc-visa-doc-translate",
+      "sha256": "1b704c5cedef16779a11cd7dd26b5f7866a8ca84bbf8ddf38f971aa1324efdb9"
+    },
+    {
+      "name": "ecc-workspace-surface-audit",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ecc-workspace-surface-audit",
+      "destinationPath": "skills/ecc-workspace-surface-audit",
+      "sha256": "9c6709a730d96f9f52f7e13dd88ca7082e848c349c482e3988a18f049a3affa6"
+    },
+    {
       "name": "edit-article",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/edit-article",
       "destinationPath": "skills/edit-article",
       "sha256": "6cf84cab687a059a11a147c2536ed1f3fa13e088d9e70683954695c1b66cf08c"
+    },
+    {
+      "name": "editframe-video",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/editframe-video",
+      "destinationPath": "skills/editframe-video",
+      "sha256": "49a57af17de90a9859cf67f7edd819023a2c48025b7b446d8d3e6bf3a438b980"
+    },
+    {
+      "name": "eightctl",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/eightctl",
+      "destinationPath": "skills/eightctl",
+      "sha256": "b08940da579e0ca4112aa88b27c4cfe1c9ee07e1841f787894f266da52498034"
     },
     {
       "name": "email-newsletter",
@@ -651,6 +2635,14 @@
       "sourcePath": "skills/email-sequence",
       "destinationPath": "skills/email-sequence",
       "sha256": "c52316bff38576e2538beadf0a6c2faaced0cb0813554edea9901b8ca99fb1aa"
+    },
+    {
+      "name": "empathy-map",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/empathy-map",
+      "destinationPath": "skills/empathy-map",
+      "sha256": "0520623374b7b815fa2da83c4e08d9a52e356d0fc15f1e485141af85ca096d63"
     },
     {
       "name": "error-handling-ux",
@@ -677,12 +2669,68 @@
       "sha256": "3618c1b285d7d98e6a72b8365950a2f7364da85f455d3b24e22f5358abbbd832"
     },
     {
+      "name": "execute",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/execute",
+      "destinationPath": "skills/execute",
+      "sha256": "5a195a13833680df3d9e449b2db118923814145bb2fc4f75babd4020cde64d5c"
+    },
+    {
+      "name": "experience-map",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/experience-map",
+      "destinationPath": "skills/experience-map",
+      "sha256": "13733b7e7da1a59a2b67bccdb3c62e027ad87060890404237584f41a00399547"
+    },
+    {
       "name": "explain-simply",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/explain-simply",
       "destinationPath": "skills/explain-simply",
       "sha256": "c6dc0d8a7a12fbb3e624ca58d6ffbaed8c301514c47f8e4afffcf21c4c83ee64"
+    },
+    {
+      "name": "explain-this-pr",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/explain-this-pr",
+      "destinationPath": "skills/explain-this-pr",
+      "sha256": "8a58de997ef1bb2c132c0d589068aa134d222ef8a8b7f5ecbd3e5d7a58a092e9"
+    },
+    {
+      "name": "feedback-mastery",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/feedback-mastery",
+      "destinationPath": "skills/feedback-mastery",
+      "sha256": "8d9f107ba08eba6331c4112250ea40ffb21933f896b4804febcfd507787da7c0"
+    },
+    {
+      "name": "feedback-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/feedback-patterns",
+      "destinationPath": "skills/feedback-patterns",
+      "sha256": "b5966db85f95e0dde3775498ed5aa52019f9b9e4739634deaa47f14973832681"
+    },
+    {
+      "name": "ferpa-compliance",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ferpa-compliance",
+      "destinationPath": "skills/ferpa-compliance",
+      "sha256": "f1e2cfe8e7c24c7028b7b6f6930230940911ee00e1993ab659efe6d12fb994ac"
+    },
+    {
+      "name": "feynman",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/feynman",
+      "destinationPath": "skills/feynman",
+      "sha256": "b8549e626fcd754c660e3162c0d95f886001a4d1abacecbb47c302a758728e00"
     },
     {
       "name": "file-organizer",
@@ -701,12 +2749,12 @@
       "sha256": "6318300a38b5d644e49f859c0b56c2923920b9cef3d9c25d36011e0b7ef22e8b"
     },
     {
-      "name": "five-whys",
+      "name": "fitts-law",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
-      "sourcePath": "skills/five-whys",
-      "destinationPath": "skills/five-whys",
-      "sha256": "461d3ae1a32b94fbe8cc9e66d3f31883c1cd5f2c603a2510a5c79004cc0ea76a"
+      "sourcePath": "skills/fitts-law",
+      "destinationPath": "skills/fitts-law",
+      "sha256": "f10904cc9990721cc6f42e654f9d9a2fb3cde4606773b99de2227983a5d6a46b"
     },
     {
       "name": "fix-ci",
@@ -725,12 +2773,44 @@
       "sha256": "a6657bf563b3873959e54c8d4c03a8aae75dbad54c414244edda62437ef2b118"
     },
     {
+      "name": "form-cro",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/form-cro",
+      "destinationPath": "skills/form-cro",
+      "sha256": "e10a7aad5838b83fa5f6b3e5c2a9323b5d6ca206ab09e1edbb578d335003ae48"
+    },
+    {
       "name": "form-design",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/form-design",
       "destinationPath": "skills/form-design",
       "sha256": "40baad61c4e6f8f02a233d9bbba77e8bc838a4898a47d857f18a343bdd95cd72"
+    },
+    {
+      "name": "free-tool-strategy",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/free-tool-strategy",
+      "destinationPath": "skills/free-tool-strategy",
+      "sha256": "d965c467a7b572aab917edcb5aa3a1fc678e56762879d1027a87814ae241717c"
+    },
+    {
+      "name": "frontend-agent",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/frontend-agent",
+      "destinationPath": "skills/frontend-agent",
+      "sha256": "781d1357b93c19e58b3f368bdad9a5e9ab7f4d9d86145d813a0328df083c5fe7"
+    },
+    {
+      "name": "frontend-coding-agent",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/frontend-coding-agent",
+      "destinationPath": "skills/frontend-coding-agent",
+      "sha256": "aeb1726ebef07a0a583a8783be01311443536fe247d73c3fe00801574782ed1d"
     },
     {
       "name": "frontend-to-backend-requirements",
@@ -741,6 +2821,14 @@
       "sha256": "270783db100017a94a82df8d8a4140f71c19327de4424957eb77ecc9fba585e5"
     },
     {
+      "name": "game-changing-features",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/game-changing-features",
+      "destinationPath": "skills/game-changing-features",
+      "sha256": "6ca5f1821663a9d2c624e9d20df21ddd73fe46e9a4e3a695c5206dd79762b683"
+    },
+    {
       "name": "gdpr-compliance",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
@@ -749,12 +2837,68 @@
       "sha256": "5560d09805883d5a6acb499f3b31c1fb99d51d159fc9fff44e5af626fb90c921"
     },
     {
+      "name": "gemini",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/gemini",
+      "destinationPath": "skills/gemini",
+      "sha256": "8c1e9f063496e2efa9891280b4053e1d4cb7d784ed774a29545b312e809f265e"
+    },
+    {
+      "name": "gepetto",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/gepetto",
+      "destinationPath": "skills/gepetto",
+      "sha256": "83b5fdc029addb363c0ccc80bcc56699148c1ba74594f717eda23f7cb53b4c87"
+    },
+    {
+      "name": "gesture-patterns",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/gesture-patterns",
+      "destinationPath": "skills/gesture-patterns",
+      "sha256": "8a9ec8edcfc0386eba78de2b24b965d4a507baf02bd7710e29d7660ac4e1ad57"
+    },
+    {
+      "name": "get-pr-comments",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/get-pr-comments",
+      "destinationPath": "skills/get-pr-comments",
+      "sha256": "989394d4df16bbcc2dfaa4c486bb7574777f535262943ca6bee1c0edefc4f454"
+    },
+    {
+      "name": "gh-issues",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/gh-issues",
+      "destinationPath": "skills/gh-issues",
+      "sha256": "f8bef707a96f9a5bf8301c95b94fbe99be60cf34d6bb2e091087f4ec42ace7bb"
+    },
+    {
+      "name": "gifgrep",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/gifgrep",
+      "destinationPath": "skills/gifgrep",
+      "sha256": "0e1362c6115493f0701babe0539188354832a468b616bf8d37da720acc84de33"
+    },
+    {
       "name": "git-context",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/git-context",
       "destinationPath": "skills/git-context",
       "sha256": "984c57be0937f88bfd2f4a13f77b13e16b0c23483dc186a6cc40bffc9c9c7bc5"
+    },
+    {
+      "name": "git-guardrails-claude-code",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/git-guardrails-claude-code",
+      "destinationPath": "skills/git-guardrails-claude-code",
+      "sha256": "4b1e7a10a097a121c0aa3d311bb3f3ff64215c461ea7b3aa18fa802353349451"
     },
     {
       "name": "github",
@@ -837,12 +2981,244 @@
       "sha256": "aa71ddc8f38b18fc3b259b8a193d7466fd3c226f79c2e028be967149d60d04a2"
     },
     {
+      "name": "gmail-send-formatting",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/gmail-send-formatting",
+      "destinationPath": "skills/gmail-send-formatting",
+      "sha256": "3202bdb5f2a7205f88bdb31ae86b89f9c110d6e78a2c8175bb6192a680caf5cb"
+    },
+    {
       "name": "goal-post",
       "sourceType": "public_override",
       "sourceRevision": "public-override",
       "sourcePath": "overrides/goal-post",
       "destinationPath": "skills/goal-post",
       "sha256": "3a3dce77fcf12918760d6b4925df6d48daeba9e0bf7c5c2d53ee1fbc5d4899f5"
+    },
+    {
+      "name": "gog",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/gog",
+      "destinationPath": "skills/gog",
+      "sha256": "1985d40ae9381f787e71dfa6001ff9139de793acf2af40e99b97e7d143e4087b"
+    },
+    {
+      "name": "goplaces",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/goplaces",
+      "destinationPath": "skills/goplaces",
+      "sha256": "bf06b35016673ddea36e03e0a9b50a76e09c7741001b05ddde8b7ecbc2dea712"
+    },
+    {
+      "name": "graphic-chart",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/graphic-chart",
+      "destinationPath": "skills/graphic-chart",
+      "sha256": "a450f3cd080026bcb27bf0f6f8675de5cb181e51509025a611d8f8628f6f4e34"
+    },
+    {
+      "name": "graphic-ebook",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/graphic-ebook",
+      "destinationPath": "skills/graphic-ebook",
+      "sha256": "06ecf2fc5685af0b4296a655a5e4936697c5d6ed43fcf8f9e8870372eeb8d0d6"
+    },
+    {
+      "name": "graphic-gif",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/graphic-gif",
+      "destinationPath": "skills/graphic-gif",
+      "sha256": "187509e1d1acbe2286ecf72d909a3e77361b9bb7255db0579313e47118c05d70"
+    },
+    {
+      "name": "graphify",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/graphify",
+      "destinationPath": "skills/graphify",
+      "sha256": "4d678b6d283ed03065d4f93f6580daa315c8ff36a808258397332f5362c73f5e"
+    },
+    {
+      "name": "grill-me",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/grill-me",
+      "destinationPath": "skills/grill-me",
+      "sha256": "31f8d37f99cc62696a27b8028a93607d117043d99ca0db26213aff7099781778"
+    },
+    {
+      "name": "grill-with-docs",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/grill-with-docs",
+      "destinationPath": "skills/grill-with-docs",
+      "sha256": "d21af3c2e0570cd9563a73780c9afb8d6ec70b77511152e67888eddd84d578fc"
+    },
+    {
+      "name": "handoff",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/handoff",
+      "destinationPath": "skills/handoff",
+      "sha256": "478ba7f43732eb37517839d1360c630bc645a1eac6f39737cb3fb38d22a1194b"
+    },
+    {
+      "name": "handoff-spec",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/handoff-spec",
+      "destinationPath": "skills/handoff-spec",
+      "sha256": "f16d57c60fd73ba3f8f1efd387b28f667081f852c380d4d4f4e39ff6699b9d0d"
+    },
+    {
+      "name": "harden",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/harden",
+      "destinationPath": "skills/harden",
+      "sha256": "be411e60c6e5ee211ce30d4b8eab60d8c4118fccca0b62d94c7ddb2bb87e5e62"
+    },
+    {
+      "name": "healthcheck",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/healthcheck",
+      "destinationPath": "skills/healthcheck",
+      "sha256": "908c5f83c518540073d027956a784e7255ffde3ceeb53eea70ac16a3e34a32ea"
+    },
+    {
+      "name": "heuristic-evaluation",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/heuristic-evaluation",
+      "destinationPath": "skills/heuristic-evaluation",
+      "sha256": "858004daa5820ed94f6626d776cadbf2ec7819ecdba76dd27ac0c115d9337505"
+    },
+    {
+      "name": "hicks-law",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/hicks-law",
+      "destinationPath": "skills/hicks-law",
+      "sha256": "da5669b8b9f1740f5f6e6f2b9a559a1f22888fca8296b7bc58cc116a5f988c01"
+    },
+    {
+      "name": "higgsfield-generate",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/higgsfield-generate",
+      "destinationPath": "skills/higgsfield-generate",
+      "sha256": "7bb181b215613b3e1b41d5c8d8a96b4060abdcd4a01f1b54bc90061758da0a25"
+    },
+    {
+      "name": "higgsfield-marketplace-cards",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/higgsfield-marketplace-cards",
+      "destinationPath": "skills/higgsfield-marketplace-cards",
+      "sha256": "3b0011e4a026f6b23b3f498081f50bb644b0c9625ddb08bf246014603656575f"
+    },
+    {
+      "name": "higgsfield-product-photoshoot",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/higgsfield-product-photoshoot",
+      "destinationPath": "skills/higgsfield-product-photoshoot",
+      "sha256": "3226f1a40a97e06352ae41bcc7ffef24780d8fa47bf62c6e65dc0d9908c10d31"
+    },
+    {
+      "name": "higgsfield-soul-id",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/higgsfield-soul-id",
+      "destinationPath": "skills/higgsfield-soul-id",
+      "sha256": "68ab413dca7de5bb156c1052affabd062dc23a718f431f4e1e848c199b165ff3"
+    },
+    {
+      "name": "himalaya",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/himalaya",
+      "destinationPath": "skills/himalaya",
+      "sha256": "b3a0d5caee9646e7f61673f5b0fdeec53f644aab535435b1187d62af76cd37cc"
+    },
+    {
+      "name": "human-tone",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/human-tone",
+      "destinationPath": "skills/human-tone",
+      "sha256": "95e56c35b3f39ab5c9c9ea270acd9810e3a00cf70de184d22acd47d62b723c79"
+    },
+    {
+      "name": "icon-system",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/icon-system",
+      "destinationPath": "skills/icon-system",
+      "sha256": "3f20d95a1a39004907b204a66fb6f269bf6e2215c64aafb3d987e0907279fe9f"
+    },
+    {
+      "name": "illustration-style",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/illustration-style",
+      "destinationPath": "skills/illustration-style",
+      "sha256": "627560b3267ee4acb029ebf920f3ac9136ed6b679a0778644fd4c392f9b0dbe2"
+    },
+    {
+      "name": "image",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/image",
+      "destinationPath": "skills/image",
+      "sha256": "99163438a768230e325b438efa756133671a4868a33a1bd0fb0a70e6ef517757"
+    },
+    {
+      "name": "image-enhancer",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/image-enhancer",
+      "destinationPath": "skills/image-enhancer",
+      "sha256": "aaa638aaafd0b4a53c412a8d68b10bf8ea6928e44bbdf51ba438821f6bb4db7e"
+    },
+    {
+      "name": "image-to-code-skill",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/image-to-code-skill",
+      "destinationPath": "skills/image-to-code-skill",
+      "sha256": "ce9e7282b05e6cf247352c0f68953b943755899eb14a2198d72c97c6e5ffa807"
+    },
+    {
+      "name": "imagegen-frontend-mobile",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/imagegen-frontend-mobile",
+      "destinationPath": "skills/imagegen-frontend-mobile",
+      "sha256": "28a7d69de882376912e75785987a8f3a8b4eb04ea26d26aeda263bfd0fc5c605"
+    },
+    {
+      "name": "imagegen-frontend-web",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/imagegen-frontend-web",
+      "destinationPath": "skills/imagegen-frontend-web",
+      "sha256": "84aa5b72943fadd3966273b5adcb1484bf62187837bb806965be2454f45b6f1a"
+    },
+    {
+      "name": "impeccable",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/impeccable",
+      "destinationPath": "skills/impeccable",
+      "sha256": "f0bf1ce039f376998399e2efb77802164eba52827a3ab533d22ae15523b136da"
     },
     {
       "name": "improve-codebase-architecture",
@@ -853,12 +3229,52 @@
       "sha256": "326e2a53c622d19509f2b0c32111b4d8cb208eb3df1bd1dd8671308708bc245b"
     },
     {
+      "name": "imsg",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/imsg",
+      "destinationPath": "skills/imsg",
+      "sha256": "d17e30fd687c491e0c711413ef0be15b03a53a47fb37b9d65b476dee226b0554"
+    },
+    {
       "name": "information-architecture",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/information-architecture",
       "destinationPath": "skills/information-architecture",
       "sha256": "f64552481c808ac2688fcc7aab35e40dd981630586aa70ba1e637432c1b46fa6"
+    },
+    {
+      "name": "inline-complexity",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/inline-complexity",
+      "destinationPath": "skills/inline-complexity",
+      "sha256": "f8668da87da651ef11ec3059c7f3de6ec2373163af62afb6a5ec394bd7c97042"
+    },
+    {
+      "name": "instruments-profiling",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/instruments-profiling",
+      "destinationPath": "skills/instruments-profiling",
+      "sha256": "d925c5dce454f6c4c660167697f1252b843ad38a5c54e499a41e064315937d05"
+    },
+    {
+      "name": "interfaces-that-feel",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/interfaces-that-feel",
+      "destinationPath": "skills/interfaces-that-feel",
+      "sha256": "b03443a8a043b7e7d967c638fd7dc3691deb2dee58ff14433b4aae194c1822b6"
+    },
+    {
+      "name": "jam-mcp-debugger",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/jam-mcp-debugger",
+      "destinationPath": "skills/jam-mcp-debugger",
+      "sha256": "dfd7f86b8a888cac001cc39244ecb23b31e34d52593003f2769ea6ab1b75936f"
     },
     {
       "name": "javascript-typescript",
@@ -875,6 +3291,38 @@
       "sourcePath": "skills/json-canvas",
       "destinationPath": "skills/json-canvas",
       "sha256": "8b99cc24a90eaa62f3a6662162f028f6a4eca50c3da25d04abf3d5555d055e2d"
+    },
+    {
+      "name": "karpathy-guidelines",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/karpathy-guidelines",
+      "destinationPath": "skills/karpathy-guidelines",
+      "sha256": "219594875767be704a535d9c71b6ceb6b30114a50657b4899ea97914567c3b54"
+    },
+    {
+      "name": "landing-page-architecture",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/landing-page-architecture",
+      "destinationPath": "skills/landing-page-architecture",
+      "sha256": "5cc3c6923fc20cd405f02612ec6889c1aa4542f046e5fce4265bb00a676245e9"
+    },
+    {
+      "name": "landscaping-design-and-quote",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/landscaping-design-and-quote",
+      "destinationPath": "skills/landscaping-design-and-quote",
+      "sha256": "31958798b28486b2b15f1a1ded2bff4fb38da6cc4b8c007056117be2a675917d"
+    },
+    {
+      "name": "lead-research-assistant",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/lead-research-assistant",
+      "destinationPath": "skills/lead-research-assistant",
+      "sha256": "215b1b4853c0e712dfcf1ca3429abf00e57f0623c2bf5a65d7a19f8dd32329d7"
     },
     {
       "name": "localization-design",
@@ -941,6 +3389,14 @@
       "sha256": "8af3ae135726c6a60d9caf00bbff86b73cfb31c15f2d21e8131c115cbb8b5169"
     },
     {
+      "name": "mui",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/mui",
+      "destinationPath": "skills/mui",
+      "sha256": "62fb623073b87cd94a601ff464ae6dc2f51fd040356b6c1a7fc4f858526bcb61"
+    },
+    {
       "name": "multi-agent-patterns",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
@@ -949,12 +3405,28 @@
       "sha256": "5b83414417c74d0cb2855ae3f19fff28a0c8fdfd2e5981cbfbfa54b68f400ca8"
     },
     {
+      "name": "multi-search-engine",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/multi-search-engine",
+      "destinationPath": "skills/multi-search-engine",
+      "sha256": "be38888a9802220c15a7690408d6a3579aa8992835237aa165a2e9dadb2ce4aa"
+    },
+    {
       "name": "nano-pdf",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/nano-pdf",
       "destinationPath": "skills/nano-pdf",
       "sha256": "f87aa33ab0bac33487296d269b713df6f731c4e4a09e70b08f2cb7f175bdec65"
+    },
+    {
+      "name": "native-app-performance",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/native-app-performance",
+      "destinationPath": "skills/native-app-performance",
+      "sha256": "aa0b2a89af9baf971c45179621944b1e7d249ba05cec73006d689b810cb602d0"
     },
     {
       "name": "new-branch-and-pr",
@@ -973,12 +3445,28 @@
       "sha256": "8041fba21915937318b8a06c1911a326644bee3627e39747757d3004f4a5c92c"
     },
     {
+      "name": "nyt-data-viz",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/nyt-data-viz",
+      "destinationPath": "skills/nyt-data-viz",
+      "sha256": "cc4dcdd6e56e4cd7669adec6af42517daebb78b1fc258542308435912a9b0d4d"
+    },
+    {
       "name": "obsidian",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/obsidian",
       "destinationPath": "skills/obsidian",
       "sha256": "476d59eba1043db67c818bfb0d720526d52b46bc52d0d5340bb265476b8a18b4"
+    },
+    {
+      "name": "obsidian-bases",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/obsidian-bases",
+      "destinationPath": "skills/obsidian-bases",
+      "sha256": "c9c7e65a8b0598473f55c3510d6d1de33d93856ac45c09d910b7dad2717b3969"
     },
     {
       "name": "obsidian-cli",
@@ -1005,6 +3493,14 @@
       "sha256": "1e34caaa182c3e70be80aad679952bd0850e76c257a3f24bd7118bebfbec6c72"
     },
     {
+      "name": "onboarding-cro",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/onboarding-cro",
+      "destinationPath": "skills/onboarding-cro",
+      "sha256": "4c22f3524f900e14a445cfdcd537bb4d3eb29e50e94447bc1c4e3fdcbcf1627c"
+    },
+    {
       "name": "onboarding-design",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
@@ -1019,6 +3515,14 @@
       "sourcePath": "skills/ooda-loop",
       "destinationPath": "skills/ooda-loop",
       "sha256": "558ae49da6a129d976b49579208230ae90d2a31e652d1acbfe8569853449be27"
+    },
+    {
+      "name": "openai-image-gen",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/openai-image-gen",
+      "destinationPath": "skills/openai-image-gen",
+      "sha256": "86bbba5670976bdf290ee7359689c5e321ca2993954323725db0076d341e600c"
     },
     {
       "name": "openai-whisper",
@@ -1059,6 +3563,22 @@
       "sourcePath": "skills/perplexity",
       "destinationPath": "skills/perplexity",
       "sha256": "96952fc3d5114eaed50a2ecce5706b152385f7753a35db6c14abc62cf78f227f"
+    },
+    {
+      "name": "pete-bowen-landing-page-guide",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/pete-bowen-landing-page-guide",
+      "destinationPath": "skills/pete-bowen-landing-page-guide",
+      "sha256": "7bb33510e1ddf08a9d7014161a6b74224f28a4666080cd813ad6746010851f9c"
+    },
+    {
+      "name": "pic-foxai-image-generator",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/pic-foxai-image-generator",
+      "destinationPath": "skills/pic-foxai-image-generator",
+      "sha256": "27f46144dbb5a0c772c86e7e959046cc313cfa15e26d67abb1b7fb3f535a54c5"
     },
     {
       "name": "pipeda-compliance",
@@ -1109,6 +3629,14 @@
       "sha256": "22589ab6979b15866d3aacb739a4ddf6ba891fa6ebea2fbb78563ba124606c52"
     },
     {
+      "name": "premium-ui-components",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/premium-ui-components",
+      "destinationPath": "skills/premium-ui-components",
+      "sha256": "53633b65b4b71b8a7ad584071ce7a71b739781d3b55a61e0df2b49d70e62f5fc"
+    },
+    {
       "name": "pricing-strategy",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
@@ -1141,6 +3669,14 @@
       "sha256": "4730de9f98bafa19db711d043dc3579de965d7519154f2cd2f46757ea46e3aa1"
     },
     {
+      "name": "project-guidelines-example",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/project-guidelines-example",
+      "destinationPath": "skills/project-guidelines-example",
+      "sha256": "a520d676852adf3e527ca64b71bfe0c1bbe6964f4300a43884d18a9ef1260e08"
+    },
+    {
       "name": "prompt-generation",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
@@ -1155,6 +3691,14 @@
       "sourcePath": "skills/proof-aware-status",
       "destinationPath": "skills/proof-aware-status",
       "sha256": "a40de05584871970739e0dacf415e17a461b8d98938e79c483fcc36b07b62cb4"
+    },
+    {
+      "name": "prototype",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/prototype",
+      "destinationPath": "skills/prototype",
+      "sha256": "76829cdb04f2cf3924e58f90d298a2e39029a3031f76f68131dbe5ae9a9a3f83"
     },
     {
       "name": "prototype-strategy",
@@ -1197,12 +3741,36 @@
       "sha256": "0b9dc01b94b097fca2aa76c6e31a231b8b19adbdc3d6803766e996e610bf9e45"
     },
     {
+      "name": "quieter",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/quieter",
+      "destinationPath": "skills/quieter",
+      "sha256": "81ca6c48bc126b094d5437c14de0204fad4e8ac92f8a86a4c1f2935bea6576d2"
+    },
+    {
       "name": "raffle-winner-picker",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/raffle-winner-picker",
       "destinationPath": "skills/raffle-winner-picker",
       "sha256": "62de6af4a4665e6684101c7444cf68d315e4437c813cf2eb608342ffa61d9f74"
+    },
+    {
+      "name": "react-useeffect",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/react-useeffect",
+      "destinationPath": "skills/react-useeffect",
+      "sha256": "7ee050448343f44bc03eeffbddfcfbf8103df09d00c3200758456d6dd2c52a6b"
+    },
+    {
+      "name": "redesign-skill",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/redesign-skill",
+      "destinationPath": "skills/redesign-skill",
+      "sha256": "f6b0637adf3481f0fbd23a365a8e0773ed82b322c1df78a40d7a8b4cda65c9e3"
     },
     {
       "name": "reducing-entropy",
@@ -1253,6 +3821,14 @@
       "sha256": "3a309ee6563c2792792a9fbd72f0c347c8e8192c9c9d03bf750ece47536772dc"
     },
     {
+      "name": "schema-markup",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/schema-markup",
+      "destinationPath": "skills/schema-markup",
+      "sha256": "f5be9cd3f86ea779afb468fed189dd4f7bc0a5cc948c74d5ad776b02b787ebfe"
+    },
+    {
       "name": "search-ux",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
@@ -1283,6 +3859,22 @@
       "sourcePath": "skills/setup-pre-commit",
       "destinationPath": "skills/setup-pre-commit",
       "sha256": "39df5538137477d3788152ef92ba1264b675157cd038794f82141edcebfddb96"
+    },
+    {
+      "name": "shopify-admin-api",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/shopify-admin-api",
+      "destinationPath": "skills/shopify-admin-api",
+      "sha256": "038c6f0b1588763487270f714cad9046aef23a7a584907305ed868ededa160b3"
+    },
+    {
+      "name": "site-architecture",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/site-architecture",
+      "destinationPath": "skills/site-architecture",
+      "sha256": "a86c315881458a75914fc261573951d7ec8c70e26a4db1f35d54c92ed57e4ba0"
     },
     {
       "name": "six-thinking-hats",
@@ -1461,6 +4053,46 @@
       "sha256": "a778d09d782537d13f301453237c1b9c00304048474045d1f53384dc1c00f6e1"
     },
     {
+      "name": "svg-animations",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/svg-animations",
+      "destinationPath": "skills/svg-animations",
+      "sha256": "c3d4f0656afe02c66ccc0a8351d13e2d3dd1df275dbb3693b62e8a22f7044ff2"
+    },
+    {
+      "name": "swift-concurrency-expert",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/swift-concurrency-expert",
+      "destinationPath": "skills/swift-concurrency-expert",
+      "sha256": "9ecce24fa3ab520a67285f39d07e82db100775ae09bf47143ea4cbf95b3ccc90"
+    },
+    {
+      "name": "swiftui-liquid-glass",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/swiftui-liquid-glass",
+      "destinationPath": "skills/swiftui-liquid-glass",
+      "sha256": "162387261122b37bf9e527b0e4828b3662cbb82be2070798a2388f7850ee03c5"
+    },
+    {
+      "name": "swiftui-performance-audit",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/swiftui-performance-audit",
+      "destinationPath": "skills/swiftui-performance-audit",
+      "sha256": "7d919f3abe7e06e01bb8507ea300a897a7310359b532365f896dbbc68379f8c9"
+    },
+    {
+      "name": "swiftui-view-refactor",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/swiftui-view-refactor",
+      "destinationPath": "skills/swiftui-view-refactor",
+      "sha256": "49e9cb6bc21cbb82846c8e579ddbfb106eee0a1f7f4361ef42a4061a8d3a2a55"
+    },
+    {
       "name": "test-scenario",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
@@ -1475,6 +4107,14 @@
       "sourcePath": "skills/theming-system",
       "destinationPath": "skills/theming-system",
       "sha256": "e8c53cabf719c0627ba0c3acf9c3b432b197a7228def825e08f2c4851d4f9be5"
+    },
+    {
+      "name": "tiktok-app-marketing",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/tiktok-app-marketing",
+      "destinationPath": "skills/tiktok-app-marketing",
+      "sha256": "e2aad94178277f2e8f5bb24ad26ac9a802f56d595e286c03594ba59f3a411281"
     },
     {
       "name": "tmux",
@@ -1501,12 +4141,28 @@
       "sha256": "4f7f15f119595cc44667203e7a649d93df42f8c6678534fdfd2f2ebf3c0f4336"
     },
     {
+      "name": "ubiquitous-language",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ubiquitous-language",
+      "destinationPath": "skills/ubiquitous-language",
+      "sha256": "675e0300ef2aaafb4ce16599f40cbbb8e1b6954bee2e73cc09df8799e9760c67"
+    },
+    {
       "name": "ui-skills",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/ui-skills",
       "destinationPath": "skills/ui-skills",
       "sha256": "38f5e01580c2d7674569ff0a51490c39152d0569c8ca9bfdac50eae0bc302a63"
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/ui-ux-pro-max",
+      "destinationPath": "skills/ui-ux-pro-max",
+      "sha256": "a20c46f75af26da54fced0102fdfcd1aa3c0935e5069d941c2a0a1bb8d31e30a"
     },
     {
       "name": "usability-test-plan",
@@ -1541,12 +4197,44 @@
       "sha256": "7cede9a63bd64c2da3671eb960ae2b8be2eb095b6574d6cff9aaf7bb53a08ee9"
     },
     {
+      "name": "video",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/video",
+      "destinationPath": "skills/video",
+      "sha256": "e95770db2b4da4e83962454b965ad6c5bdd7c8db2710d42c565839e21a1952ba"
+    },
+    {
+      "name": "video-downloader",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/video-downloader",
+      "destinationPath": "skills/video-downloader",
+      "sha256": "026de5da21fceb7eba2a8034c6bffda3eb6631f070500026ef3ad9c8ecd8aec7"
+    },
+    {
       "name": "video-frames",
       "sourceType": "private_catalog",
       "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
       "sourcePath": "skills/video-frames",
       "destinationPath": "skills/video-frames",
       "sha256": "c44647b6e878c5f1e9f830181da4cf83a05d97f6ac34adcd52d1e84add3cf548"
+    },
+    {
+      "name": "video-transcript-downloader",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/video-transcript-downloader",
+      "destinationPath": "skills/video-transcript-downloader",
+      "sha256": "a3e572104e0e61e7ca2a2233dd9d756c7dda1d27fce6f4c8fa5958c9c2eb8aaf"
+    },
+    {
+      "name": "vignelli-canon-design-system",
+      "sourceType": "private_catalog",
+      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
+      "sourcePath": "skills/vignelli-canon-design-system",
+      "destinationPath": "skills/vignelli-canon-design-system",
+      "sha256": "0d615ad5c174ccc51bc65c34f9b4d8be002822043a17e3c98be8b55e6eeee61f"
     },
     {
       "name": "visual-hierarchy",

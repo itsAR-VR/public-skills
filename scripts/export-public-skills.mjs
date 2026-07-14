@@ -78,6 +78,7 @@ const explicitRemovals = new Map([
   ['mo-youtube-gemini-video-analyst', 'person-specific operating workflow'],
   ['setup-skill-packs', 'contains private workstation and source-repository setup'],
   ['skill-portfolio-evals', 'contains private team handoffs and quality-routing context'],
+  ['writing-voice-system', 'contains a person-specific writing voice and source materials'],
   ['z2a-loop', 'company-specific orchestration workflow'],
   ['zta-ai-audit-deck', 'company-specific client-delivery workflow'],
   ['zta-pdf', 'company-specific client-delivery workflow'],

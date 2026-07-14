@@ -1,13 +1,13 @@
 {
   "schemaVersion": "public-skills-export/v1",
-  "generatedAt": "2026-07-14T14:01:10.442Z",
+  "generatedAt": "2026-07-14T14:01:39.997Z",
   "source": {
     "catalog": "private canonical catalog",
     "revision": "d883e249352e2d3c53df6689bd0b9a358433e052"
   },
   "counts": {
-    "kept": 753,
-    "removed": 171,
+    "kept": 752,
+    "removed": 172,
     "edited": 33
   },
   "edited": [
@@ -845,6 +845,10 @@
     {
       "name": "where-your-customer-lives",
       "reason": "contains unreviewed binary or data asset .env.example"
+    },
+    {
+      "name": "writing-voice-system",
+      "reason": "contains a person-specific writing voice and source materials"
     },
     {
       "name": "xurl",
@@ -6078,13 +6082,6 @@
       "sourcePath": "skills/writing-shape",
       "destinationPath": "skills/writing-shape",
       "sha256": "06c369e741d32ab091da88c54dac339532e70d6ac22b35fdf19c1fa4133f51ff"
-    },
-    {
-      "name": "writing-voice-system",
-      "sourceRevision": "d883e249352e2d3c53df6689bd0b9a358433e052",
-      "sourcePath": "skills/writing-voice-system",
-      "destinationPath": "skills/writing-voice-system",
-      "sha256": "fa026aeabbd9306b92a2b5ef2650ace15b051e890354adb7673f49bdf76ac78e"
     },
     {
       "name": "x-thread-fetcher",

@@ -1,0 +1,9 @@
+# ponytail-skills-pack manifest - DietrichGebert/ponytail
+# Skill names this marketplace pack installs. Used by sync-skills Step 1.6 to
+# scope the managed-upstream replacement pass. Upstream wins only for these
+# names, preserving user edits to any other skill.
+ponytail
+ponytail-audit
+ponytail-debt
+ponytail-help
+ponytail-review

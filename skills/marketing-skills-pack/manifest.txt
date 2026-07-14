@@ -1,0 +1,53 @@
+# marketing-skills-pack manifest — coreyhaines31/marketingskills v1.9.0
+# Skill names this marketplace pack installs. Used by sync-skills Step 1.6 to
+# scope the managed-upstream replacement pass — upstream wins ONLY for these
+# names, preserving user edits to any other skill.
+#
+# 2026-05-11: `image` and `video` removed from the manifest. They are now
+# locally re-purposed as thin routers to Higgsfield AI (`/higgsfield:generate`).
+# Step 1.6 active replacement is bypassed for them so the local routing edits
+# persist through `sync-skills`. The skills CLI's `npx skills update` only
+# replaces a skill when versions differ, so the local 1.0.0 copies stay intact
+# unless upstream bumps those skills' versions. If that happens, re-apply the
+# FALLBACK ONLY prefix and routing banner per the project memory at
+# ~/.claude/projects/-Users-contributor-Desktop-Codespace-public-skills/memory/project_higgsfield_routing.md
+#
+# Update this list when the upstream pack adds or removes skills.
+ab-test-setup
+ad-creative
+ai-seo
+analytics-tracking
+aso-audit
+churn-prevention
+cold-email
+community-marketing
+competitor-alternatives
+competitor-profiling
+content-strategy
+copy-editing
+copywriting
+customer-research
+directory-submissions
+email-sequence
+form-cro
+free-tool-strategy
+launch-strategy
+lead-magnets
+marketing-ideas
+marketing-psychology
+onboarding-cro
+page-cro
+paid-ads
+paywall-upgrade-cro
+popup-cro
+pricing-strategy
+product-marketing-context
+programmatic-seo
+referral-program
+revops
+sales-enablement
+schema-markup
+seo-audit
+signup-flow-cro
+site-architecture
+social-content

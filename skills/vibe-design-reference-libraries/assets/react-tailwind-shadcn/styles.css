@@ -1,0 +1,70 @@
+:root {
+  --vibe-surface: 255 255 255;
+  --vibe-ink: 10 10 10;
+  --vibe-muted: 82 82 82;
+  --vibe-border: 229 229 229;
+  --vibe-accent: 124 92 255;
+}
+
+.vibe-focus-ring:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px rgb(var(--vibe-surface)),
+    0 0 0 4px rgb(var(--vibe-accent) / 0.65);
+}
+
+.vibe-soft-surface {
+  background:
+    linear-gradient(180deg, rgb(var(--vibe-surface) / 0.92), rgb(var(--vibe-surface) / 0.78)),
+    radial-gradient(circle at 20% 0%, rgb(var(--vibe-accent) / 0.12), transparent 32%);
+  border: 1px solid rgb(var(--vibe-border));
+  box-shadow: 0 18px 60px rgb(0 0 0 / 0.08);
+}
+
+.vibe-grid-background {
+  background-image:
+    linear-gradient(to right, rgb(var(--vibe-border) / 0.7) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(var(--vibe-border) / 0.7) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(to bottom, black, transparent 78%);
+}
+
+.vibe-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.vibe-shimmer::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(255 255 255 / 0.55),
+    transparent
+  );
+  animation: vibe-shimmer 1.6s ease-in-out infinite;
+}
+
+@keyframes vibe-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vibe-shimmer::after {
+    animation: none;
+  }
+
+  .vibe-motion-safe,
+  .vibe-motion-safe * {
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+

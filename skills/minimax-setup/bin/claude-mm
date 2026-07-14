@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+# claude-mm — run the real Claude Code TUI with MiniMax M2.7 as the backend.
+#
+# Claude Code speaks Anthropic's API. MiniMax's Token Plan endpoint
+# (https://api.minimax.io/anthropic) is Anthropic-compatible. So we just
+# override the base URL + auth token and Claude Code can't tell the
+# difference — you get the full Claude Code TUI (sidebar, diffs, todos,
+# slash commands, MCP, sub-agents) but every request lands on MiniMax-M2.7.
+#
+# The token lives in ~/.config/minimax/token-plan.key (chmod 600). If that
+# file is missing or empty, the wrapper aborts rather than silently falling
+# back to your Anthropic account (which would surprise-bill you).
+
+set -euo pipefail
+
+KEY_FILE="${HOME}/.config/minimax/token-plan.key"
+
+if [[ ! -r "$KEY_FILE" ]]; then
+  echo "claude-mm: ${KEY_FILE} is missing or unreadable." >&2
+  echo "  Create it with your MiniMax Token Plan key:" >&2
+  echo "    umask 077 && printf '%s' '<your-token-plan-key>' > ${KEY_FILE}" >&2
+  exit 1
+fi
+
+MINIMAX_KEY="$(tr -d '\n\r' < "$KEY_FILE")"
+if [[ -z "$MINIMAX_KEY" ]]; then
+  echo "claude-mm: ${KEY_FILE} is empty." >&2
+  exit 1
+fi
+
+# Backend: MiniMax's Anthropic-compatible endpoint.
+export ANTHROPIC_BASE_URL="https://api.minimax.io/anthropic"
+export ANTHROPIC_AUTH_TOKEN="$MINIMAX_KEY"
+
+# Strip any sk-ant-* key from this process — otherwise Claude Code may
+# prefer x-api-key over Bearer and MiniMax will reject it.
+unset ANTHROPIC_API_KEY
+
+# Route every Claude Code model slot at MiniMax. Claude Code uses several
+# role-specific model slots internally (sub-agents, summarization, haiku-for-
+# fast-tasks). If any slot is left as a claude-* ID, MiniMax will 400 on it.
+export ANTHROPIC_MODEL="MiniMax-M2.7"
+export ANTHROPIC_SMALL_FAST_MODEL="MiniMax-M2.7"
+export ANTHROPIC_DEFAULT_SONNET_MODEL="MiniMax-M2.7"
+export ANTHROPIC_DEFAULT_OPUS_MODEL="MiniMax-M2.7"
+export ANTHROPIC_DEFAULT_HAIKU_MODEL="MiniMax-M2.7"
+
+# Profile dir: sessions stay isolated from the main Anthropic profile, but
+# claude-mm-sync symlinks shared resources (skills, agents, memories, hooks,
+# MCP, settings) so the MiniMax profile leverages your main ~/.claude setup.
+# Auto-run sync on launch so new skills/projects from the main profile pick
+# up without having to remember to re-sync.
+export CLAUDE_CONFIG_DIR="${HOME}/.claude-minimax"
+mkdir -p "$CLAUDE_CONFIG_DIR"
+if command -v claude-mm-sync >/dev/null 2>&1; then
+  claude-mm-sync solo >/dev/null 2>&1 || true
+fi
+
+exec /Applications/cmux.app/Contents/Resources/bin/claude "$@"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Terminus Maximus"
+  short_description: "Relentless phase execution + wrap-up loop"
+  default_prompt: "Use $terminus-maximus to keep going until the active phase is complete or blocked; apply $karpathy-guidelines, $recursive-reasoning-operator, and $ecc-documentation-lookup as subroutines that funnel back into Terminus Maximus outputs; follow $skill-creator for skill updates; always update phase docs and run $phase-gaps each turn."

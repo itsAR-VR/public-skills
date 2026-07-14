@@ -1,0 +1,8 @@
+# Skills owned by caveman-skills-pack
+# Source: https://github.com/JuliusBrussee/caveman
+# Step 1.6 of sync-skills adopts upstream replacements for these names.
+caveman
+caveman-commit
+caveman-help
+caveman-review
+caveman-compress

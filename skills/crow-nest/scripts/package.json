@@ -1,0 +1,15 @@
+{
+  "name": "crow-nest-scripts",
+  "version": "1.0.0",
+  "description": "Crow's Nest TUI scripts. Bun runtime.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "bun crow-nest.ts",
+    "dev": "bun --watch crow-nest.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.0.0"
+  }
+}

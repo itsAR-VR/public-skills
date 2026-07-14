@@ -1,0 +1,4 @@
+interface:
+  display_name: "Recursive Reasoning Operator"
+  short_description: "Source-grounded answers via plan, extract, verify."
+  default_prompt: "Produce a correct, source-grounded answer from provided material using the Recursive Reasoning Operator process."

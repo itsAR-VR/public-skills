@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hormozi Humanizer"
+  short_description: "Rewrite AI-sounding drafts into plain human writing"
+  default_prompt: "Use $hormozi-humanizer to humanize this draft without replacing my thinking."

@@ -1,0 +1,93 @@
+{
+  "skill_name": "prompt-generation",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a reusable Codex prompt for a repo-backed bug fix that needs tests, PR proof, and a clear blocker boundary.",
+      "expected_output": "Should classify the surface as a normal Codex task prompt unless the objective is durable enough for /goal. Should load the model prompt generation playbook. Should return a prompt package with Goal, Context, Constraints, and Done when sections. Should separate runtime controls from prompt text. Should include tests or proof commands, file preservation rules, external-action limits, and blocker reporting. Should not start with a generic persona.",
+      "assertions": [
+        "Classifies the target surface",
+        "Loads the model prompt generation playbook",
+        "Uses Goal, Context, Constraints, and Done when structure for Codex task prompts",
+        "Separates prompt text from runtime controls",
+        "Includes verification proof commands or tests",
+        "Includes blocker and external-action boundaries",
+        "Avoids persona-first prompting"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Rewrite this local SKILL.md so it follows current best practices and is optimized for GPT-5.6 and Codex.",
+      "expected_output": "Should classify the surface as a skill rewrite. Should use skill-creator for structure and skill-judge for quality scoring before closeout. Should keep SKILL.md lean and move long or volatile model guidance to references. Should improve the frontmatter description as a trigger contract, not a workflow summary. Should select Sol, Terra, or Luna from task complexity instead of treating GPT-5.6 as one undifferentiated route. Should include anti-patterns, validation commands, routing proof, and an eval hook such as evals/evals.json when supported.",
+      "assertions": [
+        "Classifies the task as a skill rewrite",
+        "Uses skill-judge before closeout",
+        "Keeps SKILL.md lean and uses references for long guidance",
+        "Treats description as a trigger contract",
+        "Routes GPT-5.6 work to Sol, Terra, or Luna by complexity",
+        "Includes specific anti-patterns",
+        "Includes validation commands and routing proof",
+        "Adds or recommends eval coverage"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Migrate our old OpenAI API prompt to GPT-5.6. It currently returns JSON and calls two internal tools.",
+      "expected_output": "Should treat this as a retune, not a model-string swap. Should verify the exact GPT-5.6 deployment and supported controls in current official OpenAI docs instead of assuming Codex CLI tier IDs are portable to the API. Should prefer the Responses API when state, tools, multimodality, or agentic behavior matters. Should separate model/provider, reasoning effort, verbosity, strict schemas or Structured Outputs, tool descriptions, prompt caching, and state handling from prompt text. Should include regression fixtures and compare old versus new prompts for quality, schema adherence, tool-call shape, latency, and cost.",
+      "assertions": [
+        "Rejects model-string-only migration",
+        "Requires current official OpenAI docs for volatile claims",
+        "Verifies the exact GPT-5.6 API deployment and supported controls",
+        "Separates runtime controls from prompt text",
+        "Uses strict schemas or Structured Outputs for JSON",
+        "Moves tool behavior into tool descriptions where appropriate",
+        "Includes prompt caching and state handling considerations",
+        "Defines regression evals across quality, schema, tool calls, latency, and cost"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Write an eval prompt that grades generated skill packages for quality.",
+      "expected_output": "Should classify the surface as a grader/eval prompt. Should use advanced-evaluation for rubric design and skill-judge for the skill-quality dimensions. Should prefer deterministic checks first where possible, then LLM-as-judge for semantic quality. Should require evidence before scores, one criterion per measurable aspect, confidence or edge-case guidance, and explicit bias mitigation if pairwise comparison is used.",
+      "assertions": [
+        "Classifies the surface as a grader or eval prompt",
+        "Uses advanced-evaluation for rubric design",
+        "Uses skill-judge dimensions for skill quality",
+        "Prefers deterministic checks before LLM-as-judge rubrics",
+        "Requires evidence-based justification before scoring",
+        "Keeps criteria measurable and separate",
+        "Includes edge-case or bias mitigation guidance"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Make this sentence sound less awkward: 'We can leverage AI to maximize operational outcomes.'",
+      "expected_output": "Should not use prompt-generation for a one-off rewrite. Should route to a copy-editing, writing, or plain direct rewrite workflow instead of producing a durable prompt package.",
+      "assertions": [
+        "Recognizes the task is a one-off rewrite",
+        "Does not produce a durable prompt package",
+        "Routes to a more appropriate writing or copy-editing workflow"
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Migrate this Codex prompt package to Claude Fable 5. It currently sets model_reasoning_effort=xhigh, enumerates twelve required behaviors, and asks the model to show its reasoning before answering.",
+      "expected_output": "Should treat this as a retune, not a model-string swap. Should load references/claude-fable-5.md and verify volatile Anthropic claims against current official docs. Should use Anthropic effort (high default, xhigh only when evals justify) instead of translating model_reasoning_effort. Should remove the show-your-reasoning instruction because it triggers a reasoning_extraction refusal on Fable 5, relying on summarized adaptive thinking instead. Should compress the enumerated behavior list into brief directional statements. Should keep prompt text separated from runtime controls, include a dated refresh trigger, and define regression evals comparing old versus new.",
+      "assertions": [
+        "Rejects model-string-only migration",
+        "Loads the Claude Fable 5 per-model reference",
+        "Uses Anthropic effort instead of translating OpenAI or Codex effort controls",
+        "Removes reasoning-echo instructions citing the reasoning_extraction refusal",
+        "Compresses enumerated behavior lists into brief directional statements",
+        "Separates prompt text from runtime controls",
+        "Includes a dated refresh trigger and regression evals"
+      ],
+      "files": []
+    }
+  ]
+}

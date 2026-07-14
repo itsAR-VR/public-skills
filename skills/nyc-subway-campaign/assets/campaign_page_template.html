@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BRAND_NAME — NYC Subway Campaign</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f1e8;
+  --paper:#fffaf1;
+  --ink:#111111;
+  --muted:#5c584f;
+  --line:#1a1a1a14;
+  --accent:#f04e23;
+  --accent2:#0039a6;
+  --display:'Fraunces',serif;
+  --sans:'Inter',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  --radius:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(1200px 800px at 10% -10%, rgba(240,78,35,.08), transparent 60%),
+    radial-gradient(900px 700px at 100% 0%, rgba(0,57,166,.06), transparent 50%),
+    var(--bg);
+  font-family:var(--sans);
+}
+svg{display:block}
+.page{max-width:1240px;margin:0 auto;padding:28px 22px 80px}
+.masthead{
+  display:flex;align-items:flex-start;justify-content:space-between;gap:20px;
+  padding:12px 0 26px;border-bottom:1px solid var(--line);margin-bottom:24px
+}
+.brandlock{display:flex;align-items:center;gap:14px}
+.brandmark{font-family:var(--display);font-size:clamp(34px,4vw,54px);font-weight:700;line-height:.9;letter-spacing:-.03em}
+.brandtail{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.campaignmeta{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-align:right;max-width:28ch}
+.hero{
+  display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:24px;align-items:end;
+  padding:22px 0 36px
+}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+.hero h1{margin:0;font-family:var(--display);font-size:clamp(52px,7vw,100px);line-height:.9;letter-spacing:-.04em;max-width:8.5ch}
+.lede{font-size:clamp(18px,2vw,24px);line-height:1.35;max-width:28ch;margin:18px 0 0;color:#222}
+.briefcard{
+  background:linear-gradient(180deg,var(--paper),#fff);
+  border:1px solid var(--line);border-radius:var(--radius);padding:20px 18px;box-shadow:0 20px 50px rgba(0,0,0,.08)
+}
+.briefcard p{margin:0 0 12px;font-size:14px;line-height:1.55;color:var(--muted)}
+.briefcard strong{color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.stat{padding:14px;border-radius:18px;background:rgba(255,255,255,.58);border:1px solid var(--line)}
+.stat .k{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.stat .v{font-family:var(--display);font-size:28px;line-height:1;letter-spacing:-.03em}
+.section{padding:30px 0;border-top:1px solid var(--line)}
+.sectionhead{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:16px}
+.sectionhead h2{margin:0;font-family:var(--display);font-size:clamp(30px,3vw,48px);letter-spacing:-.03em}
+.sectionhead .note{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-align:right}
+.brandbook{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px
+}
+.panel{
+  background:rgba(255,255,255,.66);
+  border:1px solid var(--line);border-radius:24px;padding:18px;min-height:150px;box-shadow:0 20px 50px rgba(0,0,0,.06)
+}
+.panel h3{margin:0 0 10px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.panel p{margin:0;color:#333;line-height:1.55}
+.swatches{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.swatch{min-height:70px;border-radius:16px;border:1px solid var(--line);padding:10px;display:flex;flex-direction:column;justify-content:space-between}
+.swatch .name{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.swatch .hex{font-family:var(--mono);font-size:10px;opacity:.7}
+.gallery{
+  display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px
+}
+.figure{margin:0;overflow:hidden;border-radius:28px;border:1px solid var(--line);background:var(--paper);box-shadow:0 20px 50px rgba(0,0,0,.08)}
+.figure img{display:block;width:100%;height:100%;object-fit:cover}
+.feature{grid-column:span 7;min-height:380px}
+.poster{grid-column:span 5;min-height:380px}
+.wide{grid-column:span 12;min-height:300px}
+.small{grid-column:span 4;min-height:280px}
+.copygrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.linecard{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:16px;min-height:160px;display:flex;flex-direction:column;justify-content:space-between}
+.linecard .label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.linecard .headline{font-family:var(--display);font-size:28px;line-height:1;letter-spacing:-.03em;margin-top:8px}
+.linecard .reason{margin-top:10px;color:var(--muted);line-height:1.5;font-size:14px}
+table{width:100%;border-collapse:separate;border-spacing:0 10px}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line)}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+td{background:rgba(255,255,255,.62)}
+tr td:first-child{border-top-left-radius:16px;border-bottom-left-radius:16px}
+tr td:last-child{border-top-right-radius:16px;border-bottom-right-radius:16px}
+.footer{padding-top:26px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr}
+  .brandbook{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .feature,.poster,.wide,.small{grid-column:span 2;min-height:260px}
+  .copygrid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .page{padding-inline:16px}
+  .masthead,.sectionhead{flex-direction:column;align-items:flex-start}
+  .stats,.brandbook,.gallery{grid-template-columns:1fr}
+  .feature,.poster,.wide,.small{grid-column:span 1}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="mark" viewBox="0 0 120 120">
+    <path d="M14 62c13-28 33-42 60-42 13 0 24 3 33 10l-16 20c-5-4-12-6-20-6-16 0-28 9-35 26-3 7-4 13-4 19 0 11 4 20 12 27 8 7 18 11 31 11 8 0 15-1 22-4l-3-24c-5 2-11 3-17 3-7 0-13-2-17-5-4-3-6-8-6-15 0-4 1-9 3-14 6-15 16-23 31-23 5 0 9 1 14 3l15-22c-11-5-24-8-40-8-31 0-54 13-68 39l15 7z" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<div class="page">
+  <header class="masthead reveal">
+    <div class="brandlock">
+      <svg width="48" height="48" viewBox="0 0 120 120" aria-hidden="true"><use href="#mark"></use></svg>
+      <div>
+        <div class="brandmark">BRAND_NAME</div>
+        <div class="brandtail">SEASON / YEAR</div>
+      </div>
+    </div>
+    <div class="campaignmeta">Cohesive NYC subway pitch deck / case study / placement plan</div>
+  </header>
+
+  <section class="hero reveal">
+    <div>
+      <p class="eyebrow">Case Study</p>
+      <h1>CAMPAIGN_HEADLINE</h1>
+      <p class="lede">BRIEF_COPY</p>
+    </div>
+    <aside class="briefcard">
+      <p><strong>Campaign idea:</strong> ONE_OWNABLE_LINE</p>
+      <div class="stats">
+        <div class="stat"><div class="k">Placements</div><div class="v">7</div></div>
+        <div class="stat"><div class="k">Run plan</div><div class="v">OOH</div></div>
+        <div class="stat"><div class="k">Tone</div><div class="v">Crisp</div></div>
+        <div class="stat"><div class="k">Status</div><div class="v">Ready</div></div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="section reveal">
+    <div class="sectionhead">
+      <h2>Brand book</h2>
+      <div class="note">Palette · type · voice · logo</div>
+    </div>
+    <div class="brandbook">
+      <div class="panel">
+        <h3>Logo</h3>
+        <p>SHORT_LOGO_NOTE</p>
+      </div>
+      <div class="panel">
+        <h3>Palette</h3>
+        <div class="swatches">
+          <div class="swatch" style="background:var(--ink);color:#fff"><div class="name">Ink</div><div class="hex">#111111</div></div>
+          <div class="swatch" style="background:var(--accent);color:#fff"><div class="name">Accent</div><div class="hex">#F04E23</div></div>
+          <div class="swatch" style="background:var(--accent2);color:#fff"><div class="name">Blue</div><div class="hex">#0039A6</div></div>
+          <div class="swatch" style="background:var(--paper)"><div class="name">Paper</div><div class="hex">#FFFAF1</div></div>
+          <div class="swatch" style="background:#d9ccb7"><div class="name">Neutral</div><div class="hex">#D9CCB7</div></div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Type</h3>
+        <p>DISPLAY_FAMILY + TEXT_FAMILY + ONE MONO LINE</p>
+      </div>
+      <div class="panel">
+        <h3>Voice</h3>
+        <p>VOICE_GUIDELINES</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="sectionhead">
+      <h2>In context</h2>
+      <div class="note">7 renders across the subway system</div>
+    </div>
+    <div class="gallery">
+      <figure class="figure feature"><img id="img-platform" src="" alt="Platform wall takeover"></figure>
+      <figure class="figure poster"><img id="img-car" src="" alt="Interior car cards"></figure>
+      <figure class="figure small"><img id="img-poster" src="" alt="2-sheet poster"></figure>
+      <figure class="figure small"><img id="img-diorama" src="" alt="Backlit diorama"></figure>
+      <figure class="figure feature"><img id="img-domination" src="" alt="Station domination"></figure>
+      <figure class="figure small"><img id="img-digital" src="" alt="Digital platform screen"></figure>
+      <figure class="figure wide"><img id="img-inapp" src="" alt="In-app payoff"></figure>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="sectionhead">
+      <h2>Copy lines</h2>
+      <div class="note">Placement-specific headlines and rationale</div>
+    </div>
+    <div class="copygrid">
+      <div class="linecard"><div><div class="label">Platform wall</div><div class="headline">HEADLINE ONE</div></div><div class="reason">Rationale for the platform wall.</div></div>
+      <div class="linecard"><div><div class="label">Car card</div><div class="headline">HEADLINE TWO</div></div><div class="reason">Rationale for the interior car card.</div></div>
+      <div class="linecard"><div><div class="label">Poster</div><div class="headline">HEADLINE THREE</div></div><div class="reason">Rationale for the 2-sheet poster.</div></div>
+      <div class="linecard"><div><div class="label">Diorama</div><div class="headline">HEADLINE FOUR</div></div><div class="reason">Rationale for the backlit diorama.</div></div>
+      <div class="linecard"><div><div class="label">Domination</div><div class="headline">HEADLINE FIVE</div></div><div class="reason">Rationale for the station domination.</div></div>
+      <div class="linecard"><div><div class="label">Digital</div><div class="headline">HEADLINE SIX</div></div><div class="reason">Rationale for the digital screen and in-app payoff.</div></div>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="sectionhead">
+      <h2>Media run plan</h2>
+      <div class="note">Agency-grade placement map</div>
+    </div>
+    <table>
+      <thead>
+        <tr><th>Placement</th><th>Format</th><th>Creative</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Platform wall takeover</td><td>16:9</td><td>HEADLINE ONE</td><td>Primary hero placement.</td></tr>
+        <tr><td>Interior car cards</td><td>16:9</td><td>HEADLINE TWO</td><td>Message repeated at commuter eye level.</td></tr>
+        <tr><td>2-sheet poster</td><td>3:4</td><td>HEADLINE THREE</td><td>Strong vertical read.</td></tr>
+        <tr><td>Backlit diorama</td><td>3:4</td><td>HEADLINE FOUR</td><td>Glowing corridor placement.</td></tr>
+        <tr><td>Station domination</td><td>16:9</td><td>HEADLINE FIVE</td><td>Full-environment takeover.</td></tr>
+        <tr><td>Digital platform screen</td><td>9:16</td><td>HEADLINE SIX</td><td>Short-form motion friendly.</td></tr>
+        <tr><td>In-app payoff</td><td>3:4</td><td>APP_SCREEN_NOTE</td><td>Proves the campaign connects to product.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="footer reveal">
+    Publish every image publicly before embedding. Replace the image src values with pub.hyperagent.com URLs.
+  </footer>
+</div>
+
+<script>
+// Fill the 7 image src values below with public share URLs.
+const IMAGES = {
+  platform: "",
+  car: "",
+  poster: "",
+  diorama: "",
+  domination: "",
+  digital: "",
+  inapp: ""
+};
+
+for (const [id, src] of Object.entries(IMAGES)) {
+  const img = document.getElementById(`img-${id}`);
+  if (img) img.src = src;
+}
+
+const observer = new IntersectionObserver((entries) => {
+  for (const entry of entries) {
+    if (entry.isIntersecting) entry.target.classList.add("in");
+  }
+}, { threshold: 0.14 });
+
+document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+</script>
+</body>
+</html>

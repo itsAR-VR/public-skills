@@ -1,6 +1,0 @@
-interface:
-  display_name: Phantom
-  short_description: "Run a Claude terminal co-pilot through tmux or cmux."
-  default_prompt: "Use Phantom to coordinate a Claude terminal co-pilot for this task. Use Phantom Ultra when UltraCode is requested."
-policy:
-  allow_implicit_invocation: true

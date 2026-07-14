@@ -1,3 +1,0 @@
-Customers are waiting longer for support replies, so we need to change the handoff.
-The onboarding checklist worked. The weekly report did not. This week we are cutting the report and assigning one owner for support questions.
-If reply time drops by Friday, we keep the change.

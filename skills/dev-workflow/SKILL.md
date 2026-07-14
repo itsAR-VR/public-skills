@@ -2,7 +2,7 @@
 name: dev-workflow
 description: End-to-end development workflow for repositories that use phase planning, red-team review, implementation, pull requests, independent review, and deployment proof. Use before nontrivial coding, debugging, refactoring, or release work.
 license: MIT
-related_skills: [phase-plan, deep-sweep, deep-build, code-review, goal-post]
+related_skills: [deep-sweep, deep-build, code-review, goal-post]
 ---
 
 # Development Workflow

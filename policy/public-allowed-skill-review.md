@@ -13,6 +13,7 @@ repo-specific implementation context.
 3. Inspect `SKILL.md`, referenced files, assets, scripts, agents, and templates.
 4. Reject the skill if it contains private paths, secrets, sessions, memories,
    OAuth state, client data, raw transcripts, or company-only implementation context.
+   Do not publish private skill names in deny lists; only public allowlisted names belong here.
 5. Reject scripts that can mutate GitHub, Vercel, billing, messaging, payments,
    production data, or local filesystem state without a clear approval gate.
 6. Record source revision, destination path, checksum, and the reason for every

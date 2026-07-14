@@ -1,4 +1,0 @@
-interface:
-  display_name: "Preauthenticated Chrome"
-  short_description: "Use the user's real signed-in Chrome window for browser tasks"
-  default_prompt: "Use the user's pre-authenticated Google Chrome instance instead of sandboxed browser contexts whenever browser auth or passkeys matter."

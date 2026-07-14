@@ -19,6 +19,9 @@ repo-specific implementation context.
 6. Record source revision, destination path, checksum, and the reason for every
    removal or edit in `PUBLIC_EXPORT.json`.
 7. Keep the repository private until export verification and independent review pass.
+8. Require a fresh-context semantic privacy review before every publication. Static
+   patterns catch paths and credentials; they do not reliably identify personal
+   initials, private skill relationships, or proprietary operating context.
 
 ## Required Export Fields For Kept Skills
 

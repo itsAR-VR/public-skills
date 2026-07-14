@@ -1,0 +1,7 @@
+interface:
+  display_name: "Adcrate Cold Audience"
+  short_description: "Cold-audience copy for any content"
+  default_prompt: "Use $adcrate-cold-audience to write cold-audience copy for this offer or content."
+
+policy:
+  allow_implicit_invocation: true
